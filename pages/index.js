@@ -1,11 +1,10 @@
-import Text from "components/01-atoms/text/text";
+import Link from "components/01-atoms/link/link";
 
 const Start = () => {
 
   return (
     <div className="start">
-      <Text className="start__text">Text</Text>
-      <Text className="start__text" modifier="large">Text (Large)</Text>
+      <Link>Link</Link>
     </div>
   );
 
