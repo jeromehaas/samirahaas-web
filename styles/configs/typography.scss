@@ -1,4 +1,37 @@
 * {
     font-family: 'Usual-Light';
+    font-weight: 300;;
     font-size: 16px;
+}
+
+.heading {
+
+    &--h1 {
+        font-family: 'Athena-Light';
+        font-size: 120px;
+        line-height: 1;
+    }
+
+    &--h2 {
+        font-family: 'Athena-Light';
+        font-size: 80px;
+        line-height: 1;
+        letter-spacing: -4px;
+    }
+
+    &--h3 {
+        font-family: 'Usual-Light';
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &--h4 {
+        font-family: 'Athena-Light';
+        font-size: 26px;
+        line-height: 1;
+    }
+
+    
 }
