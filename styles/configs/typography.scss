@@ -33,5 +33,15 @@
         line-height: 1;
     }
 
-    
+}
+
+.text {
+    font-size: 14px;
+    line-height: 1.5;
+
+    &--large {
+        font-size: 26px;
+        line-height: 1.5
+    }
+
 }
