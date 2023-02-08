@@ -1,7 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+    images: {
+      domains: ['localhost'],
+    },
+    i18n: {
+      locales: ['de-ch'],
+      defaultLocale: 'de-ch',
+    },
+  };
