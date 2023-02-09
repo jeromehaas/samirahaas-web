@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import Heading from 'components/01-atoms/heading/heading';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
-const HighlightPreview = () => {
+const HighlightPreview = ({ className }) => {
 
     const sliderItems = [
         { id: 1,label: 'Storytelling', title: 'Vergänglichkeit', image: { url: "https://picsum.photos/id/301/1440/800" } },
@@ -44,7 +45,7 @@ const HighlightPreview = () => {
     }, [counter])
     
     return (
-        <div className="highlight-preview" ref={ previewRef }>
+        <div className={`${ className } highlight-preview`} ref={ previewRef }>
             <div className="highlight-preview__preview preview">
                 { sliderItems.map((item) => (
                     <Image className="preview__image" src={ item.image.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } />
@@ -66,5 +67,14 @@ const HighlightPreview = () => {
     );
     
 };
+
+HighlightPreview.propTypes = {
+    className: PropTypes.string,
+};
+
+HighlightPreview.defaultProps = {
+    className: '',
+};
+
 
 export default HighlightPreview;

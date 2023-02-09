@@ -1,12 +1,10 @@
-import HighlightSlider from "components/02-molecules/highlight-slider/highlight-slider";
-import HighlightPreview from "components/02-molecules/highlight-preview/highlight-preview";
+import PictureCollection from "components/02-molecules/picture-collection/picture-collection";
 
 const Start = () => {
 
   return (
     <div className="start">
-      <HighlightSlider />
-      <HighlightPreview />
+      <PictureCollection />
     </div>
   );
 
