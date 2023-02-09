@@ -1,10 +1,10 @@
-import PictureCollection from "components/02-molecules/picture-collection/picture-collection";
+import Head from "components/01-atoms/head/head";
 
 const Start = () => {
 
   return (
     <div className="start">
-      <PictureCollection />
+      <Head />
     </div>
   );
 
