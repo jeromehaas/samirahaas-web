@@ -1,6 +1,6 @@
 module.exports = {
     images: {
-      domains: ['localhost'],
+      domains: ['localhost', 'picsum.photos'],
     },
     i18n: {
       locales: ['de-ch'],
