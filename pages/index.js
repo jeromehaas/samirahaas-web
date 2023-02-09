@@ -1,11 +1,11 @@
-import Head from "components/01-atoms/head/head";
+import Page from "components/04-layouts/page/page";
 
 const Start = () => {
 
   return (
-    <div className="start">
-      <Head />
-    </div>
+    <Page className="start">
+      Hello world!
+    </Page>
   );
 
 };
