@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import Heading from 'components/01-atoms/heading/heading';
 import Image from 'next/image';
 
-const HighlightSlider = () => {
+const HighlightPreview = () => {
 
     const sliderItems = [
         { id: 1,label: 'Storytelling', title: 'Vergänglichkeit', image: { url: "https://picsum.photos/id/301/1440/800" } },
@@ -13,7 +13,7 @@ const HighlightSlider = () => {
     ];
     
     const timeline = useRef();
-    const sliderRef = useRef();
+    const previewRef = useRef();
     const [ counter, setCounter ] = useState(0);
     
     const updateCounter = () => {
@@ -24,44 +24,39 @@ const HighlightSlider = () => {
 
     const playSlide = () => {
         gsap.context(() => {
-            const status = gsap.utils.toArray('.box .progress__status');
+            const status = gsap.utils.toArray('.progress .progress__status');
             const images = gsap.utils.toArray('.preview .preview__image');
-            const labels = gsap.utils.toArray('.box .box__label');
-            const titles = gsap.utils.toArray('.box .box__title');
+            const boxes = gsap.utils.toArray('.projects .box');
             timeline.current = gsap.timeline({ onComplete: updateCounter });
             timeline.current.to(status, { right: '100%', left: '0%', duration: 0, ease: 'inOut' }, '-0');
             timeline.current.to(images, { opacity: 0, duration: 0.5, ease: 'inOut' });
-            timeline.current.to(labels, { opacity: 0.2, duration: 0.5, ease: 'inOut' }, '-0');
-            timeline.current.to(titles, { opacity: 0.2, duration: 0.5, ease: 'inOut' }, '-0');
-            timeline.current.to(labels[counter], { opacity: 1, duration: 0.5, ease: 'inOut' }, '-=0.5');
-            timeline.current.to(titles[counter], { opacity: 1, duration: 0.5, ease: 'inOut' }, '-=0.5');
-            timeline.current.to(images[counter], { opacity: 1, duration: 1, ease: 'inOut' }, '-=0.5');
-            timeline.current.to(status[counter], { right: '0%', duration: 2, ease: 'none' });
-            timeline.current.to(status[counter], { left: '100%', duration: 2, ease: 'none ' });
+            timeline.current.to(boxes, { opacity: 0, duration: 0.5, ease: 'inOut' });
+            timeline.current.to(boxes[counter], { opacity: 1, duration: 2, ease: 'inOut' }, '-=0');
+            timeline.current.to(images[counter], { opacity: 1, duration: 2, ease: 'inOut' }, '-=0');
+            timeline.current.to(status[0], { right: '0%', duration: 2, ease: 'none' });
+            timeline.current.to(status[0], { left: '100%', duration: 2, ease: 'none ' });
             timeline.current.to(images[counter], { opacity: 0, duration: 0.5, ease: 'inOut' });
-        }, sliderRef );
+        }, previewRef );
     };
-
-
 
     useEffect(() => {
         playSlide();
     }, [counter])
     
     return (
-        <div className="highlight-slider" ref={ sliderRef }>
-            <div className="highlight-slider__preview preview">
+        <div className="highlight-preview" ref={ previewRef }>
+            <div className="highlight-preview__preview preview">
                 { sliderItems.map((item) => (
                     <Image className="preview__image" src={ item.image.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } />
                 ))}
             </div>
-            <div className="highlight-slider__projects projects">
+            <div className="highlight-preview__progress progress">
+                <div className="progress__background"></div>
+                <div className="progress__status"></div>
+            </div>
+            <div className="highlight-preview__projects projects">
                 { sliderItems.map((item) => (
                     <div className="projects__box box" key={ item.id }>
-                        <div className="box__progress progress">
-                            <div className="progress__background"></div>
-                            <div className="progress__status"></div>
-                        </div>
                         <Heading className="box__label" level="h3">{ item.label }</Heading>
                         <Heading className="box__title" level="h4" >{ item.title }</Heading>
                     </div>
@@ -72,4 +67,4 @@ const HighlightSlider = () => {
     
 };
 
-export default HighlightSlider;
+export default HighlightPreview;
