@@ -1,0 +1,32 @@
+.hero {
+    min-height: 100vh;
+
+    &__inner {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    &__heading {
+        margin-bottom: auto;
+        margin: 64px 0 auto 0;
+    }
+
+    &__text {
+        max-width: 640px;
+        margin: 80px 0 48px 0;
+    }
+
+    &__scroller {
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: 850px) {
+
+        &__heading {
+            max-width: 480px;
+        }
+    }
+
+}

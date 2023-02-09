@@ -1,9 +1,21 @@
 import PropTypes from 'prop-types';
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 
 const Scroller =({ className }) => {
 
+    const scrollerRef =  useRef();
+
+    useEffect(() => {
+        if (!scrollerRef) return;
+        const context = gsap.context(() => {
+            gsap.to('.scroller__icon', { top: 8, repeat: -1, duration: 1, yoyo: true, ease: 'power1.inOut' });   
+        }, scrollerRef);
+        return () =>  context.revert();
+    }, []);
+
     return (
-        <div className={`${ className } scroller`}>
+        <div className={`${ className } scroller`} ref={ scrollerRef }>
             <img className="scroller__icon" src='/icons/chevron-down.svg' alt='Scroller' />
         </div>
     );

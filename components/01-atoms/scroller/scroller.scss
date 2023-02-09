@@ -3,11 +3,11 @@
     margin: 0 auto;
 
     &__icon {
-        width: 8px;
-        height: 16px;
+        width: 16px;
+        height: 32px;
         margin: 0 auto;
         display: block;
-        transition: all 0.25s ease;
+        position: relative;
 
         &:hover {
             transform: translateY(4px);

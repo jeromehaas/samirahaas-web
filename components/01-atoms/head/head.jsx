@@ -5,7 +5,7 @@ const Head = ({ meta }) => {
 
     return (
         <NextHead>
-            <title>{ meta.title } | Samira Haas</title>
+            <title>{`${meta.title} | Samira Haas`}</title>
             <meta name="description" content={ meta.description } />
             <link rel="shortcut icon" href="/favicons/favicon.png" type="image/x-icon" />
             <meta property="og:title" content={ meta.title } />
