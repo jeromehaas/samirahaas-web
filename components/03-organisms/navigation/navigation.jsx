@@ -40,7 +40,7 @@ const Navigation = () => {
                 <div className="navigation__background"></div>
                 <div className="navigation__bar bar">
                     <Link className="bar__logo-link" href="/">
-                        <Image className="bar__logo" src="/logos/samira-haas.svg" alt="Samira Haas" width="140" height="40" priority />
+                        <Image className="bar__logo" src="/logos/full.svg" alt="Samira Haas" width="140" height="40" priority />
                     </Link>
                     <Hamburger className="bar__hamburger" isOpen={ isOpen } onClick={ toggleMenu } /> 
                 </div>
