@@ -24,14 +24,14 @@
 	&__inner {
 		display: block;
 		top: 50%;
-		margin-top: -2px;
+		margin-top: -1px;
 	}
 	
 	&__inner,
 	&__inner::before,
 	&__inner::after {
 		width: 20px;
-		height: 2px;
+		height: 1px;
 		background-color: $black-100;
 		border-radius: 4px;
 		position: absolute;
@@ -48,11 +48,11 @@
 	}
 	
 	&__inner::before {
-		top: -7.5px;
+		top: -8px;
 	}
 	
 	&__inner::after {
-		bottom: -7px;
+		bottom: -8px;
 	}
 	
 	
