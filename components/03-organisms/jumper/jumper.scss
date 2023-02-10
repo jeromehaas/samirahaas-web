@@ -1,0 +1,17 @@
+.jumper {
+    background-color: $beige-80;
+    margin-bottom: 0px !important;
+    
+    &__inner {
+        padding: 24px 32px 24px 80px;
+    }
+
+    &__link {
+        padding: 12px;
+    }
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+
+}

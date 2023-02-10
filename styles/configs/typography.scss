@@ -68,6 +68,15 @@
 
 }
 
+.jumper {
+
+    &__link {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-family: 'Athena-Light', sans-serif;
+    }
+}
+
 @media (max-width: 1000px) {
 
     .heading {
