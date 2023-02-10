@@ -10,6 +10,7 @@ const Jumper = () => {
             <Link className="jumper__link" href="/architecture">Architektur</Link>
             <Link className="jumper__link" href="/weddings">Hochzeiten</Link>
             <Link className="jumper__link" href="/design">Gestaltung</Link>
+            <Link className="jumper__link" href="/contact">Kontakt</Link>
         </Section>
     );
 

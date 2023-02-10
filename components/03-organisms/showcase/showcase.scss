@@ -1,7 +1,11 @@
 .showcase {
 
-    &__heading {
-        margin-bottom: 80px;
+    &__heading, .heading {
+
+        &__item {
+            font-size: inherit;
+
+        }
     }
 
 }

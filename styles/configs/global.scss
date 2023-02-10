@@ -6,3 +6,7 @@
     display: none;
     -webkit-appearance: none;
 }
+
+*::selection {
+    background-color: $beige-100;
+}

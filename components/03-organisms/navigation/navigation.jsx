@@ -47,11 +47,11 @@ const Navigation = () => {
                 <div className="navigation__menu menu">
                      <div className="menu__main-links main-links">
                         <Link className="main-links__item heading--h1" href="/corporate">Corporate</Link>
-                        <Link className="main-links__item heading--h1" href="/corporate">Storytelling</Link>
-                        <Link className="main-links__item heading--h1" href="/corporate">Architektur</Link>
-                        <Link className="main-links__item heading--h1" href="/corporate">Hochzeiten</Link>
-                        <Link className="main-links__item heading--h1" href="/corporate">Gestaltung</Link>
-                        <Link className="main-links__item heading--h1" href="/corporate">Kontakt</Link>
+                        <Link className="main-links__item heading--h1" href="/storytelling">Storytelling</Link>
+                        <Link className="main-links__item heading--h1" href="/architecture">Architektur</Link>
+                        <Link className="main-links__item heading--h1" href="/weddings">Hochzeiten</Link>
+                        <Link className="main-links__item heading--h1" href="/design">Gestaltung</Link>
+                        <Link className="main-links__item heading--h1" href="/contact">Kontakt</Link>
                      </div>
                      <div className="menu__social-links social-links">
                         <Link className="social-links__item" href="/">Instagram</Link>

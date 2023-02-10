@@ -76,6 +76,23 @@
         font-size: 20px;
         font-family: 'Athena-Light', sans-serif;
     }
+
+}
+
+.showcase {
+
+    &__heading, .heading {
+
+        &__item {
+            font-size: inherit;
+            font-family: inherit;
+            display: block;
+
+            &:nth-child(2) {
+                margin-left: 64px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1000px) {
