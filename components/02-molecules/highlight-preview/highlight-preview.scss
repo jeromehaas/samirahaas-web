@@ -1,5 +1,6 @@
 .highlight-preview {
     display: none;
+    margin-bottom: 120px;
 
     &__preview, .preview {
         position: relative;
@@ -22,9 +23,9 @@
     }
 
     &__progress, .progress {
-        height: 4px;
+        height: 2px;
         margin-bottom: 16px;
-        border-radius: 4px;
+        border-radius: 2px;
         position: relative;
         
         &__background, 
