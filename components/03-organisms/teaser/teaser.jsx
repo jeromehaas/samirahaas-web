@@ -6,6 +6,7 @@ const Teaser = () => {
 
     return (
         <Section className="teaser">
+            
             <HighlightSlider className="teaser__highlight-slider"  />
             <HighlightPreview classname="teaser__highlight-preview" />
         </Section>

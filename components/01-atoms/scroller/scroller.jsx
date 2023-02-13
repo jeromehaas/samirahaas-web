@@ -6,6 +6,11 @@ const Scroller =({ className }) => {
 
     const scrollerRef =  useRef();
 
+    const handleClick = () => {
+        console.log('click');
+
+    };
+
     useEffect(() => {
         if (!scrollerRef) return;
         const context = gsap.context(() => {
@@ -15,8 +20,8 @@ const Scroller =({ className }) => {
     }, []);
 
     return (
-        <div className={`${ className } scroller`} ref={ scrollerRef }>
-            <img className="scroller__icon" src='/icons/chevron-down.svg' alt='Scroller' />
+        <div className={`${ className } scroller`} href="/#sroller-target" ref={ scrollerRef }>
+            <img className="scroller__icon" src='/icons/chevron-down.svg' alt='Scroller' onClick={ handleClick } />
         </div>
     );
 
