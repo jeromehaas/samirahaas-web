@@ -1,0 +1,38 @@
+.gallery {
+	margin-top: 64px !important;
+
+	&__inner {
+		display: grid;
+		grid-template-areas: 
+			"heading description"
+			"impressions impressions";
+		grid-gap: 32px;
+		grid-template-columns: 400px 1fr;
+	}
+
+	&__heading {
+		grid-area: heading;
+	}
+
+	&__description {
+		grid-area: description;
+	}
+	
+	&__impressions {
+		grid-area: impressions;
+	}
+
+	@media (max-width: 850px) {
+
+		&__inner {
+			grid-template-areas: 
+				"heading" 
+				"description"
+				"impressions";
+			grid-gap: 32px;
+			grid-template-columns: 1fr;
+		}
+
+	}
+
+}

@@ -1,0 +1,50 @@
+.impressions {
+	
+	&__item, .item {
+			width: 100%;
+			height: 100%;
+			display: grid;	
+			grid-gap: 16px;
+			grid-auto-flow: row;
+			flex-direction: row;
+			grid-template-rows: auto;
+			grid-template-columns: 1fr;
+			margin-bottom: 16px;
+			
+			&__image, .image {
+				width: 100%;
+				display: block;
+				height: auto;
+				object-fit: cover;
+			}
+				
+				
+				&--one {
+					grid-template-rows: auto;
+					grid-template-columns: 1fr;
+				}
+				
+				&--two {
+					grid-template-rows: auto;
+					grid-template-columns: 1fr 1fr;
+				}
+				
+				&--three {
+					grid-template-rows: auto auto;
+					grid-template-columns: 1fr 1fr;
+					
+					& .picture__item {
+						
+						&:first-child {
+							grid-row: span 2;
+						}
+						
+					}
+					
+			
+				
+		}
+		
+	}
+
+}

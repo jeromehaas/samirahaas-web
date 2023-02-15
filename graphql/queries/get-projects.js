@@ -7,7 +7,7 @@ export const GET_ALL_PROJECTS = () => {
 				data {
 					id
 					attributes {
-						title
+						heading
 						preview {
 							data {
 								attributes {
