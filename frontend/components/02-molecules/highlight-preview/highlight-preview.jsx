@@ -5,13 +5,6 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 const HighlightPreview = ({ className, items }) => {
-
-    // const sliderItems = [
-    //     { id: 1,label: 'Storytelling', title: 'Vergänglichkeit', image: { url: "https://picsum.photos/id/301/1440/800" } },
-    //     { id: 2,label: 'Hochzeiten', title: 'Nicole & Sandro', image: { url: "https://picsum.photos/id/302/1440/800" } },
-    //     { id: 3,label: 'Corporate', title: 'Keramik-Kurs Buitig', image: { url: "https://picsum.photos/id/305/1440/800" } },
-    //     { id: 4,label: 'Architektur', title: 'Boutique Hotel B2', image: { url: "https://picsum.photos/id/307/1440/800" } },
-    // ];
     
     const timeline = useRef();
     const previewRef = useRef();
@@ -48,7 +41,7 @@ const HighlightPreview = ({ className, items }) => {
         <div className={`${ className } highlight-preview`} ref={ previewRef }>
             <div className="highlight-preview__preview preview">
                 { items.map((item) => (
-                    <Image className="preview__image" src={`${ process.env.NEXT_PUBLIC_STRAPI_URI }${item.attributes.teaser.data.attributes.formats.large.url}`} alt="Image" key={ item.id } width={ 2000 } height={ 1600 } />
+                    <Image className="preview__image" src={ item.attributes.preview.data.attributes.formats.large.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } quality={ 100 } />
                 ))}
             </div>
             <div className="highlight-preview__progress progress">

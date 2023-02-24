@@ -10,6 +10,7 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 						heading
 						preview {
 							data {
+								id
 								attributes {
 									formats
 								}

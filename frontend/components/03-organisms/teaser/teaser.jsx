@@ -4,12 +4,11 @@ import HighlightPreview from "components/02-molecules/highlight-preview/highligh
 
 const Teaser = ({ data }) => {
 
-	console.log(data.projects.data);
 
     return (
         <Section className="teaser">
-            {/* <HighlightSlider className="teaser__highlight-slider" items={ data.projects.data }  /> */}
-            <HighlightPreview classname="teaser__highlight-preview" items={ data.projects.data } />
+            <HighlightSlider className="teaser__highlight-slider" items={ data.teaser.data.attributes.projects.data }  />
+            <HighlightPreview classname="teaser__highlight-preview" items={ data.teaser.data.attributes.projects.data } />
         </Section>
     );
 

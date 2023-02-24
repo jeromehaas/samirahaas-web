@@ -7,7 +7,7 @@ const Impressions = ({ className, items }) => {
 		<div className={`${ className } impressions`}>
 			<div className="impressions__inner">
 				{ items.map((item, index) => {
-					const images = item.group.data.map((image) => ({ src: `${ process.env.NEXT_PUBLIC_STRAPI_URI }${ image.attributes.formats?.large.url }`}))
+					const images = item.group.data.map((image) => ({ src: image.attributes.formats?.large.url }))
 					return ( <Items images={ images } key={ index } />)
 				})}
 			</div>
@@ -31,7 +31,7 @@ const Items = ({ images }) => {
 	return (
 		<div className={`impressions__item item item--${ getLength(images) }`}>
 			{ images.map((image, index) => (
-				<Image className="item__image" src={ image.src } width={2000} height={ 1600 } key={ index } alt="Image" />
+				<Image className="item__image" src={ image.src } width={2000} height={ 1600 } key={ index } quality={ 100 } alt="Image" />
 			))}
 		</div>
 	);
