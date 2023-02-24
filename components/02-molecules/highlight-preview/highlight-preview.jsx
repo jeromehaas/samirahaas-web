@@ -4,21 +4,21 @@ import Heading from 'components/01-atoms/heading/heading';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-const HighlightPreview = ({ className }) => {
+const HighlightPreview = ({ className, items }) => {
 
-    const sliderItems = [
-        { id: 1,label: 'Storytelling', title: 'Vergänglichkeit', image: { url: "https://picsum.photos/id/301/1440/800" } },
-        { id: 2,label: 'Hochzeiten', title: 'Nicole & Sandro', image: { url: "https://picsum.photos/id/302/1440/800" } },
-        { id: 3,label: 'Corporate', title: 'Keramik-Kurs Buitig', image: { url: "https://picsum.photos/id/305/1440/800" } },
-        { id: 4,label: 'Architektur', title: 'Boutique Hotel B2', image: { url: "https://picsum.photos/id/307/1440/800" } },
-    ];
+    // const sliderItems = [
+    //     { id: 1,label: 'Storytelling', title: 'Vergänglichkeit', image: { url: "https://picsum.photos/id/301/1440/800" } },
+    //     { id: 2,label: 'Hochzeiten', title: 'Nicole & Sandro', image: { url: "https://picsum.photos/id/302/1440/800" } },
+    //     { id: 3,label: 'Corporate', title: 'Keramik-Kurs Buitig', image: { url: "https://picsum.photos/id/305/1440/800" } },
+    //     { id: 4,label: 'Architektur', title: 'Boutique Hotel B2', image: { url: "https://picsum.photos/id/307/1440/800" } },
+    // ];
     
     const timeline = useRef();
     const previewRef = useRef();
     const [ counter, setCounter ] = useState(0);
     
     const updateCounter = () => {
-        const isLastSlide = counter === sliderItems.length - 1;
+        const isLastSlide = counter === items.length - 1;
         const newCounter = isLastSlide ? 0 : counter + 1;
         setCounter(newCounter);
     }
@@ -47,8 +47,8 @@ const HighlightPreview = ({ className }) => {
     return (
         <div className={`${ className } highlight-preview`} ref={ previewRef }>
             <div className="highlight-preview__preview preview">
-                { sliderItems.map((item) => (
-                    <Image className="preview__image" src={ item.image.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } />
+                { items.map((item) => (
+                    <Image className="preview__image" src={`${ process.env.NEXT_PUBLIC_STRAPI_URI }${item.attributes.teaser.data.attributes.formats.large.url}`} alt="Image" key={ item.id } width={ 2000 } height={ 1600 } />
                 ))}
             </div>
             <div className="highlight-preview__progress progress">
@@ -56,10 +56,10 @@ const HighlightPreview = ({ className }) => {
                 <div className="progress__status"></div>
             </div>
             <div className="highlight-preview__projects projects">
-                { sliderItems.map((item) => (
+                { items.map((item) => (
                     <div className="projects__box box" key={ item.id }>
-                        <Heading className="box__label" level="h3">{ item.label }</Heading>
-                        <Heading className="box__title" level="h4" >{ item.title }</Heading>
+                        <Heading className="box__label" level="h3">{ item.attributes.category }</Heading>
+                        <Heading className="box__title" level="h4" >{ item.attributes.heading }</Heading>
                     </div>
                 ))}
             </div>

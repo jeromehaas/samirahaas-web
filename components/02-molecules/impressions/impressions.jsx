@@ -2,13 +2,11 @@ import Image from "next/image";
 
 const Impressions = ({ className, items }) => {
 
-	// console.log(items);
 
 	return (
 		<div className={`${ className } impressions`}>
 			<div className="impressions__inner">
 				{ items.map((item, index) => {
-					console.log(process.env);
 					const images = item.group.data.map((image) => ({ src: `${ process.env.NEXT_PUBLIC_STRAPI_URI }${ image.attributes.formats?.large.url }`}))
 					return ( <Items images={ images } key={ index } />)
 				})}
