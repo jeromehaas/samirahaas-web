@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "teasers",
+  "info": {
+    "singularName": "teaser",
+    "pluralName": "teasers",
+    "displayName": "Teaser"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    }
+  }
+}
