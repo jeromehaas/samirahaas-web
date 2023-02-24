@@ -7,8 +7,8 @@ const Teaser = ({ data }) => {
 
     return (
         <Section className="teaser">
-            <HighlightSlider className="teaser__highlight-slider" items={ data.teaser.data.attributes.projects.data }  />
-            <HighlightPreview classname="teaser__highlight-preview" items={ data.teaser.data.attributes.projects.data } />
+            <HighlightSlider className="teaser__highlight-slider" items={ data.attributes.projects.data }  />
+            <HighlightPreview classname="teaser__highlight-preview" items={ data.attributes.projects.data } />
         </Section>
     );
 

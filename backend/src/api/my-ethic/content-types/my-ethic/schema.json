@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "my_ethics",
+  "info": {
+    "singularName": "my-ethic",
+    "pluralName": "my-ethics",
+    "displayName": "My  Ethic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.value"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

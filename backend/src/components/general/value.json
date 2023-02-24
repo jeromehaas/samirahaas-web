@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_general_values",
+  "info": {
+    "displayName": "Values",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    }
+  }
+}

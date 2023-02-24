@@ -4,16 +4,17 @@ import Text from "components/01-atoms/text/text";
 import Picture from "components/01-atoms/picture/picture";
 import Link from "components/01-atoms/link/link";
 
-const AboutMe = () => {
+const AboutMe = ({ data }) => {
+
 
     return (
         <Section className="about-me">
             <div className="about-me__content">
-                <Heading className="content__heading" level="h2">Über Mich</Heading>
-                <Text className="content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit laborum, dolores qui, commodi doloremque tenetur iusto repudiandae quisquam consequuntur quis tempora deserunt saepe rem, dignissimos eligendi labore. Quisquam dolore tempora delectus qui reiciendis a consequuntur consequatur. Vitae aliquam dolor repellat.</Text>
-                <Link className="content__link" href="/">Kontakt</Link>
+                <Heading className="content__heading" level="h2">{ data.attributes.heading }</Heading>
+                <Text className="content__text">{ data.attributes.text }</Text>
+                <Link className="content__link" href={ data.attributes.button.link }>{ data.attributes.button.label }</Link>
             </div>
-            <Picture className="about-me__image" src="https://picsum.photos/id/301/500/800" alt="Image" />
+            <Picture className="about-me__image" src={ data.attributes.image.data.attributes.formats.large.url } alt="Image" />
         </Section>
     );
 
