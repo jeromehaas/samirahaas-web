@@ -86,14 +86,34 @@
         &__item {
             font-size: inherit;
             font-family: inherit;
-            display: block;
-
-            &:nth-child(2) {
-                margin-left: 64px;
-            }
+            line-height: 0.75;
+            
         }
+
     }
+
 }
+
+.say-hello {
+
+    &__content, .content {
+
+        
+        &__heading, .heading {
+            
+            &__item {
+                font-size: inherit;
+                font-family: inherit;
+                line-height: 0.75;
+            }
+            
+        }
+
+    }
+
+}
+
+
 
 @media (max-width: 1000px) {
 

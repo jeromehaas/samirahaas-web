@@ -4,8 +4,14 @@
 
         &__item {
             font-size: inherit;
+            display: block;
+
+            &:nth-child(2) {
+                margin-left: 0.5em;
+            }
 
         }
+        
     }
 
 }

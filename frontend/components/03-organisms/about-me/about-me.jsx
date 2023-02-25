@@ -9,7 +9,7 @@ const AboutMe = ({ data }) => {
 
     return (
         <Section className="about-me">
-            <div className="about-me__content">
+            <div className="about-me__content content">
                 <Heading className="content__heading" level="h2">{ data.attributes.heading }</Heading>
                 <Text className="content__text">{ data.attributes.text }</Text>
                 <Link className="content__link" href={ data.attributes.button.link }>{ data.attributes.button.label }</Link>
