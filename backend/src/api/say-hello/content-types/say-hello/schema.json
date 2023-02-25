@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "say_hellos",
+  "info": {
+    "singularName": "say-hello",
+    "pluralName": "say-hellos",
+    "displayName": "Say Hello"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

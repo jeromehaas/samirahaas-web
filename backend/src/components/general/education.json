@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_educations",
+  "info": {
+    "displayName": "Education",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "training": {
+      "displayName": "Training",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.training"
+    }
+  }
+}

@@ -15,23 +15,21 @@
         align-items: flex-start;
         max-width: 440px;
         
-        
         &__heading, .heading {
             margin-top: 64px;
             margin-bottom: 120px;
 
-        &__item {
-            font-size: inherit;
-            display: block;
+            &__item {
+                font-size: inherit;
+                display: block;
 
-            &:nth-child(2) {
-                margin-left: 0.5em;
+                &:nth-child(2) {
+                    margin-left: 0.5em;
+                }
+
             }
-
+            
         }
-        
-    }
-
 
         &__text {
             margin-bottom: 16px;
@@ -66,7 +64,7 @@
 
         &__image {
             width: 100%;
-            height: 300px;
+            height: 480px;
         }
 
     }

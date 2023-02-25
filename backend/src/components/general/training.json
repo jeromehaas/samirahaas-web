@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_general_trainings",
+  "info": {
+    "displayName": "Training"
+  },
+  "options": {},
+  "attributes": {
+    "period": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

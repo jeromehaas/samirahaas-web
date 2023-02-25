@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "behind_the_scenes",
+  "info": {
+    "singularName": "behind-the-scene",
+    "pluralName": "behind-the-scenes",
+    "displayName": "Behind The Scene",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

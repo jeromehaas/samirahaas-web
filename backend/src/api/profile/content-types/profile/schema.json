@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "education": {
+      "displayName": "Education",
+      "type": "component",
+      "repeatable": false,
+      "component": "general.education",
+      "required": true
+    },
+    "contact": {
+      "displayName": "Contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "general.contact"
+    }
+  }
+}
