@@ -2,7 +2,6 @@ import Section from "components/04-layouts/section/section";
 import Heading from "components/01-atoms/heading/heading";
 import Text from "components/01-atoms/text/text";
 import Picture from "components/01-atoms/picture/picture";
-import Link from "next/link";
 
 const SayHello = () => {
 

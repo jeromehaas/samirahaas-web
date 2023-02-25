@@ -1,0 +1,84 @@
+.profile {
+    background-color: $beige-80;
+
+    &__inner {
+        padding: 80px;
+        display: grid;
+        grid-template-areas: 
+            "education contact";
+        grid-template-columns: auto auto;
+        grid-gap: 32px;
+    }
+    
+    &__education, .education {
+        grid-area: education;
+        max-width: 400px;
+
+        &__heading {
+            margin-bottom: 16px;
+        }
+
+        &__table, .table {
+
+            &__cell {
+                vertical-align: top;
+
+                &:nth-child(1) {
+                    white-space: nowrap;
+                    padding-right: 24px;
+                }
+
+                &:nth-child(2) {
+                }
+
+            }
+
+        }
+
+    }
+
+    &__contact, .contact {
+        grid-area: contact;
+
+        &__heading {
+            margin-bottom: 16px;
+        }
+        
+    }
+
+   @media (max-width: 700px) {
+
+        &__inner {
+            padding: 48px 0;
+            display: grid;
+            grid-template-areas: 
+                "contact"
+                "education"; 
+            grid-template-columns: auto;
+            grid-gap: 32px;
+        }
+
+        &__education, .education {
+            max-width: unset;
+
+            &__table, .table {
+
+                &__cell {
+                    vertical-align: top;
+
+                    &:nth-child(1) {
+                        padding-right: 12px;
+                    }
+
+                    &:nth-child(2) {
+                    }
+
+                }
+
+            }
+
+        }
+        
+   } 
+
+}
