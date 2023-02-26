@@ -7,7 +7,10 @@ const Scroller =({ className }) => {
     const scrollerRef =  useRef();
 
     const handleClick = () => {
-        console.log('click');
+        if (typeof window !== 'undefined') {
+            const viewportHeight = window.innerHeight;
+            window.scrollTo({ top: viewportHeight, behavior: 'smooth' });
+        }
 
     };
 

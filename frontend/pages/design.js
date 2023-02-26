@@ -7,9 +7,23 @@ const Design = ({ data }) => {
 
     return (
         <Page>
-            <Showcase heading={['Gestal', 'Tung']} />
+            <Showcase data={ data.design } />
         </Page>
     );
+
+ };
+
+ export async function getServerSideProps() {
+
+    const design = await client.query({ query: queries.GET_DESIGN() });
+
+    return {
+        props: {
+            data: {
+                design: design.data.design.data,
+            },
+        },
+    };
 
  };
 

@@ -7,7 +7,7 @@ const Corporate = ({ data }) => {
 
     return (
         <Page>
-            <Showcase heading={['Cor', 'Porate']} data={ data.projects } />
+            <Showcase data={ data.corporate } />
         </Page>
     );
 
@@ -15,12 +15,12 @@ const Corporate = ({ data }) => {
 
  export async function getServerSideProps() {
 
-	const projects = await client.query({ query: queries.GET_PROJECTS_BY_CATEGORY("Corporate") });
+	const corporate = await client.query({ query: queries.GET_CORPORATE() });
 
 	return {
 		props: {
 			data: {
-				projects: projects.data.projects.data
+				corporate: corporate.data.corporate.data
 			},
 		},
 	};

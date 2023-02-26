@@ -7,6 +7,11 @@ import { GET_MY_ETHICS } from "./get-my-ethics";
 import { GET_SAY_HELLO } from "./get-say-hello";
 import { GET_BEHIND_THE_SCENE } from "./get-behind-the-scene";
 import { GET_PROFILE } from "./get-profile";
+import { GET_CORPORATE } from "./get-corporate";
+import { GET_STORYTELLING } from "./get-storytelling";
+import { GET_DESIGN } from "./get-design";
+import { GET_WEDDING } from "./get-weddings";
+import { GET_ARCHITECTURE } from "./get-architecture";
 
 const queries = {
 	GET_ALL_PROJECTS: GET_ALL_PROJECTS,
@@ -17,7 +22,12 @@ const queries = {
 	GET_MY_ETHICS: GET_MY_ETHICS,
 	GET_SAY_HELLO: GET_SAY_HELLO,
 	GET_BEHIND_THE_SCENE: GET_BEHIND_THE_SCENE,
-	GET_PROFILE: GET_PROFILE
+	GET_PROFILE: GET_PROFILE,
+	GET_CORPORATE: GET_CORPORATE,
+	GET_STORYTELLING: GET_STORYTELLING,
+	GET_DESIGN: GET_DESIGN,
+	GET_WEDDING: GET_WEDDING,
+	GET_ARCHITECTURE: GET_ARCHITECTURE,
 };
 
 export default queries;

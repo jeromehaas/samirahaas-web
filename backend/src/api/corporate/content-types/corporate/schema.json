@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "corporates",
+  "info": {
+    "singularName": "corporate",
+    "pluralName": "corporates",
+    "displayName": "Corporate"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    },
+    "heading": {
+      "displayName": "Two-Level-Heading",
+      "type": "component",
+      "repeatable": false,
+      "component": "general.two-level-heading"
+    }
+  }
+}

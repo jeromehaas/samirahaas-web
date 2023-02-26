@@ -22,14 +22,14 @@ const HighlightPreview = ({ className, items }) => {
             const images = gsap.utils.toArray('.preview .preview__image');
             const boxes = gsap.utils.toArray('.projects .box');
             timeline.current = gsap.timeline({ onComplete: updateCounter });
-            timeline.current.to(status, { right: '100%', left: '0%', duration: 0, ease: 'inOut' }, '-0');
-            timeline.current.to(images, { opacity: 0, duration: 0.5, ease: 'inOut' });
-            timeline.current.to(boxes, { opacity: 0, duration: 0.5, ease: 'inOut' });
-            timeline.current.to(boxes[counter], { opacity: 1, duration: 2, ease: 'inOut' }, '-=0');
-            timeline.current.to(images[counter], { opacity: 1, duration: 2, ease: 'inOut' }, '-=0');
+            timeline.current.to(status, { right: '100%', left: '0%', duration: 0 });
+            timeline.current.to(images, { opacity: 0, duration: 0.25, ease: 'inOut' });
+            timeline.current.to(boxes, { opacity: 0, duration: 0.25, ease: 'inOut' });
+            timeline.current.to(boxes[counter], { opacity: 1, duration: 2, ease: 'inOut' }, '-=0.25');
+            timeline.current.to(images[counter], { opacity: 1, duration: 2, ease: 'inOut' }, '-=0.25');
             timeline.current.to(status[0], { right: '0%', duration: 2, ease: 'none' });
             timeline.current.to(status[0], { left: '100%', duration: 2, ease: 'none ' });
-            timeline.current.to(images[counter], { opacity: 0, duration: 0.5, ease: 'inOut' });
+            timeline.current.to(images[counter], { opacity: 0, duration: 0.25, ease: 'inOut' });
         }, previewRef );
     };
 

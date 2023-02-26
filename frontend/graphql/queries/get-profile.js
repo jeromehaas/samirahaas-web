@@ -9,6 +9,7 @@ export const GET_PROFILE = () => {
 			  contact {
 				heading
 				address {
+				id
 				  text
 				  link
 				}
@@ -17,6 +18,7 @@ export const GET_PROFILE = () => {
 			  education {
 				heading
 				training {
+				  id
 				  period
 				  description
 				}

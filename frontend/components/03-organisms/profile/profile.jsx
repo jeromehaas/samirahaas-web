@@ -12,7 +12,7 @@ const Profile = ({ data }) => {
                 <table className="education__table table">
                     <tbody className="table__body">
                         { data.attributes.education.training.map((item) => (
-                        <tr className="table__row">
+                        <tr className="table__row" key={ item.id }>
                             <td className="table__cell"><Text>{ item.period }</Text></td>
                             <td className="table__cell"><Text>{ item.description }</Text></td>
                         </tr>
@@ -25,17 +25,14 @@ const Profile = ({ data }) => {
                 <div className="contact__address address">
                     { data.attributes.contact.address.map((item) => (
                          item.link ? (
-                            <a className="address__link" href={ item.link }>
+                            <a className="address__link" href={ item.link } key={ item.id }>
                                 <Text className="address__item">{ item.text }</Text>
                             </a>
                         ) : ( 
-                            <Text className="address__item">{ item.text }</Text>
+                            <Text className="address__item" key={ item.id }>{ item.text }</Text>
                         )
 
                     ))}
-                    {/* <Text className="address__item">6003 Luzern</Text>
-                    <Text className="address__item"><a href="mailto:mail@samirahaas.ch">mail@samirahaas.ch</a></Text>
-                    <Text className="address__item"><a href="tel:0797894050">079 789 40 50</a></Text> */}
                 </div>
             </div>
         </Section>

@@ -7,7 +7,7 @@ const Architecture = ({ data }) => {
 
     return (
         <Page>
-            <Showcase heading={['Archi', 'Tektur']} data={ data.projects } />
+            <Showcase data={ data.architecture } />
         </Page>
     );
 
@@ -15,12 +15,12 @@ const Architecture = ({ data }) => {
 
  export async function getServerSideProps() {
 
-    const projects = await client.query({ query: queries.GET_PROJECTS_BY_CATEGORY('Architecture')});
+    const architecture = await client.query({ query: queries.GET_ARCHITECTURE() });
     
     return {
         props: {
             data: {
-                projects: projects.data.projects.data
+                architecture: architecture.data.architecture.data,
             },
         },
     };

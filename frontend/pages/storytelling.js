@@ -7,7 +7,7 @@ const Storytelling = ({ data }) => {
 
     return (
         <Page>
-            <Showcase heading={['Story', 'Telling']} data={ data.projects } />
+            <Showcase data={ data.storytelling } />
         </Page>
     );
 
@@ -15,12 +15,12 @@ const Storytelling = ({ data }) => {
 
  export async function getServerSideProps() {
 
-    const projects = await client.query({ query: queries.GET_PROJECTS_BY_CATEGORY('Storytelling')});
+    const storytelling = await client.query({ query: queries.GET_STORYTELLING() });
 
     return {
         props: {
             data: {
-                projects: projects.data.projects.data
+                storytelling: storytelling.data.storytelling.data
             },
         },
     };

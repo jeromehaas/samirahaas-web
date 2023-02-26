@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "weddings",
+  "info": {
+    "singularName": "wedding",
+    "pluralName": "weddings",
+    "displayName": "Wedding"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.two-level-heading"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    }
+  }
+}
