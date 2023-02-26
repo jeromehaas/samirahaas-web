@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "data_privacies",
+  "info": {
+    "singularName": "data-privacy",
+    "pluralName": "data-privacies",
+    "displayName": "Data Privacy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.two-level-heading",
+      "required": true
+    },
+    "paragraph": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.paragraph"
+    }
+  }
+}

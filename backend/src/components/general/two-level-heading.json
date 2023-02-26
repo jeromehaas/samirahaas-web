@@ -1,7 +1,8 @@
 {
   "collectionName": "components_general_two_level_headings",
   "info": {
-    "displayName": "Two-Level-Heading"
+    "displayName": "Two-Level-Heading",
+    "description": ""
   },
   "options": {},
   "attributes": {

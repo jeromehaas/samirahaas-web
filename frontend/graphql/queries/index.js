@@ -12,6 +12,7 @@ import { GET_STORYTELLING } from "./get-storytelling";
 import { GET_DESIGN } from "./get-design";
 import { GET_WEDDING } from "./get-weddings";
 import { GET_ARCHITECTURE } from "./get-architecture";
+import { GET_DATA_PRIVACY } from "./get-data-privacy";
 
 const queries = {
 	GET_ALL_PROJECTS: GET_ALL_PROJECTS,
@@ -28,6 +29,7 @@ const queries = {
 	GET_DESIGN: GET_DESIGN,
 	GET_WEDDING: GET_WEDDING,
 	GET_ARCHITECTURE: GET_ARCHITECTURE,
+	GET_DATA_PRIVACY: GET_DATA_PRIVACY
 };
 
 export default queries;

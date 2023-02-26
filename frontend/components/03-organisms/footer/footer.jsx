@@ -25,7 +25,7 @@ const Footer = () => {
                     </div>
                    <div className="content__legal-links legal-links">
                         <Link className="legal-links__item" href="/">Impressum</Link>
-                        <Link className="legal-links__item" href="/">Datenschutz</Link>
+                        <Link className="legal-links__item" href="/data-privacy">Datenschutz</Link>
                     </div>   
                     <Text className="content__copyright">© { getCurrentYear() } Samira Haas</Text>
                 </div>

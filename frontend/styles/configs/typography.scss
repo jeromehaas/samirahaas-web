@@ -34,9 +34,20 @@
         line-height: 1;
     }
 
+    &__item {
+        font-size: inherit;
+        font-family: inherit;
+        line-height: 0.75;
+        display: block;
+
+        &:nth-child(2) {
+            margin-left: 0.5em;
+        }
+    }
+
 }
 
-.text {
+.text, p {
     font-family: 'Usual-Light';
     font-size: 14px;
     line-height: 1.5;
@@ -79,42 +90,6 @@
 
 }
 
-.showcase {
-
-    &__heading, .heading {
-
-        &__item {
-            font-size: inherit;
-            font-family: inherit;
-            line-height: 0.75;
-            
-        }
-
-    }
-
-}
-
-.say-hello {
-
-    &__content, .content {
-
-        
-        &__heading, .heading {
-            
-            &__item {
-                font-size: inherit;
-                font-family: inherit;
-                line-height: 0.75;
-            }
-            
-        }
-
-    }
-
-}
-
-
-
 @media (max-width: 1000px) {
 
     .heading {
@@ -126,6 +101,8 @@
         &--h2 {
             font-size: 60px;
         }
+
+
 
     }
 
