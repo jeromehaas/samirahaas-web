@@ -5,7 +5,11 @@ const Picture =({ className, src, alt }) => {
 
     return (
         <div className={`${ className } picture`}>
-            <Image className="picture__source" src={ src } alt={ alt } width={ 1300 } height={ 700 } />
+            { src ? (
+                <Image className="picture__source" src={ src } alt={ alt } width={ 1300 } height={ 700 }  />
+            ) : (
+                <div className="picture__alternative"></div>
+            )}
         </div>
     );
 

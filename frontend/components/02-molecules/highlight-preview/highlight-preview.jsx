@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import Heading from 'components/01-atoms/heading/heading';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import Picture from 'components/01-atoms/picture/picture';
 
 const HighlightPreview = ({ className, items }) => {
     
@@ -41,7 +42,7 @@ const HighlightPreview = ({ className, items }) => {
         <div className={`${ className } highlight-preview`} ref={ previewRef }>
             <div className="highlight-preview__preview preview">
                 { items.map((item) => (
-                    <Image className="preview__image" src={ item.attributes.preview.data.attributes.formats.large.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } quality={ 100 } />
+                    <Picture className="preview__image" src={ item.attributes.preview.data?.attributes.formats.large.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } quality={ 100 } />
                 ))}
             </div>
             <div className="highlight-preview__progress progress">

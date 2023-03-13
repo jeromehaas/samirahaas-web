@@ -13,7 +13,7 @@ const LegalInformations = ({ data }) => {
             </Heading>
             <div className="legal-informations__paragraphs paragraphs">
                 { data.attributes.paragraph.map((item) => (
-                    <div className="paragraphs__item item" key={ item.id }>
+                    <div className="paragraphs__item item" key={ item.idss }>
                         <Heading className="item__heading" level="h4">{ item.heading }</Heading>
                         <ReactMarkdown className="item__text">{ item.text }</ReactMarkdown>
                     </div>

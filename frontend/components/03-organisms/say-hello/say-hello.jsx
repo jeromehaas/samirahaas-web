@@ -13,7 +13,7 @@ const SayHello = ({ data }) => {
                 </Heading>
                 <Text className="content__text">{ data.attributes.text }</Text>
             </div>
-            <Picture className="say-hello__image" src={ data.attributes.image.data.attributes.formats.large.url } alt="Samira Haas" />
+            <Picture className="say-hello__image" src={ data.attributes.image.data?.attributes.formats.large.url } alt="Samira Haas" />
             
         </Section>
     );

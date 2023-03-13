@@ -14,7 +14,7 @@ const AboutMe = ({ data }) => {
                 <Text className="content__text">{ data.attributes.text }</Text>
                 <Link className="content__link" href={ data.attributes.button.link }>{ data.attributes.button.label }</Link>
             </div>
-            <Picture className="about-me__image" src={ data.attributes.image.data.attributes.formats.large.url } alt="Image" />
+            <Picture className="about-me__image" src={ data.attributes.image.data?.attributes.formats.large.url } alt="Image" />
         </Section>
     );
 

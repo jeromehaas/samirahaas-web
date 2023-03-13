@@ -8,7 +8,7 @@ const Showcase = ({ data }) => {
 		return {
 			id: item.id,
 			heading: item.attributes.heading,
-			preview: item.attributes.preview.data.attributes.formats.large,
+			preview: item.attributes.preview.data?.attributes.formats.large,
 		}
 	});
 
