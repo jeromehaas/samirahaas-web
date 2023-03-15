@@ -10,15 +10,18 @@
     &__heading {
         margin-bottom: auto;
         margin: 64px 0 auto 0;
+        visibility: hidden;
     }
 
     &__text {
         max-width: 640px;
         margin: 80px 0 48px 0;
+        visibility: hidden;
     }
 
     &__scroller {
         margin-bottom: 32px;
+        visibility: hidden;
     }
 
     @media (max-width: 850px) {
