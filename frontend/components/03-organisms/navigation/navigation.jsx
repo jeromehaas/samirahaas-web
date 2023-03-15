@@ -8,7 +8,7 @@ const Navigation = () => {
 
     const [ isOpen, setIsOpen ] = useState(false);
     const navigationRef = useRef();
-    const timelineRef = useRef();
+    const menuTimelineRef = useRef();
 
     const toggleMenu = () => {
         isOpen ? closeMenu() : openMenu();
@@ -16,21 +16,27 @@ const Navigation = () => {
     };
 
     const openMenu = () => {
-        timelineRef.current.play();
+        menuTimelineRef.current.play();
     };
 
     const closeMenu = () => {
-        timelineRef.current.reverse();
+        menuTimelineRef.current.reverse();
     };
 
     useEffect(() => {
         gsap.context(() => {
-            timelineRef.current = gsap.timeline();
-            timelineRef.current.to('.navigation .navigation__menu', { bottom: '0%', duration: 1, ease: 'power4.inOut' }).reverse();
-            timelineRef.current.to('.navigation .main-links__item', { opacity: '1', duration: 0.5, ease: 'power4.inOut', stagger: { amount: 0.5 } }).reverse();
-            timelineRef.current.to('.navigation .social-links__item', { opacity: '1', duration: 0.5, ease: 'power4.inOut' }).reverse();
-        }, navigationRef);
-        () => timeline.current.kill();
+            gsap.to(['.navigation .bar__logo', '.navigation .bar__hamburger'], { autoAlpha: 1, duration: 2 })
+        }, navigationRef.current)
+    }, []);
+
+    useEffect(() => {
+        gsap.context(() => {
+            menuTimelineRef.current = gsap.timeline();
+            menuTimelineRef.current.to('.navigation .navigation__menu', { bottom: '0%', duration: 1, ease: 'power4.inOut' }).reverse();
+            menuTimelineRef.current.to('.navigation .main-links__item', { opacity: '1', duration: 0.5, ease: 'power4.inOut', stagger: { amount: 0.5 } }).reverse();
+            menuTimelineRef.current.to('.navigation .social-links__item', { opacity: '1', duration: 0.5, ease: 'power4.inOut' }).reverse();
+        }, navigationRef.current);
+        () => menuTimelineRef.current.kill();
     }, []);
 
     return (

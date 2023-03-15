@@ -17,15 +17,19 @@
         align-items: center;
         height: 80px;
         position: fixed;
-        top: 0;
+        top: 0px;
         left: 0;
         right: 0;
         padding: 0 32px;
-        // background-color: $white-100;
         z-index: 50;
 
         &__logo {
             cursor: pointer;
+            visibility: hidden;
+        }
+
+        &__hamburger {
+            visibility: hidden;
         }
 
     }
