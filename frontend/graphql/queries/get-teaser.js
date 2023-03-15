@@ -12,7 +12,7 @@ export const GET_TEASER = () => {
 					attributes {
 						heading
 						category
-						preview {
+						teaser {
 						data {
 							attributes {
 							formats

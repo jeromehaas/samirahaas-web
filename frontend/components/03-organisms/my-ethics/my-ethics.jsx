@@ -8,7 +8,7 @@ const MyEthics = ({ data }) => {
 
     return (
         <Section className="my-ehtics">
-            <Picture className="my-ehtics__image" src={ data.attributes.image.data?.attributes.formats.small.url } alt="Leave" />
+            <Picture className="my-ehtics__image" src={ data.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />
             <div className="my-ehtics__content content">
                 <Heading className="content__heading" level="h2" lookLike="h3">{ data.attributes.heading }</Heading>
                 { data.attributes.values.map((item) => (

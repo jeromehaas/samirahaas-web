@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Picture from "components/01-atoms/picture/picture";
 
 const Impressions = ({ className, items }) => {
 
@@ -31,7 +31,7 @@ const Items = ({ images }) => {
 	return (
 		<div className={`impressions__item item item--${ getLength(images) }`}>
 			{ images.map((image, index) => (
-				<Image className="item__image" src={ image.src } width={2000} height={ 1600 } key={ index } quality={ 100 } alt="Image" />
+				<Picture className="item__image" src={ image.src } width={2000} height={ 1600 } key={ index } quality={ 100 } alt="Image" />
 			))}
 		</div>
 	);

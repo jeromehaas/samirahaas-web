@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import Heading from 'components/01-atoms/heading/heading';
 import Link from 'next/link';
 import Picture from 'components/01-atoms/picture/picture';
@@ -7,17 +6,14 @@ import Picture from 'components/01-atoms/picture/picture';
 const PictureCollection = ({ className, items }) => {
 
     return (
-        <div className={`picture-collection`}>
+        <div className={`${ className } picture-collection`}>
             <div className="picture-collection__inner">
             { items && items.map((item) => (
                 <Link className="picture-collection__item item" href={`/project/${ item.id }`} key={ item.id }>
                     <div className="item__image-wrapper">
-                        { item.preview?.url && (
-                            <Picture className="item__image" src={`${ item.preview.url} `} key={ item.id } width={ 2000 } height={ 1600 } alt="Image" />
-                        )}
+                        <Picture className="item__image" src={ item.preview?.url }  key={ item.id } width={ 2000 } height={ 1600 } alt="Image" />
                     </div>
                     { item.heading && ( <Heading className="item__heading" level="h4">{ item.heading }</Heading> )}
-                        
                 </Link>
             ))}
             </div>
