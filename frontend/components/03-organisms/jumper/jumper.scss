@@ -1,6 +1,7 @@
 .jumper {
     background-color: $beige-80;
     margin-bottom: 0px !important;
+    height: 80px;
     
     &__inner {
         padding: 24px 0 24px 80px;
@@ -8,6 +9,8 @@
 
     &__link {
         padding: 12px 24px 12px 0;
+        visibility: hidden;
+        opacity: none;
 
         &:last-child {
             padding-right: 0;

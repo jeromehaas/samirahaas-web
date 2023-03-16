@@ -18,7 +18,7 @@ const MyEthics = ({ data }) => {
     // ANIMATE ELEMENTS
     useEffect(() => {
         const context = gsap.context(() => {
-            myEthicsTimelineRef.current= gsap.timeline({ scrollTrigger: { trigger: myEthicsRef.current, start: 'top bottom-=320px', end: 'bottom top+=320px', markers: true }});
+            myEthicsTimelineRef.current= gsap.timeline({ scrollTrigger: { trigger: myEthicsRef.current, start: 'top bottom-=320px', end: 'bottom top+=320px', markers: false }});
             myEthicsTimelineRef.current.to('.my-ethics .my-ethics__image', { autoAlpha: 1, duration: 2 }, 0);
             myEthicsTimelineRef.current.to('.my-ethics .my-ethics__content .content__heading', { autoAlpha: 1, duration: 2 }, 0.25);
             myEthicsTimelineRef.current.to('.my-ethics .my-ethics__content .content__text', { autoAlpha: 1, duration: 3, stagger: 0.125 }, 0.5);
