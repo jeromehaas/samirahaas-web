@@ -20,6 +20,12 @@ const ProtectedRoutes = ({ children }) => {
         };
     }, [ isAuthenticated, isLoading ]);
 
+    useEffect(() => {
+        if (!isLoading && isAuthenticated && environment !== 'production' && currentPath === '/login') {
+            router.push('/');
+        };
+    }, [ isAuthenticated, isLoading ])
+
     // IF PRODUCTION ENVIRONMENT SHOW PAGE
     if (environment === 'production') {
         return children;

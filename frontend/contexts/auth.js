@@ -29,13 +29,6 @@ const AuthProvider = ({ children }) => {
         };
     };
 
-    // IF PAGE NOT LOADING AND USER IS AUTHENTICATED REDIRECT TO 
-    useEffect(() => {
-        if (!isLoading && isAuthenticated ) {
-            router.push('/');
-        };
-    }, [ isLoading, isAuthenticated])
-
     // AFTER FIRST RENDER CHECK TOKEN FROM LOCALSTORAGE
     useEffect(() => {
         checkSession();

@@ -5,11 +5,11 @@ import { AuthProvider } from 'contexts/auth';
 const App = ({ Component, pageProps }) => {
 
   return (
-    <AuthProvider>
-      <ProtectedRoutes>
-        <Component {...pageProps} />
-      </ProtectedRoutes>
-    </AuthProvider>
+        <AuthProvider>
+          <ProtectedRoutes>
+            <Component {...pageProps} />
+          </ProtectedRoutes>
+        </AuthProvider>
   );
 
 };

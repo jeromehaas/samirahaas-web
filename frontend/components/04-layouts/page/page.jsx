@@ -10,7 +10,7 @@ const Page = ({ className, children, meta }) => {
         <div className={`${ className } page`}>
             <Head meta={ meta } />
             <Navigation />
-            { children }
+                { children }
             <Jumper />
             <Footer />
         </div>

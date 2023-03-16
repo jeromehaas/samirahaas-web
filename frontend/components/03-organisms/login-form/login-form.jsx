@@ -27,7 +27,6 @@ const LoginForm = () => {
 
     // UPDATE INPUT ON KEYPRESS
     const handleKeyPress = (event) => {
-        console.log(event);
       updateInput(event.key);
     };
 
