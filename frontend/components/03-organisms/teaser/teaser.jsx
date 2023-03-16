@@ -18,9 +18,9 @@ const Teaser = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             teaserTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: teaserRef.current, start: 'top bottom-=320px', end: 'bottom top+=320px', markers: false }});
-            teaserTimelineRef.current.to('.teaser .teaser__highlight-slider', { autoAlpha: 1, duration: 1 }, 0);
-            teaserTimelineRef.current.to('.teaser .teaser__highlight-preview', { autoAlpha: 1, duration: 1 }, 0);
-            teaserTimelineRef.current.to('.teaser .teaser__highlight-slider .projects__box', { autoAlpha: 1, top: 0, duration: 1, stagger: 0.25 }, 0.25);
+            teaserTimelineRef.current.to('.teaser .teaser__highlight-slider', { autoAlpha: 1, duration: 2 }, 0);
+            teaserTimelineRef.current.to('.teaser .teaser__highlight-preview', { autoAlpha: 1, duration: 2 }, 0);
+            teaserTimelineRef.current.to('.teaser .teaser__highlight-slider .projects__box', { autoAlpha: 1, top: 0, duration: 2, stagger: 0.25 }, 0.25);
         }, teaserRef);
         return () => context.revert();
     }, []);

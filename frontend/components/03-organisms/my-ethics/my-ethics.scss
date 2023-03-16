@@ -1,4 +1,4 @@
-.my-ehtics {
+.my-ethics {
     
     &__inner {
         padding: 80px;
@@ -20,10 +20,14 @@
         &__heading {
             margin-top: 64px;
             margin-bottom: 16px;
+            visibility: hidden; 
+            opacity: 0;
         }
 
 
         &__text {
+            visibility: hidden; 
+            opacity: 0;
         }
 
     }
@@ -32,6 +36,8 @@
         grid-area: image;
         width: 440px;
         height: 100%;
+        visibility: hidden; 
+        opacity: 0;
     }
 
     @media (max-width: 850px) {
