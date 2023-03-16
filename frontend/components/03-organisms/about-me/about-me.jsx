@@ -5,7 +5,7 @@ import Picture from "components/01-atoms/picture/picture";
 import Link from "components/01-atoms/link/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useRef, useEffect, useMemo } from "react";
+import { useRef, useEffect } from "react";
 
 const AboutMe = ({ data }) => {
 
@@ -24,7 +24,7 @@ const AboutMe = ({ data }) => {
             aboutMeTimelineRef.current.to('.about-me .about-me__image', { autoAlpha: 1, duration: 1 }, 0);
             aboutMeTimelineRef.current.to('.about-me .content__heading', { autoAlpha: 1, duration: 1 }, 0.25);
             aboutMeTimelineRef.current.to('.about-me .content__text', { autoAlpha: 1, duration: 1 }, 0.5);
-           aboutMeTimelineRef.current.to('.about-me .content__link', { autoAlpha: 1, duration: 1 }, 0.75);
+            aboutMeTimelineRef.current.to('.about-me .content__link', { autoAlpha: 1, duration: 1 }, 0.75);
         }, aboutMeRef);
         return () => context.revert();
     }, []);

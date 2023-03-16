@@ -27,6 +27,10 @@
 
         &__box, .box {
             transition: 0.3s ease;
+            visibility: hidden;
+            opacity: 0;
+            position: relative;
+            top: 32px;
 
             &__progress, .progress {
                 height: 2px;
