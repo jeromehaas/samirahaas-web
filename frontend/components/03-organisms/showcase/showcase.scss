@@ -1,4 +1,19 @@
 .showcase {
 
+    &__heading, .heading {
+
+        &__item {
+            visibility: hidden;
+        }
+
+    }
+
+    &__picture-collection, .picture-collection {
+
+        &__item {
+            visibility: hidden;
+        }
+
+    }
 
 }
