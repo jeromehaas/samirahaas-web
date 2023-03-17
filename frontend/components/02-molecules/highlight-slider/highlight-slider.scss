@@ -30,12 +30,22 @@
             opacity: 0;
             width: 100%;
 
+            &:last-child {
+
+                .progress,
+                .heading {
+                    margin-right: 0px;
+                }
+
+            }
+
             &__progress, .progress {
                 height: 2px;
                 margin-bottom: 16px;
                 border-radius: 2px;
                 position: relative;
                 margin-right: 32px;
+
                 
                 &__background, 
                 &__status {

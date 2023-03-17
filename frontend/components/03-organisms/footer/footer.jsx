@@ -2,15 +2,39 @@ import Link from "next/link";
 import Text from "components/01-atoms/text/text";
 import Image from "next/image";
 import Heading from "components/01-atoms/heading/heading";
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Footer = () => {
+    
+    // REGISTER PLUGIN
+    gsap.registerPlugin(ScrollTrigger);
 
+    // CREATE REFS
+    const footerRef = useRef();
+    const footerTimelineRef = useRef();
+
+    // ANIMATE ELEMENTS
+    useEffect(() => {
+        const context = gsap.context(() => {
+            footerTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: footerRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: true }});
+            footerTimelineRef.current.to('.footer .footer__logo', { autoAlpha: 1, duration: 2  }, 0);
+            footerTimelineRef.current.to('.footer .content__title', { autoAlpha: 1, duration: 2 }, 0.25);
+            footerTimelineRef.current.to('.footer .content__contact-links',  { autoAlpha: 1, duration: 2 }, 0.5);
+            footerTimelineRef.current.to('.footer .content__social-media-links', { autoAlpha: 1, duration: 2 }, 0.75);
+            footerTimelineRef.current.to('.footer .content__legal-links', { autoAlpha: 1, duration: 2 }, 1);
+        }, footerRef);
+        return () => context.revert();
+    }, []);
+
+    // GET CURRENT YEAR
     const getCurrentYear = () => {
         return new Date().getFullYear();
     };
 
     return (
-        <footer className="footer section">
+        <footer className="footer section"  ref={ footerRef }>
             <div className="footer__inner section__inner">
                 <Image className="footer__logo" src="/logos/small.svg" alt="Samira Haas" width="140" height="40" priority />
                 <div className="footer__content content">
