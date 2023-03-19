@@ -39,12 +39,12 @@
 
         &__background {
             right: 0;
-            background-color: lightgrey;
+            background-color: $grey-60;
         }
 
         &__status {
             right: 100%;
-            background-color: black;
+            background-color: $black-100;
         }
 
     }

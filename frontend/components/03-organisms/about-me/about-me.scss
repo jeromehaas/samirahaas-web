@@ -21,16 +21,19 @@
             margin-top: 64px;
             margin-bottom: 32px;
             visibility: hidden;
+            opacity: 0;
         }
 
         &__text {
             margin-bottom: 16px;
             margin-top: auto;
             visibility: hidden;
+            opacity: 0;
         }
 
         &__link {
             visibility: hidden;
+            opacity: 0;
         }
 
     }

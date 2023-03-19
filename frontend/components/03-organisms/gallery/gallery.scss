@@ -12,14 +12,24 @@
 
 	&__heading {
 		grid-area: heading;
+		visibility: hidden;
+		opacity: 0;
 	}
 
 	&__description {
 		grid-area: description;
+		visibility: hidden;
+		opacity: 0;
 	}
 	
-	&__impressions {
+	&__impressions, .impressions {
 		grid-area: impressions;
+
+		&__item {
+			visibility: 0;
+			opacity: 0;
+		}
+
 	}
 
 	@media (max-width: 850px) {
