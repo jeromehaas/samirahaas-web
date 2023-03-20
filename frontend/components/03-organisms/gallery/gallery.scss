@@ -25,9 +25,13 @@
 	&__impressions, .impressions {
 		grid-area: impressions;
 
-		&__item {
-			visibility: 0;
-			opacity: 0;
+		&__item, .item {
+
+			&__image {
+				visibility: 0;
+				opacity: 0;
+			}
+			
 		}
 
 	}

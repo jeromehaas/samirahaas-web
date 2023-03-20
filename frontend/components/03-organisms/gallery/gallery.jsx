@@ -18,10 +18,10 @@ const Gallery = ({ data }) => {
 	// ANIMATE ELEMENTS
 	useEffect(() => {
 		const context = gsap.context(() => {
-			galleryTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: galleryTimelineRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: true }});
+			galleryTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: galleryTimelineRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false }});
 			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 1, duration: 2 }, 0.25);
 			galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 1, duration: 2 }, 0.5);
-			galleryTimelineRef.current.to('.gallery .impressions__item', { autoAlpha: 1, duration: 2, stagger: 0.5 }, 0.5);
+			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0.5);
 		}, galleryRef);
 		return () => context.revert();
 	}, []);

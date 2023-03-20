@@ -24,6 +24,7 @@ const Footer = () => {
             footerTimelineRef.current.to('.footer .content__contact-links',  { autoAlpha: 1, duration: 2 }, 0.5);
             footerTimelineRef.current.to('.footer .content__social-media-links', { autoAlpha: 1, duration: 2 }, 0.75);
             footerTimelineRef.current.to('.footer .content__legal-links', { autoAlpha: 1, duration: 2 }, 1);
+            footerTimelineRef.current.to('.footer .content__copyright', { autoAlpha: 1, duration: 2 }, 1.25);
         }, footerRef);
         return () => context.revert();
     }, []);
