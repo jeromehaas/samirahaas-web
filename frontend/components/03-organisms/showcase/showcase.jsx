@@ -17,7 +17,7 @@ const Showcase = ({ data }) => {
     // ANIMATE ELEMENTS
     useEffect(() => {
         const context = gsap.context(() => {
-            showcaseTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: showcaseRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false }});
+            showcaseTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: showcaseRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false }});
             showcaseTimelineRef.current.to('.showcase .heading__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0);
             showcaseTimelineRef.current.to('.showcase .picture-collection__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0.5);
     

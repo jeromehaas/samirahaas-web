@@ -18,21 +18,12 @@
         &__heading, .heading {
             margin-top: 64px;
             margin-bottom: 120px;
-
-            &__item {
-                font-size: inherit;
-                display: block;
-
-                &:nth-child(2) {
-                    margin-left: 0.5em;
-                }
-
-            }
-            
+            visibility: hidden;
         }
 
         &__text {
             margin-bottom: 16px;
+            visibility: hidden;
         }
 
     }
@@ -41,6 +32,7 @@
         grid-area: image;
         width: 320px;
         height: 560px;
+        visibility: hidden;
     }
 
     @media (max-width: 850px) {

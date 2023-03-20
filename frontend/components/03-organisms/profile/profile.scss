@@ -13,6 +13,7 @@
     &__education, .education {
         grid-area: education;
         max-width: 400px;
+        visibility: hidden;
 
         &__heading {
             margin-bottom: 16px;
@@ -39,6 +40,7 @@
 
     &__contact, .contact {
         grid-area: contact;
+        visibility: hidden;
 
         &__heading {
             margin-bottom: 16px;

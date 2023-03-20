@@ -4,29 +4,33 @@
   "info": {
     "singularName": "say-hello",
     "pluralName": "say-hellos",
-    "displayName": "Say Hello"
+    "displayName": "Say Hello",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "heading": {
-      "type": "string"
-    },
     "text": {
       "type": "richtext",
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.two-level-heading"
     }
   }
 }

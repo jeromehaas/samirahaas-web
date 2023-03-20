@@ -6,7 +6,10 @@ export const GET_SAY_HELLO = () => {
         sayHello {
           data {
             attributes {
-                heading 
+                heading {
+                  top
+                  sub
+                }
               text
               image {
                 data {
