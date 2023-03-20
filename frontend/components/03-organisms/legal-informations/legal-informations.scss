@@ -2,6 +2,7 @@
 
     &__heading {
         margin-bottom: 64px;
+        visibility: hidden;
     }
 
     &__paragraphs, .paragraphs {
@@ -9,6 +10,7 @@
 
         &__item, .item {
             margin-bottom: 32px;
+            visibility: hidden;
 
             &__heading {
                 margin-bottom: 8px;
