@@ -44,7 +44,6 @@
         z-index: 40;
         display: grid;
         place-items: center;
-        overflow: scroll;
 
         &__main-links, .main-links {
             width: 100%;
@@ -132,6 +131,49 @@
 
         }
         
+    }
+
+    @media (max-height: 450px), (max-width: 400px) {
+
+        .navigation {
+
+            &__menu, .menu {
+
+                &__main-links, .main-links {
+
+                    &__item {
+
+                            &:nth-child(1) { margin-left: 24px; }
+                            &:nth-child(2) { margin-right: 40px; }
+                            &:nth-child(3) { margin-left: 24px; }
+                            &:nth-child(4) { margin-right: 40px; }
+                            &:nth-child(5) { margin-left: 64px; }
+                            &:nth-child(6) { margin-right: 24px; }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    @media (hover: none) {
+
+        &__menu, .menu {
+                
+            &__main-links, .main-links {
+                
+                &__item {
+                    color: $black-100;
+                }
+
+            }
+
+        }
+
     }
 
 }
