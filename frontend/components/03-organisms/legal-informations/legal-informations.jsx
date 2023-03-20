@@ -18,10 +18,11 @@ const LegalInformations = ({ data }) => {
     // ANIMATE ELEMENTS
     useEffect(() => {
         const context = gsap.context(() => {
-            legalInformationsTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: legalInformationsRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: true }});
+            legalInformationsTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: legalInformationsRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false }});
             legalInformationsTimelineRef.current.to('.legal-informations .legal-informations__heading', { autoAlpha: 1, duration: 2 }, 0);
             legalInformationsTimelineRef.current.to('.legal-informations .paragraphs__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0);
         }, legalInformationsRef);
+        return () => context.revert();
     }, []);
 
     return (
