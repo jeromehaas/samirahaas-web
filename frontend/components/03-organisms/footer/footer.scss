@@ -3,7 +3,7 @@
     margin-bottom: 0 !important;
 
     &__inner {
-        padding: 40px 40px 40px 80px;
+        padding: 40px 0 40px 0;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -12,7 +12,8 @@
     &__logo {
         height: auto;
         width: 48px;
-        margin-right: 48px;
+        margin-right: 32px;
+        margin-bottom: 24px;
         visibility: hidden;
     }
 
@@ -88,8 +89,6 @@
     @media (max-width: 1050px) {
 
         &__content, .content {
-            width: 100%;
-            display: grid;
             grid-template-areas: 
                 "title title title"
                 "contact-links contact-links social-media-links" 
@@ -104,7 +103,41 @@
                 &__item {
                     margin-right: 0 !important;
                 }
+
             }
+
+        }
+
+    }
+
+    @media (max-width: 415px) {
+
+        &__content, .content {
+            grid-template-areas: 
+                "title"
+                "contact-links" 
+                "social-media-links" 
+                "legal-links" 
+                "copyright";
+            grid-template-columns: auto;
+            grid-gap: 24px;
+
+            &__legal-links, .legal-links {
+                margin-left: 0;
+            }
+
+            &__copyright {
+                text-align: left;
+            }
+
+        }
+
+    }
+
+    @media (max-width: 300px) {
+
+        &__inner {
+            flex-direction: column;
         }
 
     }
