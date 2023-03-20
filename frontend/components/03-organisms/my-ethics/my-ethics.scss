@@ -24,7 +24,6 @@
             opacity: 0;
         }
 
-
         &__text {
             visibility: hidden; 
             opacity: 0;
@@ -69,4 +68,13 @@
 
     }
 
-};
+    @media (max-width: 450px) {
+
+
+        &__content, .content {
+            margin: 0;
+        }
+
+    }
+    
+}
