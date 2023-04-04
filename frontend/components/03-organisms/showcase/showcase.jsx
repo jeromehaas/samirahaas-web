@@ -25,6 +25,7 @@ const Showcase = ({ data }) => {
         return () => context.revert();
     });
 
+    // GET ALL ITEMS
 	const items = data && data.attributes.projects.data.map((item) => {
 		return {
 			id: item.id,

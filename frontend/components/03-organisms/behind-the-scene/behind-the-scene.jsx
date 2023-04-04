@@ -20,8 +20,10 @@ const BehindTheScenes = ({ data }) => {
             behindTheScenesTimelineRef.current = gsap.timeline({ trigger: behindTheScenesRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: true });
             behindTheScenesTimelineRef.current.to('.behind-the-scenes .images__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0.75);
         }, behindTheScenesRef);
+        return () => context.revert();
     }, []);
 
+    // GET ALL IMAGES
     const items = data && data.attributes.images.data.map((item) => {
         return {
             id: item.id,

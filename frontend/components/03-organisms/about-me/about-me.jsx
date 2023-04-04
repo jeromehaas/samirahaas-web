@@ -15,7 +15,6 @@ const AboutMe = ({ data }) => {
     // CREATE REFS
     const aboutMeRef = useRef();
     const aboutMeTimelineRef = useRef();
-
     
     // ANIMATE ELEMENTS
     useEffect(() => {

@@ -25,7 +25,6 @@ const Teaser = ({ data }) => {
         return () => context.revert();
     }, []);
 
-
     return (
         <Section className="teaser" ref={ teaserRef }>
             <HighlightSlider className="teaser__highlight-slider" items={ data.attributes.projects.data }  />

@@ -22,6 +22,7 @@ const Publication = ({ data }) => {
             publicationTimelineRef.current.to('.publication .publication__heading', { autoAlpha: 1, duration: 2 }, 0);
             publicationTimelineRef.current.to('.publication .contributors__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0.25);
         }, publicationRef);
+        return () => context.revert();
     }, []);
 
     return (
@@ -32,15 +33,15 @@ const Publication = ({ data }) => {
             </Heading>
             <div className="publication__contributors contributors">
                 { data.attributes.contributors.map((item) => (
-                    <div className="contributors__item item">
+                    <div className="contributors__item item" key={ item.id }>
                     <Heading className="item__heading" level="h5">{ item.heading }</Heading>
                     { item.address.map((line) => (
                         line.link ? (
-                            <Link className="item__link" href={ line.link }>
+                            <Link className="item__link" href={ line.link } key={ line.id }>
                                 <Text className="item__text">{ line.text }</Text>
                             </Link>
                         ) : (
-                            <Text className="item__text">{ line.text }</Text>
+                            <Text className="item__text" key={ line.id }>{ line.text }</Text>
                         )
                     ))}
                 </div>

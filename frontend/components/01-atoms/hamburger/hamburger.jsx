@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Hamburger = ({ className, isOpen, onClick }) => {
 
     return (
-        <button className={` ${ className } hamburger hamburger--squeeze ${ isOpen ? `hamburger--is-open`: '' } `} type='button' onClick={ onClick }>
+        <button className={` ${ className } hamburger hamburger--squeeze ${ isOpen ? `hamburger--is-open`: '' } `} type='button' aria-label='Hamburger' onClick={ onClick }>
             <span className='hamburger__box'>
                 <span className='hamburger__inner' />
             </span>

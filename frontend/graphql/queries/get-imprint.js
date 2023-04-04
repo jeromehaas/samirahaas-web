@@ -13,6 +13,7 @@ export const GET_IMPRINT = () => {
                         contributors {
                             id
                             address {
+                                id
                                 text
                                 link
                             }

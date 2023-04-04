@@ -26,7 +26,6 @@ const MyEthics = ({ data }) => {
         return () => context.revert();
     }, []);
 
-
     return (
         <Section className="my-ethics" ref={ myEthicsRef }>
             <Picture className="my-ethics__image" src={ data.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />

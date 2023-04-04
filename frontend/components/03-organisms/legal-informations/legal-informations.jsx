@@ -1,6 +1,5 @@
 import Section from "components/04-layouts/section/section";
 import Heading from "components/01-atoms/heading/heading";
-import Text from "components/01-atoms/text/text";
 import ReactMarkdown from "react-markdown";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

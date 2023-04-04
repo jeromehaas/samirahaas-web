@@ -45,11 +45,11 @@ const Footer = () => {
                         <Link className="contact-links__item" href="tel:0797894050">079 789 40 50</Link>
                     </div>
                     <div className="content__social-media-links social-media-links">
-                        <Link className="social-media-links__item" href="/">Insagram</Link>
-                        <Link className="social-media-links__item" href="/">Facebook</Link>
+                        <Link className="social-media-links__item" href="https://www.instagram.com/samirahaas_/" target="_blank">Instagram</Link>
+                        <Link className="social-media-links__item" href="https://www.facebook.com/samira.haas" target="_blank">Facebook</Link>
                     </div>
                    <div className="content__legal-links legal-links">
-                        <Link className="legal-links__item" href="/">Impressum</Link>
+                        <Link className="legal-links__item" href="/imprint">Impressum</Link>
                         <Link className="legal-links__item" href="/data-privacy">Datenschutz</Link>
                     </div>   
                     <Text className="content__copyright">© { getCurrentYear() } Samira Haas</Text>
