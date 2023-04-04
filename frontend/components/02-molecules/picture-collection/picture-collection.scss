@@ -248,4 +248,28 @@
 
     }
 
+    @media (max-width: 550px) {
+        
+        &__item, .item {
+            
+            &:nth-child(4n + 1) {
+                max-width: 100%;
+            }
+            
+            &:nth-child(4n + 2) {
+                max-width: 80%;
+            }
+            
+            &:nth-child(4n + 3) {
+                max-width: 80%;
+            }
+            
+            &:nth-child(4n + 4) {
+                max-width: 80%;
+            }
+
+        }
+
+    }
+
 }

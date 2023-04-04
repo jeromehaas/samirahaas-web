@@ -19,6 +19,8 @@
 	&__description {
 		grid-area: description;
 		visibility: hidden;
+		max-width: 640px;
+		justify-self: end;
 		opacity: 0;
 	}
 	

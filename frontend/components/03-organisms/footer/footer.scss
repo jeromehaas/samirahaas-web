@@ -29,6 +29,7 @@
         &__title {
             grid-area: title;
             visibility: hidden;
+            margin-top: 16px;
         }
 
         &__contact-links, .contact-links {
@@ -141,6 +142,14 @@
             flex-direction: column;
         }
 
+        &__content, .content {
+
+            &__title {
+                margin-top: 0;
+            }
+
+        }
+    
     }
 
 }

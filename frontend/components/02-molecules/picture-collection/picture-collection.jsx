@@ -8,14 +8,14 @@ const PictureCollection = ({ className, items }) => {
     return (
         <div className={`${ className } picture-collection`}>
             <div className="picture-collection__inner">
-            { items && items.map((item) => (
-                <Link className="picture-collection__item item" href={`/project/${ item.id }`} key={ item.id }>
-                    <div className="item__image-wrapper">
-                        <Picture className="item__image" src={ item.preview?.url }  key={ item.id } width={ 2000 } height={ 1600 } alt="Image" />
-                    </div>
-                    { item.heading && ( <Heading className="item__heading" level="h5">{ item.heading }</Heading> )}
-                </Link>
-            ))}
+                { items && items.map((item) => (
+                    <Link className="picture-collection__item item" href={`/project/${ item.id }`} key={ item.id }>
+                        <div className="item__image-wrapper">
+                            <Picture className="item__image" src={ item.preview?.url }  key={ item.id } width={ 2000 } height={ 1600 } alt="Image" />
+                        </div>
+                        { item.heading && ( <Heading className="item__heading" level="h5">{ item.heading }</Heading> )}
+                    </Link>
+                ))}
             </div>
         </div>
     )
