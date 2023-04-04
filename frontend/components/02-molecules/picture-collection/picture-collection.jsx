@@ -13,7 +13,7 @@ const PictureCollection = ({ className, items }) => {
                     <div className="item__image-wrapper">
                         <Picture className="item__image" src={ item.preview?.url }  key={ item.id } width={ 2000 } height={ 1600 } alt="Image" />
                     </div>
-                    { item.heading && ( <Heading className="item__heading" level="h4">{ item.heading }</Heading> )}
+                    { item.heading && ( <Heading className="item__heading" level="h5">{ item.heading }</Heading> )}
                 </Link>
             ))}
             </div>

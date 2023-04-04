@@ -32,8 +32,8 @@ const Profile = ({ data }) => {
                     <tbody className="table__body">
                         { data.attributes.education.training.map((item) => (
                         <tr className="table__row" key={ item.id }>
-                            <td className="table__cell"><Text>{ item.period }</Text></td>
-                            <td className="table__cell"><Text>{ item.description }</Text></td>
+                            <td className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></td>
+                            <td className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></td>
                         </tr>
                         )) }
                     </tbody>
@@ -45,10 +45,10 @@ const Profile = ({ data }) => {
                     { data.attributes.contact.address.map((item) => (
                          item.link ? (
                             <a className="address__link" href={ item.link } key={ item.id }>
-                                <Text className="address__item">{ item.text }</Text>
+                                <Text className="address__item text--medium">{ item.text }</Text>
                             </a>
                         ) : ( 
-                            <Text className="address__item" key={ item.id }>{ item.text }</Text>
+                            <Text className="address__item text--medium" key={ item.id }>{ item.text }</Text>
                         )
 
                     ))}

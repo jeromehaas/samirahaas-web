@@ -7,12 +7,12 @@
         grid-template-areas: 
             "education contact";
         grid-template-columns: auto auto;
-        grid-gap: 32px;
+        grid-gap: 48px;
     }
     
     &__education, .education {
         grid-area: education;
-        max-width: 400px;
+        max-width: 520px;
         visibility: hidden;
 
         &__heading {
@@ -27,9 +27,6 @@
                 &:nth-child(1) {
                     white-space: nowrap;
                     padding-right: 24px;
-                }
-
-                &:nth-child(2) {
                 }
 
             }
@@ -48,7 +45,7 @@
         
     }
 
-   @media (max-width: 700px) {
+   @media (max-width: 850px) {
 
         &__inner {
             padding: 48px 0;

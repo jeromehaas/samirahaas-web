@@ -33,7 +33,7 @@ const Publication = ({ data }) => {
             <div className="publication__contributors contributors">
                 { data.attributes.contributors.map((item) => (
                     <div className="contributors__item item">
-                    <Heading className="item__heading" level="h4">{ item.heading }</Heading>
+                    <Heading className="item__heading" level="h5">{ item.heading }</Heading>
                     { item.address.map((line) => (
                         line.link ? (
                             <Link className="item__link" href={ line.link }>

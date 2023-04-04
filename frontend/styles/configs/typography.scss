@@ -18,6 +18,7 @@
         font-size: 80px;
         line-height: 1;
         letter-spacing: -4px;
+        text-transform: uppercase;
     }
 
     &--h3 {
@@ -29,6 +30,12 @@
     }
 
     &--h4 {
+        font-family: 'Athena-Light';
+        font-size: 50px;
+        line-height: 1;
+    }
+
+    &--h5 {
         font-family: 'Athena-Light';
         font-size: 26px;
         line-height: 1;
@@ -43,6 +50,7 @@
         &:nth-child(2) {
             margin-left: 0.5em;
         }
+
     }
 
 }
@@ -52,14 +60,17 @@
     font-size: 14px;
     line-height: 1.5;
 
+    &--medium {
+        font-size: 20px;
+    }
+
     &--large {
         font-size: 26px;
-        line-height: 1.5
     }
 
 }
 
-.link {
+.link, a {
     font-size: 12px;
     line-height: 20px;
 }
@@ -74,6 +85,18 @@
                 text-transform: uppercase;
             }
 
+        }
+
+    }
+
+}
+
+.footer {
+
+    &__content, .content {
+
+        &__copyright {
+            font-size: 12px;
         }
 
     }
@@ -102,8 +125,6 @@
             font-size: 60px;
         }
 
-
-
     }
 
 }
@@ -118,12 +139,27 @@
 
         &--h2 {
             font-size: 34px;
-        }
-
-        &--h3 {
+            letter-spacing: -1px;
         }
 
         &--h4 {
+            font-size: 34px;
+        }
+
+        &__item {
+            line-height: 0.9;
+        }
+
+    }
+
+    .text, p {
+
+        &--medium {
+            font-size: 16px;
+        }
+
+        &--large {
+            font-size: 16px;
         }
 
     }
@@ -179,13 +215,37 @@
             &__main-links, .main-links {
 
                 &__item {
-                    font-size: 32px;
+                    font-size: 36px;
                 }
 
             }
 
         }
 
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .heading {
+
+        &--h1 {
+            font-size: 34px;
+        }
+
+        &--h3 {
+            font-size: 10px;
+        }
+
+        &--h5 {
+            font-size: 20px;
+        }
+
+    }
+
+    .text, p {
+        font-size: 12px;
     }
 
 }

@@ -52,7 +52,7 @@ const HighlightPreview = ({ className, items }) => {
                 { items.map((item) => (
                     <div className="projects__box box" key={ item.id }>
                         <Heading className="box__label" level="h3">{ item.attributes.category }</Heading>
-                        <Heading className="box__title" level="h4" >{ item.attributes.heading }</Heading>
+                        <Heading className="box__title" level="h5" >{ item.attributes.heading }</Heading>
                     </div>
                 ))}
             </div>

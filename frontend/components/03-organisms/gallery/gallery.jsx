@@ -28,7 +28,7 @@ const Gallery = ({ data }) => {
 
 	return (
 		<Section className="gallery" ref={ galleryRef }>
-				<Heading className="gallery__heading" level="h1" lookLike="h4">{data.attributes.heading }</Heading>
+				<Heading className="gallery__heading" level="h1" lookLike="h4">{ data.attributes.heading }</Heading>
 				<Text className="gallery__description">{ data.attributes.description }</Text>
 				<Impressions className="gallery__impressions" items={ data.attributes.images } />
 		</Section>
