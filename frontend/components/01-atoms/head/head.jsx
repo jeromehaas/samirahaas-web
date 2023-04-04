@@ -7,7 +7,7 @@ const Head = ({ meta }) => {
         <NextHead>
             <title>{`${meta.title} | Samira Haas`}</title>
             <meta name="description" content={ meta.description } />
-            <link rel="shortcut icon" href="/favicons/favicon.png" type="image/x-icon" />
+            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
             <meta property="og:title" content={ meta.title } />
             <meta property="og:description" content={ meta.description } />
             <meta property="og:image" content={ meta.image } />
