@@ -5,6 +5,7 @@ export const GET_SAY_HELLO = () => {
     query {
         sayHello {
           data {
+            id
             attributes {
                 heading {
                   top
@@ -13,6 +14,7 @@ export const GET_SAY_HELLO = () => {
               text
               image {
                 data {
+                  id
                   attributes {
                     formats
                   }

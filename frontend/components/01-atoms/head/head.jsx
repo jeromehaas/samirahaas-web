@@ -5,7 +5,7 @@ const Head = ({ meta }) => {
 
     return (
         <NextHead>
-            <title>{`${meta.title} | Samira Haas`}</title>
+            <title>{`${ meta.title } | Samira Haas`}</title>
             <meta name="description" content={ meta.description || "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus facere repellat voluptatem natus doloremque a tenetur, numquam eligendi nulla velit inventore necessitatibus molestias dicta officia, eos autem corrupti asperiores possimus." } />
             <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
             <meta property="og:title" content={ meta.title } />
@@ -31,7 +31,7 @@ Head.defaultProps = {
     meta: {
         title: 'Fotografie & Gestaltung',
         description: '',
-        image: 'https://samirahaas.ch/images/placeholders/placeholder.png'
+        image: 'https://samirahaas-web-development.fra1.digitaloceanspaces.com/large_general_04_049cda56b7.webp',
     },
 };
 

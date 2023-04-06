@@ -5,6 +5,7 @@ export const GET_CORPORATE = () => {
 	query {
 		corporate {
 		  data {
+			id
 			attributes {
 			  heading {
 				top
@@ -15,14 +16,28 @@ export const GET_CORPORATE = () => {
 				  id
 				  attributes {
 					heading
-					teaser {
+					description
+					category
+					preview {
 					  data {
+						id
 						attributes {
 						  formats
 						}
 					  }
 					}
-					preview {
+					images {
+							id
+							group {
+								data {
+									id
+									attributes {
+										formats
+									}
+								}
+							}
+						}
+					teaser {
 					  data {
 						attributes {
 						  formats

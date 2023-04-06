@@ -5,6 +5,7 @@ export const GET_MY_ETHICS = () => {
 	query {
 		myEthic {
 		data {
+		  id
 		  attributes {
 			heading
 			values {
@@ -13,6 +14,7 @@ export const GET_MY_ETHICS = () => {
 			}
 			image {
 				data {
+					id
 					attributes {
 						formats
 					}

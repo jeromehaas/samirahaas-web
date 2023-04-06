@@ -5,6 +5,7 @@ export const GET_PROFILE = () => {
 	query {
 		profile {
 		  data {
+			id
 			attributes {
 			  contact {
 				heading

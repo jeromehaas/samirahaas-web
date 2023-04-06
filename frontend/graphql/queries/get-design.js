@@ -5,23 +5,19 @@ export const GET_DESIGN = () => {
 	query {
 		design {
 		  data {
+			id
 			attributes {
 			  heading {
 				top
 				sub
 			  }
-			  projects {
+			   projects {
 				data {
 				  id
 				  attributes {
 					heading
-					teaser {
-					  data {
-						attributes {
-						  formats
-						}
-					  }
-					}
+					description
+					category
 					preview {
 					  data {
 						attributes {
@@ -29,6 +25,25 @@ export const GET_DESIGN = () => {
 						}
 					  }
 					}
+					images {
+							id
+							group {
+								data {
+									id
+									attributes {
+										formats
+									}
+								}
+							}
+						}
+					teaser {
+					  data {
+						attributes {
+						  formats
+						}
+					  }
+					}
+
 				  }
 				}
 			  }

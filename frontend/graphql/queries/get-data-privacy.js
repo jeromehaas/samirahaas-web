@@ -5,6 +5,7 @@ export const GET_DATA_PRIVACY = () => {
 	query {
 		dataPrivacy {
 		  data {
+			id
 			attributes {
 			  heading {
 				top 

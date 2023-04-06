@@ -10,18 +10,13 @@ export const GET_ARCHITECTURE = () => {
 				top
 				sub
 			  }
-			  projects {
+			   projects {
 				data {
 				  id
 				  attributes {
 					heading
-					teaser {
-					  data {
-						attributes {
-						  formats
-						}
-					  }
-					}
+					description
+					category
 					preview {
 					  data {
 						attributes {
@@ -29,6 +24,25 @@ export const GET_ARCHITECTURE = () => {
 						}
 					  }
 					}
+					images {
+							id
+							group {
+								data {
+									id
+									attributes {
+										formats
+									}
+								}
+							}
+						}
+					teaser {
+					  data {
+						attributes {
+						  formats
+						}
+					  }
+					}
+
 				  }
 				}
 			  }

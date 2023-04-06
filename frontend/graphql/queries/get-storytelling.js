@@ -5,6 +5,7 @@ export const GET_STORYTELLING = () => {
 	query {
 		storytelling {
 		  data {
+			id
 			attributes {
 			  heading {
 				top
@@ -15,13 +16,8 @@ export const GET_STORYTELLING = () => {
 				  id
 				  attributes {
 					heading
-					teaser {
-					  data {
-						attributes {
-						  formats
-						}
-					  }
-					}
+					description
+					category
 					preview {
 					  data {
 						attributes {
@@ -29,6 +25,25 @@ export const GET_STORYTELLING = () => {
 						}
 					  }
 					}
+					images {
+							id
+							group {
+								data {
+									id
+									attributes {
+										formats
+									}
+								}
+							}
+						}
+					teaser {
+					  data {
+						attributes {
+						  formats
+						}
+					  }
+					}
+
 				  }
 				}
 			  }

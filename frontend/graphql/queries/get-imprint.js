@@ -5,6 +5,7 @@ export const GET_IMPRINT = () => {
         query {
             imprint {
                 data {
+                    id
                     attributes {
                         heading {
                             top

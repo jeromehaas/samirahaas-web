@@ -9,8 +9,10 @@ export const GET_PROJECTS_BY_ID = (id) => {
 					attributes {
 						heading
 						description
+						category
 						preview {
 							data {
+								id
 								attributes {
 									formats
 								}
@@ -26,6 +28,13 @@ export const GET_PROJECTS_BY_ID = (id) => {
 									}
 								}
 							}
+						}
+						teaser {
+							data {
+								attributes {
+								formats
+							} 
+						}
 						}
 					}
 				}

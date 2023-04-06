@@ -8,6 +8,8 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 					id
 					attributes {
 						heading
+						description
+						category
 						preview {
 							data {
 								id
@@ -15,6 +17,24 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 									formats
 								}
 							}
+						}
+						images {
+							id
+							group {
+								data {
+									id
+									attributes {
+										formats
+									}
+								}
+							}
+						}
+							teaser {
+							data {
+								attributes {
+								formats
+							} 
+						}
 						}
 					}
 				}
