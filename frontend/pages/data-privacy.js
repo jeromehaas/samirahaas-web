@@ -6,7 +6,7 @@ import queries from "graphql/queries";
 const DataPrivacy = ({ data }) => {
 
     return (
-        <Page>
+        <Page meta={{ title: 'Datenschutz', description: 'Lorem ipsum' }}>
             <LegalInformations data={ data.dataPrivacy } />
         </Page>
     )

@@ -6,7 +6,7 @@ import queries from "graphql/queries";
 const Design = ({ data }) => {
 
     return (
-        <Page>
+        <Page meta={{ title: 'Gestaltung', description: 'Lorem ipsum' }}>
             <Showcase data={ data.design } />
         </Page>
     );

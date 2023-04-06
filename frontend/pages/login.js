@@ -4,7 +4,7 @@ import LoginForm from "components/03-organisms/login-form/login-form";
 const Login = () => {
 
     return (
-        <BlankPage>
+        <BlankPage meta={{ title: 'Login', description: '' }}>
             <LoginForm />
         </BlankPage>
     );

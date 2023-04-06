@@ -9,7 +9,7 @@ import queries from "graphql/queries";
 const Start = ({ data }) => {
 
   return (
-    <Page className="start">
+      <Page meta={{ title: 'Fotografie & Gestaltung', description: 'Lorem ipsum' }}>
         <Hero />
         <Teaser data={ data.teaser } />
         <AboutMe data={ data.aboutMe } />

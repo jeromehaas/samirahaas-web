@@ -6,7 +6,7 @@ import queries from "graphql/queries";
 const Imprint  = ({ data }) => {
 
     return (
-        <Page>
+        <Page meta={{ title: 'Impressum', description: 'Lorem ipsum' }}>
             <Publication data={ data.imprint } />
         </Page>
     );

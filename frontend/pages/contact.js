@@ -8,7 +8,7 @@ import queries from "graphql/queries";
 const Contact = ({ data }) => {
 
     return (
-        <Page>
+        <Page meta={{ title: 'Kontakt', description: 'Lorem ipsum' }}>
             <SayHello data={ data.sayHello } />
             <Profile data={ data.profile } />
             <BehindTheScene data={ data.behindTheScene } />
