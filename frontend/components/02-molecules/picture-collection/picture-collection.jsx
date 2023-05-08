@@ -7,7 +7,7 @@ const PictureCollection = ({ className, items }) => {
 
     return (
         <div className={`${ className } picture-collection`}>
-            <div className="picture-collection__inner">
+            <div className="picture-collection__container">
                 { items && items.map((item) => (
                     <Link className="picture-collection__item item" href={`/project/${ item.id }`} key={ item.id }>
                         <div className="item__image-wrapper">

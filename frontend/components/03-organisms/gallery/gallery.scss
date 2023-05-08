@@ -38,6 +38,25 @@
 
 	}
 
+	&__navigation, .navigation {
+
+		&__item, .item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			&__icon {
+				margin-right: 16px;
+			}
+
+			&__label {
+				margin-bottom: 4px;
+			}
+			
+		}
+
+	}
+
 	@media (max-width: 850px) {
 
 		&__inner {

@@ -13,7 +13,6 @@ const Link = ({ className, children, href, onClick }) => {
 
 };
 
-
 Link.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node.isRequired,

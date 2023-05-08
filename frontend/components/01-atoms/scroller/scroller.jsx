@@ -10,8 +10,7 @@ const Scroller =({ className }) => {
         if (typeof window !== 'undefined') {
             const viewportHeight = window.innerHeight;
             window.scrollTo({ top: viewportHeight, behavior: 'smooth' });
-        }
-
+        };
     };
 
     useEffect(() => {
