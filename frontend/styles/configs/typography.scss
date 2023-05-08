@@ -176,6 +176,26 @@
             &__main-links, .main-links {
 
                 &__item {
+                    font-size: 100px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-height: 850px) {
+
+	.navigation {
+
+        &__menu, .menu {
+
+            &__main-links, .main-links {
+
+                &__item {
                     font-size: 80px;
                 }
 

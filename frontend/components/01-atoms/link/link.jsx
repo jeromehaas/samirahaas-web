@@ -5,7 +5,9 @@ const Link = ({ className, children, href, onClick }) => {
 
     return (
         <NextLink className={` ${ className } link `} href={ href } onClick={ onClick }>
+					<span className="link__content">
             { children }
+					</span>
         </NextLink>
     );
 

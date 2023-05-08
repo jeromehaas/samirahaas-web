@@ -21,7 +21,6 @@ const HighlightSlider = ({ className, items }) => {
 			const context = gsap.context(() => {
 					const status = gsap.utils.toArray('.box .progress__status');
 					const boxes = gsap.utils.toArray('.box');
-					console.log(boxes);
 					const images = gsap.utils.toArray('.preview .preview__image');
 					const labels = gsap.utils.toArray('.box .box__label');
 					const titles = gsap.utils.toArray('.box .box__title');
@@ -54,7 +53,7 @@ const HighlightSlider = ({ className, items }) => {
             </div>
             <div className="highlight-slider__projects projects">
                 { items.map((item) => (
-                    <Link className="projects__box box" key={ item.id } href={`/projects/${ item.id }`}>
+                    <Link className="projects__box box" key={ item.id } href={`/project/${ item.id }`}>
                         <div className="box__progress progress">
                             <div className="progress__background"></div>
                             <div className="progress__status"></div>
