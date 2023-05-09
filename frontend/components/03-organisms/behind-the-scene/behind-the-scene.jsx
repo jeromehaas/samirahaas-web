@@ -6,7 +6,6 @@ import { useRef, useEffect } from 'react';
 
 const BehindTheScenes = ({ data }) => {
 
-
     // REGISTER PLUGIN
     gsap.registerPlugin(ScrollTrigger);
 
@@ -34,7 +33,7 @@ const BehindTheScenes = ({ data }) => {
     return(
         <Section className="behind-the-scenes" ref={ behindTheScenesRef }>
             <div className="behind-the-scenes__images images">
-                { items.map((item) => (
+                { items?.map((item) => (
                     <Picture className="images__item" src={ item.preview?.url } key={ item.id } alt="Image" />
                 ))}
             </div>

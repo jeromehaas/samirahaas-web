@@ -28,10 +28,10 @@ const MyEthics = ({ data }) => {
 
     return (
         <Section className="my-ethics" ref={ myEthicsRef }>
-            <Picture className="my-ethics__image" src={ data.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />
+            <Picture className="my-ethics__image" src={ data?.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />
             <div className="my-ethics__content content">
-                <Heading className="content__heading" level="h2" lookLike="h3">{ data.attributes.heading }</Heading>
-                { data.attributes.values.map((item) => (
+                <Heading className="content__heading" level="h2" lookLike="h3">{ data?.attributes.heading }</Heading>
+                { data?.attributes.values.map((item) => (
                     <Text className="content__text text--large" key={ item.id }>{ item.value }</Text>
                 ))}
             </div>

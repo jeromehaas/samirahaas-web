@@ -37,8 +37,8 @@ const Showcase = ({ data }) => {
   return (
         <Section className="showcase" ref={ showcaseRef }>
             <Heading className="showcase__heading heading" level="h1">
-                <span className="heading__item" >{ data.attributes.heading.top }</span>
-                <span className="heading__item" >{ data.attributes.heading.sub }</span>
+                <span className="heading__item" >{ data?.attributes.heading.top }</span>
+                <span className="heading__item" >{ data?.attributes.heading.sub }</span>
             </Heading>
             <PictureCollection className="showcase__picture-collection" items={ items }  />
         </Section>

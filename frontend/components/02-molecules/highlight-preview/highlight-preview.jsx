@@ -19,6 +19,7 @@ const HighlightPreview = ({ className, items }) => {
 
     useEffect(() => {
 			const context = gsap.context(() => {
+				if (!items || items.length === 0) return;
 					const status = gsap.utils.toArray('.progress .progress__status');
 					const images = gsap.utils.toArray('.preview .preview__image');
 					const boxes = gsap.utils.toArray('.projects .box');
@@ -43,7 +44,7 @@ const HighlightPreview = ({ className, items }) => {
     return (
         <div className={`${ className } highlight-preview`} ref={ previewRef }>
             <div className="highlight-preview__preview preview">
-                { items.map((item) => (
+                { items?.map((item) => (
                     <Picture className="preview__image" src={ item.attributes.teaser.data?.attributes.formats.large.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } quality={ 100 } />
                 ))}
             </div>
@@ -52,7 +53,7 @@ const HighlightPreview = ({ className, items }) => {
                 <div className="progress__status"></div>
             </div>
             <div className="highlight-preview__projects projects">
-                { items.map((item) => (
+                { items?.map((item) => (
                     <Link className="projects__box box" key={ item.id } href={`/project/${ item.id }`}>
                         <Heading className="box__label" level="h3">{ item.attributes.category }</Heading>
                         <Heading className="box__title" level="h5" >{ item.attributes.heading }</Heading>

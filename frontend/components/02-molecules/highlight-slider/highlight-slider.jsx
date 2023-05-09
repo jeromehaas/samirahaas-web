@@ -12,13 +12,14 @@ const HighlightSlider = ({ className, items }) => {
     const [ counter, setCounter ] = useState(0);
     
     const updateCounter = () => {
-        const isLastSlide = counter === items.length - 1;
+        const isLastSlide = counter === items?.length - 1;
         const newCounter = isLastSlide ? 0 : counter + 1;
         setCounter(newCounter);
     };
 
     useEffect(() => {
 			const context = gsap.context(() => {
+					if (!items || items.lenght === 0) return;
 					const status = gsap.utils.toArray('.box .progress__status');
 					const boxes = gsap.utils.toArray('.box');
 					const images = gsap.utils.toArray('.preview .preview__image');
@@ -47,12 +48,12 @@ const HighlightSlider = ({ className, items }) => {
     return (
         <div className={`${ className } highlight-slider`} ref={ sliderRef }>
             <div className="highlight-slider__preview preview">
-                { items.map((item) => (
+                { items?.map((item) => (
                     <Picture className="preview__image" src={ item.attributes.teaser.data?.attributes.formats.large.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } />
                 ))}
             </div>
             <div className="highlight-slider__projects projects">
-                { items.map((item) => (
+                { items?.map((item) => (
                     <Link className="projects__box box" key={ item.id } href={`/project/${ item.id }`}>
                         <div className="box__progress progress">
                             <div className="progress__background"></div>

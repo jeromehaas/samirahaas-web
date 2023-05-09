@@ -27,10 +27,10 @@ const Profile = ({ data }) => {
     return (
         <Section className="profile" ref={ profileRef }>
             <div className="profile__education education">
-                <Heading className="education__heading" level="h3">{ data.attributes.education.heading }</Heading>
+                <Heading className="education__heading" level="h3">{ data?.attributes.education.heading }</Heading>
                 <table className="education__table table">
                     <tbody className="table__body">
-                        { data.attributes.education.training.map((item) => (
+                        { data?.attributes.education.training.map((item) => (
 													<div className="table__row" key={ item.id }>
 															<p className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></p>
 															<p className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></p>
@@ -40,9 +40,9 @@ const Profile = ({ data }) => {
                 </table>
             </div>
             <div className="profile__contact contact">
-                <Heading className="contact__heading" level="h3">{ data.attributes.contact.heading }</Heading>
+                <Heading className="contact__heading" level="h3">{ data?.attributes.contact.heading }</Heading>
                 <div className="contact__address address">
-                    { data.attributes.contact.address.map((item) => (
+                    { data?.attributes.contact.address.map((item) => (
                          item.link ? (
                             <a className="address__link" href={ item.link } key={ item.id }>
                                 <Text className="address__item text--medium">{ item.text }</Text>

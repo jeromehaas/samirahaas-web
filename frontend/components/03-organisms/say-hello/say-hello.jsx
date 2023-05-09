@@ -31,12 +31,12 @@ const SayHello = ({ data }) => {
         <Section className="say-hello" ref={ sayHelloRef }>
             <div className="say-hello__content content">
                 <Heading className="content__heading heading" level="h1" lookLike="h1">
-                    <span className="heading__item" >{ data.attributes.heading.top }</span>
-                    <span className="heading__item" >{ data.attributes.heading.sub }</span>
+                    <span className="heading__item" >{ data?.attributes.heading.top }</span>
+                    <span className="heading__item" >{ data?.attributes.heading.sub }</span>
                 </Heading>
-                <Text className="content__text">{ data.attributes.text }</Text>
+                <Text className="content__text">{ data?.attributes.text }</Text>
             </div>
-            <Picture className="say-hello__image" src={ data.attributes.image.data?.attributes.formats.large.url } alt="Samira Haas" />
+            <Picture className="say-hello__image" src={ data?.attributes.image.data?.attributes.formats.large.url } alt="Samira Haas" />
             
         </Section>
     );

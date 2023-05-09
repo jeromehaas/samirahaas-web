@@ -31,11 +31,11 @@ const AboutMe = ({ data }) => {
     return (
         <Section className="about-me" ref={ aboutMeRef }>
             <div className="about-me__content content">
-                <Heading className="content__heading" level="h2">{ data.attributes.heading }</Heading>
-                <Text className="content__text">{ data.attributes.text }</Text>
-                <Link className="content__link" href={ data.attributes.button.link }>{ data.attributes.button.label }</Link>
+                <Heading className="content__heading" level="h2">{ data?.attributes.heading }</Heading>
+                <Text className="content__text">{ data?.attributes.text }</Text>
+                <Link className="content__link" href={ data?.attributes.button.link || '/' }>{ data?.attributes.button.label }</Link>
             </div>
-            <Picture className="about-me__image" src={ data.attributes.image.data?.attributes.formats.large.url } alt="Image" />
+            <Picture className="about-me__image" src={ data?.attributes.image.data?.attributes.formats.large.url } alt="Image" />
         </Section>
     );
 

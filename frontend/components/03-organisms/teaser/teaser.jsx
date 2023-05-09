@@ -27,8 +27,8 @@ const Teaser = ({ data }) => {
 
     return (
         <Section className="teaser" ref={ teaserRef }>
-            <HighlightSlider className="teaser__highlight-slider" items={ data.attributes.projects.data }  />
-            <HighlightPreview className="teaser__highlight-preview" items={ data.attributes.projects.data } />
+            <HighlightSlider className="teaser__highlight-slider" items={ data?.attributes.projects.data }  />
+            <HighlightPreview className="teaser__highlight-preview" items={ data?.attributes.projects.data } />
         </Section>
     );
 
