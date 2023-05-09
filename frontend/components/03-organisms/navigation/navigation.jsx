@@ -32,12 +32,13 @@ const Navigation = () => {
     };
 
 		// HANDLE LINK KLICK
-		const handleLinkClick = (event) => {
+		const handleLinkClick = (targetPath) => {
+			event.preventDefault();
 			const currentPath = router.pathname;
-			const targetPath = event.target.href;
-			if (targetPath.includes(currentPath)) {
-				event.preventDefault();
+			if (currentPath === targetPath) {
 				toggleMenu();
+			} else {
+				router.push(targetPath);
 			};
 		};
 
@@ -103,7 +104,7 @@ const Navigation = () => {
                 <div className="navigation__background"></div>
                 <div className="navigation__bar bar">
 									<div className="bar__inner">
-                    <Link className="bar__logo-link" href="/">
+                    <Link className="bar__logo-link" href="/" onClick={ () => handleLinkClick('/') }>
                         <Image className="bar__logo" src="/logos/full.svg" alt="Samira Haas" width="140" height="40" priority />
                     </Link>
                     <Hamburger className="bar__hamburger" isOpen={ isOpen } onClick={ toggleMenu } /> 
@@ -111,12 +112,12 @@ const Navigation = () => {
                 </div>
                 <div className="navigation__menu menu">
                      <div className="menu__main-links main-links">
-                        <Link className="main-links__item heading--h1" href="/corporate" onClick={ (event) => handleLinkClick(event) }>Corporate</Link>
-                        <Link className="main-links__item heading--h1" href="/storytelling" onClick={ (event) => handleLinkClick(event) }>Storytelling</Link>
-                        <Link className="main-links__item heading--h1" href="/architecture" onClick={ (event) => handleLinkClick(event) }>Architektur</Link>
-                        <Link className="main-links__item heading--h1" href="/weddings" onClick={ (event) => handleLinkClick(event) }>Hochzeiten</Link>
-                        <Link className="main-links__item heading--h1" href="/design" onClick={ (event) => handleLinkClick(event) }>Gestaltung</Link>
-                        <Link className="main-links__item heading--h1" href="/contact" onClick={ (event) => handleLinkClick(event) }>Kontakt</Link>
+                        <Link className="main-links__item heading--h1" href="/corporate" onClick={ () => handleLinkClick('/corporate') }>Corporate</Link>
+                        <Link className="main-links__item heading--h1" href="/storytelling" onClick={ () => handleLinkClick('/storytelling') }>Storytelling</Link>
+                        <Link className="main-links__item heading--h1" href="/architecture" onClick={ () => handleLinkClick('/architecture') }>Architektur</Link>
+                        <Link className="main-links__item heading--h1" href="/weddings" onClick={ () => handleLinkClick('/weddings') }>Hochzeiten</Link>
+                        <Link className="main-links__item heading--h1" href="/design" onClick={ () => handleLinkClick('/design') }>Gestaltung</Link>
+                        <Link className="main-links__item heading--h1" href="/contact" onClick={ () => handleLinkClick('/contact') }>Kontakt</Link>
                      </div>
                      <div className="menu__social-links social-links">
                         <Link className="social-links__item" href="/">Instagram</Link>
