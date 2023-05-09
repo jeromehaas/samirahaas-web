@@ -39,10 +39,7 @@ const Navigation = () => {
 				event.preventDefault();
 				toggleMenu();
 			};
-			console.log(currentPath);
-			console.log(targetPath);
-			
-		}
+		};
 
     // CLOSE MENU
     const closeMenu = () => {

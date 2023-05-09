@@ -11,8 +11,6 @@ import Markdown from "components/01-atoms/markdown/markdown";
 
 const Gallery = ({ data }) => {
 
-	console.log(data);
-
 	// SETUP ROUTER
 	const router = useRouter();
 
