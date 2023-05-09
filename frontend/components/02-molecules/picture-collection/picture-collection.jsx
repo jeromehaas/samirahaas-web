@@ -22,7 +22,7 @@ const PictureCollection = ({ className, items }) => {
 
 };
 
-PictureCollection.protTypes = {
+PictureCollection.propTypes = {
     className: PropTypes.string,
 };
 

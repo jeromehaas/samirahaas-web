@@ -14,6 +14,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         max-width: 440px;
+				margin-bottom: 80px;
         
         &__heading, .heading {
             margin-top: 64px;
@@ -22,7 +23,7 @@
         }
 
         &__text {
-            margin-bottom: 16px;
+						margin-top: auto;
             visibility: hidden;
         }
 
@@ -30,10 +31,23 @@
 
     &__image {
         grid-area: image;
-        width: 320px;
-        height: 560px;
+        width: 560px;
+        height: 100%;
         visibility: hidden;
+				margin-left: auto;
     }
+
+		@media (max-width: 1200px) {
+
+			&__content, .content {
+				margin-bottom: 0;
+			}
+
+			&__image {
+				width: 320px;
+			}
+
+		}
 
     @media (max-width: 850px) {
 
@@ -46,6 +60,8 @@
         }
 
         &__content, .content {
+						max-width: unset;
+						margin-bottom: 32px;
 
             &__heading, .heading {
                 margin-top: 48px;
@@ -56,7 +72,7 @@
 
         &__image {
             width: 100%;
-            height: 480px;
+            height: 100%;
         }
 
     }
