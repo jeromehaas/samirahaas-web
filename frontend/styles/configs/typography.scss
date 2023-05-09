@@ -78,10 +78,13 @@
 .link, a {
     font-size: 12px;
     line-height: 20px;
-
+		
 		&__content {
 			font-size: inherit;
+			text-transform: uppercase;
+			letter-spacing: 1px;
 		}
+
 }
 
 .navigation {
@@ -195,7 +198,7 @@
 
 }
 
-@media (max-height: 850px) {
+@media (max-height: 850px), (max-width: 915px) {
 
 	.navigation {
 

@@ -272,4 +272,17 @@
 
     }
 
+    @media (hover: none) {
+		
+			  &__item, .item {
+            
+            &__heading {
+                opacity: 1 !important;
+                top: calc(100% + 0px);
+            }
+
+					}
+					
+		}
+
 }

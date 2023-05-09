@@ -1,6 +1,7 @@
 import Hamburger from "components/01-atoms/hamburger/hamburger";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
@@ -10,9 +11,9 @@ const Navigation = () => {
     const [ isOpen, setIsOpen ] = useState(false);
 		const [ scrollPosition, setScrollPosition ] = useState(0);
 		const [ previousScrollPosition, setPreviousScrollPosition ] = useState(0);
-	
-		// SETUP SCROLL POSITION
-		// let previousScrollPosition = 0;
+
+		// SETUP ROUTER
+		const router = useRouter();
 
     // SETUP REFS
     const navigationRef = useRef();
@@ -29,6 +30,19 @@ const Navigation = () => {
     const openMenu = () => {
         menuTimelineRef.current.play();
     };
+
+		// HANDLE LINK KLICK
+		const handleLinkClick = (event) => {
+			const currentPath = router.pathname;
+			const targetPath = event.target.href;
+			if (targetPath.includes(currentPath)) {
+				event.preventDefault();
+				toggleMenu();
+			};
+			console.log(currentPath);
+			console.log(targetPath);
+			
+		}
 
     // CLOSE MENU
     const closeMenu = () => {
@@ -100,12 +114,12 @@ const Navigation = () => {
                 </div>
                 <div className="navigation__menu menu">
                      <div className="menu__main-links main-links">
-                        <Link className="main-links__item heading--h1" href="/corporate">Corporate</Link>
-                        <Link className="main-links__item heading--h1" href="/storytelling">Storytelling</Link>
-                        <Link className="main-links__item heading--h1" href="/architecture">Architektur</Link>
-                        <Link className="main-links__item heading--h1" href="/weddings">Hochzeiten</Link>
-                        <Link className="main-links__item heading--h1" href="/design">Gestaltung</Link>
-                        <Link className="main-links__item heading--h1" href="/contact">Kontakt</Link>
+                        <Link className="main-links__item heading--h1" href="/corporate" onClick={ (event) => handleLinkClick(event) }>Corporate</Link>
+                        <Link className="main-links__item heading--h1" href="/storytelling" onClick={ (event) => handleLinkClick(event) }>Storytelling</Link>
+                        <Link className="main-links__item heading--h1" href="/architecture" onClick={ (event) => handleLinkClick(event) }>Architektur</Link>
+                        <Link className="main-links__item heading--h1" href="/weddings" onClick={ (event) => handleLinkClick(event) }>Hochzeiten</Link>
+                        <Link className="main-links__item heading--h1" href="/design" onClick={ (event) => handleLinkClick(event) }>Gestaltung</Link>
+                        <Link className="main-links__item heading--h1" href="/contact" onClick={ (event) => handleLinkClick(event) }>Kontakt</Link>
                      </div>
                      <div className="menu__social-links social-links">
                         <Link className="social-links__item" href="/">Instagram</Link>

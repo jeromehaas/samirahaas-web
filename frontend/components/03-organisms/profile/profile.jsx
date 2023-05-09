@@ -31,14 +31,10 @@ const Profile = ({ data }) => {
                 <table className="education__table table">
                     <tbody className="table__body">
                         { data.attributes.education.training.map((item) => (
-                        // <tr className="table__row" key={ item.id }>
-                        //     <td className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></td>
-                        //     <td className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></td>
-                        // </tr>
- 											  <div className="table__row" key={ item.id }>
-                            <p className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></p>
-                            <p className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></p>
-                        </div>
+													<div className="table__row" key={ item.id }>
+															<p className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></p>
+															<p className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></p>
+													</div>
                         )) }
                     </tbody>
                 </table>
