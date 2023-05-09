@@ -7,8 +7,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef, useEffect } from 'react';
 import { useRouter } from "next/router";
+import Markdown from "components/01-atoms/markdown/markdown";
 
 const Gallery = ({ data }) => {
+
+	console.log(data);
 
 	// SETUP ROUTER
 	const router = useRouter();
@@ -34,7 +37,7 @@ const Gallery = ({ data }) => {
 	return (
 		<Section className="gallery" ref={ galleryRef }>
 				<Heading className="gallery__heading" level="h1" lookLike="h4">{ data.attributes.heading }</Heading>
-				<Text className="gallery__description">{ data.attributes.description }</Text>
+				<Markdown className="gallery__description">{ data.attributes.description }</Markdown>
 				<Impressions className="gallery__impressions" items={ data.attributes.images } />
 				<nav className="gallery__navigation navigation">
 					<Link className="navigation__item item" href={`/${ data.attributes.category.toLowerCase() }`}>

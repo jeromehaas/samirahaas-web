@@ -5,7 +5,8 @@
 		display: grid;
 		grid-template-areas: 
 			"heading description"
-			"impressions impressions";
+			"impressions impressions"
+			"navigation navigation";
 		grid-gap: 32px;
 		grid-template-columns: 400px 1fr;
 	}
@@ -19,7 +20,7 @@
 	&__description {
 		grid-area: description;
 		visibility: hidden;
-		max-width: 640px;
+		max-width: 880px;
 		justify-self: end;
 		opacity: 0;
 	}
@@ -39,6 +40,7 @@
 	}
 
 	&__navigation, .navigation {
+		grid-area: navigation;
 
 		&__item, .item {
 			display: flex;

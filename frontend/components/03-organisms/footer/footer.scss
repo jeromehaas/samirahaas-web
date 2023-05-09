@@ -83,6 +83,7 @@
             align-self: flex-end;
             text-align: right;
             visibility: hidden;
+						margin-bottom: 4px;
         }
 
     
@@ -112,7 +113,7 @@
 
     }
 
-    @media (max-width: 415px) {
+    @media (max-width: 375px) {
 
         &__content, .content {
             grid-template-areas: 
@@ -122,7 +123,7 @@
                 "legal-links" 
                 "copyright";
             grid-template-columns: auto;
-            grid-gap: 24px;
+            grid-gap: 16px;
 
             &__legal-links, .legal-links {
                 margin-left: 0;

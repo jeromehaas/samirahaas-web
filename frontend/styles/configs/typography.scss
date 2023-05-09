@@ -56,7 +56,7 @@
 
 }
 
-.text, p {
+.text, .markdown, p {
     font-family: 'Usual-Light';
     font-size: 14px;
     line-height: 1.5;
@@ -69,11 +69,19 @@
         font-size: 26px;
     }
 
+		p, a {
+			font-size: inherit;
+		}
+
 }
 
 .link, a {
     font-size: 12px;
     line-height: 20px;
+
+		&__content {
+			font-size: inherit;
+		}
 }
 
 .navigation {

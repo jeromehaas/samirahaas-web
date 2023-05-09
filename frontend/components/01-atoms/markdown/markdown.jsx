@@ -1,0 +1,26 @@
+import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
+
+const Markdown = ({ className, children, modifier, size }) => {
+
+    return (
+        <ReactMarkdown className={` ${ className } markdown ${ modifier ? `markdown--${ modifier }` : '' } ${ size ? `markdown--${ size }` : '' } `}>
+           { children }
+        </ReactMarkdown>
+    );
+
+};
+
+Markdown.propTypes = {
+    className: PropTypes.string,
+    children: PropTypes.string,
+    modifier: PropTypes.string,
+};
+
+Markdown.defaultProps = {
+    className: '',
+    modifier: '',
+    size: '',
+};
+
+export default Markdown;
