@@ -28,16 +28,16 @@ const Profile = ({ data }) => {
         <Section className="profile" ref={ profileRef }>
             <div className="profile__education education">
                 <Heading className="education__heading" level="h3">{ data?.attributes.education.heading }</Heading>
-                <table className="education__table table">
-                    <tbody className="table__body">
+                <div className="education__table table">
+                    <div className="table__body">
                         { data?.attributes.education.training.map((item) => (
 													<div className="table__row" key={ item.id }>
-															<p className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></p>
-															<p className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></p>
+															<div className="table__cell"><Text className="education__item text--medium">{ item.period }</Text></div>
+															<div className="table__cell"><Text className="education__item text--medium">{ item.description }</Text></div>
 													</div>
                         )) }
-                    </tbody>
-                </table>
+                    </div>
+                </div>
             </div>
             <div className="profile__contact contact">
                 <Heading className="contact__heading" level="h3">{ data?.attributes.contact.heading }</Heading>
