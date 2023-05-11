@@ -20,10 +20,10 @@ const AboutMe = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             aboutMeTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: aboutMeRef.current, start: 'top bottom-=320px', end: 'bottom top+=320px', markers: false }});
-            aboutMeTimelineRef.current.to('.about-me .about-me__image', { autoAlpha: 1, duration: 1 }, 0);
-            aboutMeTimelineRef.current.to('.about-me .content__heading', { autoAlpha: 1, duration: 1 }, 0.25);
-            aboutMeTimelineRef.current.to('.about-me .content__text', { autoAlpha: 1, duration: 1 }, 0.5);
-            aboutMeTimelineRef.current.to('.about-me .content__link', { autoAlpha: 1, duration: 1 }, 0.75);
+            aboutMeTimelineRef.current.to('.about-me .about-me__image', { autoAlpha: 1, duration: 1, top: 0 }, 0);
+            aboutMeTimelineRef.current.to('.about-me .content__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0.25);
+            aboutMeTimelineRef.current.to('.about-me .content__text', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
+            aboutMeTimelineRef.current.to('.about-me .content__link', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
         }, aboutMeRef);
         return () => context.revert();
     }, []);
@@ -31,11 +31,11 @@ const AboutMe = ({ data }) => {
     return (
         <Section className="about-me" ref={ aboutMeRef }>
             <div className="about-me__content content">
-                <Heading className="content__heading" level="h2">{ data?.attributes.heading }</Heading>
-                <Text className="content__text">{ data?.attributes.text }</Text>
-                <Link className="content__link" href={ data?.attributes.button.link || '/' }>{ data?.attributes.button.label }</Link>
+                <Heading className="content__heading animation--fade-in" level="h2">{ data?.attributes.heading }</Heading>
+                <Text className="content__text animation--fade-in">{ data?.attributes.text }</Text>
+                <Link className="content__link animation--fade-in" href={ data?.attributes.button.link || '/' }>{ data?.attributes.button.label }</Link>
             </div>
-            <Picture className="about-me__image" src={ data?.attributes.image.data?.attributes.formats.large.url } alt="Image" />
+            <Picture className="about-me__image animation--fade-in" src={ data?.attributes.image.data?.attributes.formats.large.url } alt="Image" />
         </Section>
     );
 

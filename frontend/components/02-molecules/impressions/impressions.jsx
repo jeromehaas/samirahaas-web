@@ -8,7 +8,7 @@ const Impressions = ({ className, items }) => {
 			<div className="impressions__inner">
 				{ items.map((item, index) => {
 					const images = item.group.data.map((image) => ({ src: image.attributes.formats?.large.url }))
-					return ( <Items images={ images } key={ index } />)
+					return ( <Items images={ images } key={ index } priority={ index === 0 ? true : false } />)
 				})}
 			</div>
 		</div>
@@ -16,7 +16,7 @@ const Impressions = ({ className, items }) => {
 
 };
 
-const Items = ({ images }) => {
+const Items = ({ images, priority }) => {
 
 	const getLength = (images) => {
 		let length;
@@ -31,7 +31,7 @@ const Items = ({ images }) => {
 	return (
 		<div className={`impressions__item item item--${ getLength(images) }`}>
 			{ images.map((image, index) => (
-				<Picture className="item__image" src={ image.src } width={2000} height={ 1600 } key={ index } quality={ 100 } alt="Image" />
+				<Picture className="item__image animation--fade-in" src={ image.src } width={2000} height={ 1600 } key={ index } quality={ 100 } alt="Image" priority={ priority } />
 			))}
 		</div>
 	);

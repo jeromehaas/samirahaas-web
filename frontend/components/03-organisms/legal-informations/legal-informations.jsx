@@ -18,8 +18,8 @@ const LegalInformations = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             legalInformationsTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: legalInformationsRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false }});
-            legalInformationsTimelineRef.current.to('.legal-informations .legal-informations__heading', { autoAlpha: 1, duration: 2 }, 0);
-            legalInformationsTimelineRef.current.to('.legal-informations .paragraphs__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0);
+            legalInformationsTimelineRef.current.to('.legal-informations .legal-informations__heading .heading__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
+            legalInformationsTimelineRef.current.to('.legal-informations .paragraphs__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
         }, legalInformationsRef);
         return () => context.revert();
     }, []);
@@ -27,12 +27,12 @@ const LegalInformations = ({ data }) => {
     return (
         <Section className="legal-informations" ref={ legalInformationsRef }>
             <Heading className="legal-informations__heading heading" level="h1">
-                <span className="heading__item" >{ data.attributes.heading.top }</span>
-                <span className="heading__item" >{ data.attributes.heading.sub }</span>
+                <span className="heading__item animation--fade-in" >{ data.attributes.heading.top }</span>
+                <span className="heading__item animation--fade-in" >{ data.attributes.heading.sub }</span>
             </Heading>
             <div className="legal-informations__paragraphs paragraphs">
                 { data.attributes.paragraph.map((item) => (
-                    <div className="paragraphs__item item" key={ item.idss }>
+                    <div className="paragraphs__item item animation--fade-in" key={ item.id }>
                         <Heading className="item__heading" level="h5">{ item.heading }</Heading>
                         <ReactMarkdown className="item__text">{ item.text }</ReactMarkdown>
                     </div>

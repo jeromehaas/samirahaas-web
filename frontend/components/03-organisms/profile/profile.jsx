@@ -18,15 +18,15 @@ const Profile = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             profileTimelineRef.current = gsap.timeline({ ScrollTrigger: { trigger: profileTimelineRef.current, start: 'top bottom-=80px', end: 'bottom top-=80px' }});
-            profileTimelineRef.current.to('.profile .profile__education', { autoAlpha: 1, duration: 1 }, 0.5);
-            profileTimelineRef.current.to('.profile .profile__contact', { autoAlpha: 1, duration: 1 }, 0.75);
+            profileTimelineRef.current.to('.profile .profile__education', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
+            profileTimelineRef.current.to('.profile .profile__contact', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
         }, profileRef);
         return () => context.revert();
     }, []);
 
     return (
         <Section className="profile" ref={ profileRef }>
-            <div className="profile__education education">
+            <div className="profile__education education animation--fade-in">
                 <Heading className="education__heading" level="h3">{ data?.attributes.education.heading }</Heading>
                 <div className="education__table table">
                     <div className="table__body">
@@ -39,7 +39,7 @@ const Profile = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <div className="profile__contact contact">
+            <div className="profile__contact contact animation--fade-in">
                 <Heading className="contact__heading" level="h3">{ data?.attributes.contact.heading }</Heading>
                 <div className="contact__address address">
                     { data?.attributes.contact.address.map((item) => (

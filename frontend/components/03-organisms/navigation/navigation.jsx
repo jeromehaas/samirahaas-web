@@ -70,8 +70,8 @@ const Navigation = () => {
 			const context = gsap.context(() => {
             menuTimelineRef.current = gsap.timeline({ paused: true });
             menuTimelineRef.current.to('.navigation .navigation__menu', { bottom: '0%', duration: 1, ease: 'power4.inOut' }, 0);
-            menuTimelineRef.current.to('.navigation .main-links__item', { opacity: '1', duration: 1, ease: 'power4.inOut', stagger: { amount: 0.5 } }, 0.75);
-            menuTimelineRef.current.to('.navigation .social-links__item', { opacity: '1', duration: 1, ease: 'power4.inOut' }, 1.25);
+            menuTimelineRef.current.to('.navigation .main-links__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.inOut', stagger: { amount: 0.25 } }, 0.75);
+            menuTimelineRef.current.to('.navigation .social-links__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.inOut' }, 1.25);
         }, navigationRef.current);
         return () => context.revert();
     }, []);
@@ -112,14 +112,14 @@ const Navigation = () => {
                 </div>
                 <div className="navigation__menu menu">
                      <div className="menu__main-links main-links">
-                        <Link className="main-links__item heading--h1" href="/corporate" onClick={ () => handleLinkClick('/corporate') }>Corporate</Link>
-                        <Link className="main-links__item heading--h1" href="/storytelling" onClick={ () => handleLinkClick('/storytelling') }>Storytelling</Link>
-                        <Link className="main-links__item heading--h1" href="/architecture" onClick={ () => handleLinkClick('/architecture') }>Architektur</Link>
-                        <Link className="main-links__item heading--h1" href="/weddings" onClick={ () => handleLinkClick('/weddings') }>Hochzeiten</Link>
-                        <Link className="main-links__item heading--h1" href="/design" onClick={ () => handleLinkClick('/design') }>Gestaltung</Link>
-                        <Link className="main-links__item heading--h1" href="/contact" onClick={ () => handleLinkClick('/contact') }>Kontakt</Link>
+                        <Link className="main-links__item heading--h1 animation--fade-in" href="/corporate" onClick={ () => handleLinkClick('/corporate') }>Corporate</Link>
+                        <Link className="main-links__item heading--h1 animation--fade-in" href="/storytelling" onClick={ () => handleLinkClick('/storytelling') }>Storytelling</Link>
+                        <Link className="main-links__item heading--h1 animation--fade-in" href="/architecture" onClick={ () => handleLinkClick('/architecture') }>Architektur</Link>
+                        <Link className="main-links__item heading--h1 animation--fade-in" href="/weddings" onClick={ () => handleLinkClick('/weddings') }>Hochzeiten</Link>
+                        <Link className="main-links__item heading--h1 animation--fade-in" href="/design" onClick={ () => handleLinkClick('/design') }>Gestaltung</Link>
+                        <Link className="main-links__item heading--h1 animation--fade-in" href="/contact" onClick={ () => handleLinkClick('/contact') }>Kontakt</Link>
                      </div>
-                     <div className="menu__social-links social-links">
+                     <div className="menu__social-links social-links animation--fade-in">
                         <Link className="social-links__item" href="/">Instagram</Link>
                      </div>
                 </div>

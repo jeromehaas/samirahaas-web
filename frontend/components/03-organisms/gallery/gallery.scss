@@ -13,16 +13,12 @@
 
 	&__heading {
 		grid-area: heading;
-		visibility: hidden;
-		opacity: 0;
 	}
 
 	&__description {
 		grid-area: description;
-		visibility: hidden;
 		max-width: 880px;
 		justify-self: end;
-		opacity: 0;
 	}
 	
 	&__impressions, .impressions {
@@ -30,10 +26,7 @@
 
 		&__item, .item {
 
-			&__image {
-				visibility: 0;
-				opacity: 0;
-			}
+			&__image {}
 			
 		}
 

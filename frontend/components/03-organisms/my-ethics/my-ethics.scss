@@ -20,14 +20,9 @@
         &__heading {
             margin-top: 64px;
             margin-bottom: 16px;
-            visibility: hidden; 
-            opacity: 0;
         }
 
-        &__text {
-            visibility: hidden; 
-            opacity: 0;
-        }
+        &__text {}
 
     }
 
@@ -35,8 +30,6 @@
         grid-area: image;
         width: 560px;
         height: 360px;
-        visibility: hidden; 
-        opacity: 0;
     }
 
     @media (max-width: 1150px) {

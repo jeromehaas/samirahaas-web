@@ -1,13 +1,10 @@
 .teaser {
 
     &__highlight-slider, .highlight-slider {
-        visibility: hidden; 
 
         &__projects, .projects {
 
             &__box {
-                visibility: hidden;
-                opacity: 0;
                 position: relative;
                 top: 16px;
             }
@@ -16,9 +13,6 @@
 
     }
 
-    &__highlight-preview {
-        visibility: hidden;
-        opacity: 0;
-    }
+    &__highlight-preview {}
     
 }

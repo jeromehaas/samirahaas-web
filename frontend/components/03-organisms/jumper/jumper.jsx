@@ -17,19 +17,19 @@ const Jumper = () => {
     useEffect(() => {
         const context = gsap.context(() => {
             jumperTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: jumperRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false }});
-            jumperTimelineRef.current.to('.jumper .jumper__link', { autoAlpha: 1, duration: 1, stagger: 0.25 });
+            jumperTimelineRef.current.to('.jumper .jumper__link', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 });
         }, jumperRef);
         return () => context.revert();
     }, [])
 
     return (
         <Section className="jumper" ref={ jumperRef }>
-            <Link className="jumper__link" href="/corporate">Corporate</Link>
-            <Link className="jumper__link" href="/storytelling">Storytelling</Link>
-            <Link className="jumper__link" href="/architecture">Architektur</Link>
-            <Link className="jumper__link" href="/weddings">Hochzeiten</Link>
-            <Link className="jumper__link" href="/design">Gestaltung</Link>
-            <Link className="jumper__link" href="/contact">Kontakt</Link>
+            <Link className="jumper__link animation--fade-in" href="/corporate">Corporate</Link>
+            <Link className="jumper__link animation--fade-in" href="/storytelling">Storytelling</Link>
+            <Link className="jumper__link animation--fade-in" href="/architecture">Architektur</Link>
+            <Link className="jumper__link animation--fade-in" href="/weddings">Hochzeiten</Link>
+            <Link className="jumper__link animation--fade-in" href="/design">Gestaltung</Link>
+            <Link className="jumper__link animation--fade-in" href="/contact">Kontakt</Link>
         </Section>
     );
 

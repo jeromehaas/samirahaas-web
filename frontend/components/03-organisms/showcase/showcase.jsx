@@ -18,9 +18,8 @@ const Showcase = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             showcaseTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: showcaseRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false }});
-            showcaseTimelineRef.current.to('.showcase .heading__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0);
-            showcaseTimelineRef.current.to('.showcase .picture-collection__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0.5);
-    
+            showcaseTimelineRef.current.to('.showcase .heading__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
+            showcaseTimelineRef.current.to('.showcase .picture-collection__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0.5);
         }, showcaseRef);
         return () => context.revert();
     });
@@ -37,8 +36,8 @@ const Showcase = ({ data }) => {
   return (
         <Section className="showcase" ref={ showcaseRef }>
             <Heading className="showcase__heading heading" level="h1">
-                <span className="heading__item" >{ data?.attributes.heading.top }</span>
-                <span className="heading__item" >{ data?.attributes.heading.sub }</span>
+                <span className="heading__item animation--fade-in" >{ data?.attributes.heading.top }</span>
+                <span className="heading__item animation--fade-in" >{ data?.attributes.heading.sub }</span>
             </Heading>
             <PictureCollection className="showcase__picture-collection" items={ items }  />
         </Section>

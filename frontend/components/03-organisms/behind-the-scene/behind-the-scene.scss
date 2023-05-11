@@ -8,8 +8,7 @@
         width: 1400px;
 
         &__item {
-            visibility: hidden;
-            
+								 
             &:nth-child(1) { grid-row-start: 1; }
             &:nth-child(2) { grid-row-start: 4; }
             &:nth-child(3) { grid-row-start: 9; }

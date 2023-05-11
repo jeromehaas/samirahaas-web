@@ -19,21 +19,21 @@ const Publication = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             publicationTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: publicationRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false }});
-            publicationTimelineRef.current.to('.publication .publication__heading', { autoAlpha: 1, duration: 2 }, 0);
-            publicationTimelineRef.current.to('.publication .contributors__item', { autoAlpha: 1, duration: 2, stagger: 0.25 }, 0.25);
+            publicationTimelineRef.current.to('.publication .publication__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0);
+            publicationTimelineRef.current.to('.publication .contributors__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0.25);
         }, publicationRef);
         return () => context.revert();
     }, []);
 
     return (
         <Section className="publication" ref={ publicationRef }>
-            <Heading className="publication__heading heading" level="h1">
+            <Heading className="publication__heading heading animation--fade-in" level="h1">
                 <span className="heading__item">{ data.attributes.heading.top }</span>
                 <span className="heading__item">{ data.attributes.heading.sub }</span>
             </Heading>
             <div className="publication__contributors contributors">
                 { data.attributes.contributors.map((item) => (
-                    <div className="contributors__item item" key={ item.id }>
+                    <div className="contributors__item item animation--fade-in" key={ item.id }>
                     <Heading className="item__heading" level="h5">{ item.heading }</Heading>
                     { item.address.map((line) => (
                         line.link ? (

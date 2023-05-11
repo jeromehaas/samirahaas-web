@@ -9,8 +9,6 @@ import { gsap } from 'gsap';
 
 const Hero = ({ data }) => {
 
-	console.log('x', data);
-
     // CREATE REFS
     const heroRef = useRef();
     const heroTimelineRef = useRef();
@@ -19,18 +17,18 @@ const Hero = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             heroTimelineRef.current = gsap.timeline();
-            heroTimelineRef.current.to('.hero__heading', { autoAlpha: 1, duration: 2 }, 0.5 )
-            heroTimelineRef.current.to('.hero__text', { autoAlpha: 1, duration: 2 }, 0.75 )
-            heroTimelineRef.current.to('.hero__scroller', { autoAlpha: 1, duration: 3 }, 1 )
+            heroTimelineRef.current.to('.hero__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0.5 )
+            heroTimelineRef.current.to('.hero__text', { autoAlpha: 1, duration: 1, top: 0 }, 0.75 )
+            heroTimelineRef.current.to('.hero__scroller', { autoAlpha: 1, duration: 1, top: 0 }, 1 )
         }, heroRef);
         return () => context.revert();
     }, []);
 
     return (
         <Section className="hero" ref={ heroRef }>
-            <Heading className="hero__heading">{ data.attributes.heading }</Heading>
-            <Text className="hero__text">{ data.attributes.text } </Text>
-            <Scroller className="hero__scroller" />
+            <Heading className="hero__heading animation--fade-in">{ data.attributes.heading }</Heading>
+            <Text className="hero__text animation--fade-in">{ data.attributes.text } </Text>
+            <Scroller className="hero__scroller animation--fade-in" />
         </Section>
     );
 

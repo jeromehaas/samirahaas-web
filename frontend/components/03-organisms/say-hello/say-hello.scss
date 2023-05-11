@@ -19,12 +19,10 @@
         &__heading, .heading {
             margin-top: 64px;
             margin-bottom: 120px;
-            visibility: hidden;
         }
 
         &__text {
 						margin-top: auto;
-            visibility: hidden;
         }
 
     }
@@ -33,7 +31,6 @@
         grid-area: image;
         width: 560px;
         height: 100%;
-        visibility: hidden;
 				margin-left: auto;
     }
 

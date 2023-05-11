@@ -19,20 +19,20 @@ const MyEthics = ({ data }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             myEthicsTimelineRef.current= gsap.timeline({ scrollTrigger: { trigger: myEthicsRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false }});
-            myEthicsTimelineRef.current.to('.my-ethics .my-ethics__image', { autoAlpha: 1, duration: 2 }, 0);
-            myEthicsTimelineRef.current.to('.my-ethics .my-ethics__content .content__heading', { autoAlpha: 1, duration: 2 }, 0.25);
-            myEthicsTimelineRef.current.to('.my-ethics .my-ethics__content .content__text', { autoAlpha: 1, duration: 3, stagger: 0.125 }, 0.5);
+            myEthicsTimelineRef.current.to('.my-ethics .my-ethics__image', { autoAlpha: 1, duration: 1, top: 0 }, 0);
+            myEthicsTimelineRef.current.to('.my-ethics .my-ethics__content .content__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0.25);
+            myEthicsTimelineRef.current.to('.my-ethics .my-ethics__content .content__text', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0.5);
         }, myEthicsRef);
         return () => context.revert();
     }, []);
 
     return (
         <Section className="my-ethics" ref={ myEthicsRef }>
-            <Picture className="my-ethics__image" src={ data?.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />
+            <Picture className="my-ethics__image animation--fade-in" src={ data?.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />
             <div className="my-ethics__content content">
-                <Heading className="content__heading" level="h2" lookLike="h3">{ data?.attributes.heading }</Heading>
+                <Heading className="content__heading animation--fade-in" level="h2" lookLike="h3">{ data?.attributes.heading }</Heading>
                 { data?.attributes.values.map((item) => (
-                    <Text className="content__text text--large" key={ item.id }>{ item.value }</Text>
+                    <Text className="content__text text--large animation--fade-in" key={ item.id }>{ item.value }</Text>
                 ))}
             </div>
         </Section>
