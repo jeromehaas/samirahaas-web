@@ -10,7 +10,7 @@ const Start = ({ data }) => {
 
   return (
       <Page meta={{ title: 'Fotografie & Gestaltung', description: 'Lorem ipsum' }}>
-        <Hero />
+        <Hero data={ data.hero } />
         <Teaser data={ data.teaser } />
         <AboutMe data={ data.aboutMe } />
         <MyEthics data={ data.myEthics } />
@@ -21,6 +21,7 @@ const Start = ({ data }) => {
 
 export async function getServerSideProps() {
 
+	const hero = await client.query({ query: queries.GET_HERO() });
 	const teaser = await client.query({ query: queries.GET_TEASER() });
   const aboutMe = await client.query({ query: queries.GET_ABOUT_ME() });
   const myEthics = await client.query({ query: queries.GET_MY_ETHICS() });
@@ -28,6 +29,7 @@ export async function getServerSideProps() {
 	return {
 		props: {
 			data: {
+				hero: hero.data.hero.data,
 				teaser: teaser.data.teaser.data,
         aboutMe: aboutMe.data.aboutMe.data,
         myEthics: myEthics.data.myEthic.data,

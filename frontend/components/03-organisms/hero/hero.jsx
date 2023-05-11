@@ -7,7 +7,9 @@ import Scroller from 'components/01-atoms/scroller/scroller';
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-const Hero = () => {
+const Hero = ({ data }) => {
+
+	console.log('x', data);
 
     // CREATE REFS
     const heroRef = useRef();
@@ -26,8 +28,8 @@ const Hero = () => {
 
     return (
         <Section className="hero" ref={ heroRef }>
-            <Heading className="hero__heading">Fotografie & Gestaltung</Heading>
-            <Text className="hero__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus facere repellat voluptatem natus doloremque a tenetur, numquam eligendi nulla velit inventore necessitatibus molestias dicta officia, eos autem corrupti asperiores possimus.</Text>
+            <Heading className="hero__heading">{ data.attributes.heading }</Heading>
+            <Text className="hero__text">{ data.attributes.text } </Text>
             <Scroller className="hero__scroller" />
         </Section>
     );
