@@ -17,6 +17,7 @@ export const GET_SAY_HELLO = () => {
                   id
                   attributes {
                     formats
+										url
                   }
                 }
               }

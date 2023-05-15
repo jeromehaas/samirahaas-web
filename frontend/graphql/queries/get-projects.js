@@ -12,6 +12,7 @@ export const GET_ALL_PROJECTS = () => {
 							data {
 								attributes {
 									formats
+									url
 								}
 							}
 						}

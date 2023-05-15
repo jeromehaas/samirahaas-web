@@ -36,7 +36,7 @@ const SayHello = ({ data }) => {
                 </Heading>
                 <Text className="content__text animation--fade-in">{ data?.attributes.text }</Text>
             </div>
-            <Picture className="say-hello__image animation--fade-in" src={ data?.attributes.image.data?.attributes.formats.large.url } alt="Samira Haas" />
+            <Picture className="say-hello__image animation--fade-in" src={ data?.attributes.image.data?.attributes.url } alt="Samira Haas" />
             
         </Section>
     );

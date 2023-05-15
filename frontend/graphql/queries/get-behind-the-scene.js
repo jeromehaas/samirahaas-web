@@ -12,6 +12,7 @@ export const GET_BEHIND_THE_SCENE = () => {
 					id
 					attributes {
 					  formats
+						url
 					}
 				  }
 				}

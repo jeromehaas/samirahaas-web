@@ -23,6 +23,7 @@ export const GET_CORPORATE = () => {
 						id
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}
@@ -33,6 +34,7 @@ export const GET_CORPORATE = () => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -41,6 +43,7 @@ export const GET_CORPORATE = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}

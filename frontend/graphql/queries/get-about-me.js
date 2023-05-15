@@ -12,6 +12,7 @@ export const GET_ABOUT_ME = () => {
 				data {
 				  attributes {
 					formats
+					url
 				  }
 				}
 			  }

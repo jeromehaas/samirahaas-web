@@ -21,6 +21,7 @@ export const GET_ARCHITECTURE = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}
@@ -31,6 +32,7 @@ export const GET_ARCHITECTURE = () => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -39,6 +41,7 @@ export const GET_ARCHITECTURE = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}

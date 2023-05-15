@@ -35,7 +35,7 @@ const AboutMe = ({ data }) => {
                 <Text className="content__text animation--fade-in">{ data?.attributes.text }</Text>
                 <Link className="content__link animation--fade-in" href={ data?.attributes.button.link || '/' }>{ data?.attributes.button.label }</Link>
             </div>
-            <Picture className="about-me__image animation--fade-in" src={ data?.attributes.image.data?.attributes.formats.large.url } alt="Image" />
+            <Picture className="about-me__image animation--fade-in" src={ data?.attributes.image.data?.attributes.url } alt="Image" />
         </Section>
     );
 

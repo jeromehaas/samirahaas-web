@@ -22,6 +22,7 @@ export const GET_DESIGN = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}
@@ -32,6 +33,7 @@ export const GET_DESIGN = () => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -40,6 +42,7 @@ export const GET_DESIGN = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}

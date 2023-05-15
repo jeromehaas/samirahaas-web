@@ -28,7 +28,7 @@ const MyEthics = ({ data }) => {
 
     return (
         <Section className="my-ethics" ref={ myEthicsRef }>
-            <Picture className="my-ethics__image animation--fade-in" src={ data?.attributes.image.data?.attributes.formats.large?.url } alt="Leave" />
+            <Picture className="my-ethics__image animation--fade-in" src={ data?.attributes.image.data?.attributes.url } alt="Leave" />
             <div className="my-ethics__content content">
                 <Heading className="content__heading animation--fade-in" level="h2" lookLike="h3">{ data?.attributes.heading }</Heading>
                 { data?.attributes.values.map((item) => (

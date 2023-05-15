@@ -19,6 +19,7 @@ export const GET_TEASER = () => {
 								id
 								attributes {
 									formats
+									url
 								}
 							}
 						}
@@ -29,6 +30,7 @@ export const GET_TEASER = () => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -37,6 +39,7 @@ export const GET_TEASER = () => {
 							data {
 								attributes {
 								formats
+								url
 							} 
 						}
 						}

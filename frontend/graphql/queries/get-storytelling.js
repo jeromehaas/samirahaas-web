@@ -22,6 +22,7 @@ export const GET_STORYTELLING = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}
@@ -32,6 +33,7 @@ export const GET_STORYTELLING = () => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -40,6 +42,7 @@ export const GET_STORYTELLING = () => {
 					  data {
 						attributes {
 						  formats
+							url
 						}
 					  }
 					}

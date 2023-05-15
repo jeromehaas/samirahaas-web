@@ -15,6 +15,7 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 								id
 								attributes {
 									formats
+									url
 								}
 							}
 						}
@@ -25,6 +26,7 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -33,6 +35,7 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 							data {
 								attributes {
 								formats
+								url
 							} 
 						}
 						}

@@ -15,6 +15,7 @@ export const GET_PROJECTS_BY_ID = (id) => {
 								id
 								attributes {
 									formats
+									url
 								}
 							}
 						}
@@ -25,6 +26,7 @@ export const GET_PROJECTS_BY_ID = (id) => {
 									id
 									attributes {
 										formats
+										url
 									}
 								}
 							}
@@ -33,6 +35,7 @@ export const GET_PROJECTS_BY_ID = (id) => {
 							data {
 								attributes {
 								formats
+									url
 							} 
 						}
 						}
