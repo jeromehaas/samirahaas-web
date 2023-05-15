@@ -8,6 +8,8 @@ import { useRef, useEffect } from 'react';
 
 const MyEthics = ({ data }) => {
 
+	console.log(data);
+
     // REGISTER PLUGIN
     gsap.registerPlugin(ScrollTrigger);
 
