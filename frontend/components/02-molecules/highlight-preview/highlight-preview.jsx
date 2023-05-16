@@ -45,7 +45,7 @@ const HighlightPreview = ({ className, items }) => {
         <div className={`${ className } highlight-preview`} ref={ previewRef }>
             <div className="highlight-preview__preview preview">
                 { items?.map((item) => (
-                    <Picture className="preview__image" src={ item.attributes.teaser.data?.attributes.url } alt="Image" key={ item.id } width={ 2000 } height={ 1600 } quality={ 100 } />
+                    <Picture className="preview__image" src={ item.attributes.teaser.data?.attributes.url } alt="Image" key={ item.id } width={ 2500 } height={ 2500 } quality={ 100 } priority />
                 ))}
             </div>
             <div className="highlight-preview__progress progress">

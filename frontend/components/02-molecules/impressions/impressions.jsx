@@ -30,7 +30,7 @@ const Items = ({ images, priority }) => {
 	return (
 		<div className={`impressions__item item item--${ getLength(images) }`}>
 			{ images.map((image, index) => (
-				 <Picture className="item__image animation--fade-in" src={ image.src } width={2000} height={ 1600 } key={ index } quality={ 100 } alt="Image" priority={ priority } />
+				 <Picture className="item__image animation--fade-in" src={ image.src } width={ 2500 } height={ 2500 } key={ index } quality={ 100 } alt="Image" priority={ index === 0 ? true : false } />
 			))}
 		</div>
 	);
