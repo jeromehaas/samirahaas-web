@@ -26,7 +26,7 @@ const BehindTheScenes = ({ data }) => {
     const items = data && data.attributes.images.data.map((item) => {
         return {
             id: item.id,
-            preview: item.attributes.url,
+            preview: item.attributes,
         }
     });
 
