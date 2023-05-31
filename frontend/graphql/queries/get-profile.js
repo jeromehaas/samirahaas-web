@@ -28,6 +28,5 @@ export const GET_PROFILE = () => {
 		  }
 		}
 	  }
-	`
+	`;
 };
-

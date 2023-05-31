@@ -25,6 +25,5 @@ export const GET_MY_ETHICS = () => {
 		}
 	  }
 	}
-	`
+	`;
 };
-

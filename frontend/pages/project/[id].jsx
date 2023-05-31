@@ -1,7 +1,7 @@
-import Page from "components/04-layouts/page/page";
-import queries from "graphql/queries";
-import client from "graphql/client";
-import Gallery from "components/03-organisms/gallery/gallery";
+import Page from 'components/04-layouts/page/page';
+import queries from 'graphql/queries';
+import client from 'graphql/client';
+import Gallery from 'components/03-organisms/gallery/gallery';
 
 const Project = ({ data }) => {
 
@@ -16,12 +16,12 @@ const Project = ({ data }) => {
 export async function getServerSideProps(context) {
 
 	const { id } = context.query;
-	const project = await client.query({ query: queries.GET_PROJECTS_BY_ID(id) })
+	const project = await client.query({ query: queries.GET_PROJECTS_BY_ID(id) });
 
 	return {
 		props: {
 			data: {
-				project: project.data.project.data
+				project: project.data.project.data,
 			},
 		},
 	};

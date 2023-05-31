@@ -1,18 +1,16 @@
 .teaser {
 
-    &__highlight-slider, .highlight-slider {
+	&__highlight-slider, .highlight-slider {
 
-        &__projects, .projects {
+		&__projects, .projects {
 
-            &__box {
-                position: relative;
-                top: 16px;
-            }
+			&__box {
+				position: relative;
+				top: 16px;
+			}
 
-        }
+		}
 
-    }
+	}
 
-    &__highlight-preview {}
-    
 }

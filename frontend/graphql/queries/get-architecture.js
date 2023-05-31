@@ -53,6 +53,5 @@ export const GET_ARCHITECTURE = () => {
 		  }
 		}
 	  }
-	`
+	`;
 };
-

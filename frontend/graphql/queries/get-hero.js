@@ -12,6 +12,5 @@ export const GET_HERO = () => {
 		    }
 		  }
 		}
-	`
+	`;
 };
-

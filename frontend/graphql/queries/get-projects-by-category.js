@@ -43,6 +43,5 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 				}
 			}
 		}
-	`
+	`;
 };
-

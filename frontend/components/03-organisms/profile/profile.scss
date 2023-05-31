@@ -1,88 +1,88 @@
 .profile {
-    background-color: $beige-80;
+	background-color: $beige-80;
 
-    &__inner {
-        padding: 80px;
-        display: grid;
-        grid-template-areas: 
-            "education contact";
-        grid-template-columns: auto auto;
-        grid-gap: 48px;
-    }
+	&__inner {
+		padding: 80px;
+		display: grid;
+		grid-template-areas: 
+      "education contact";
+		grid-template-columns: auto auto;
+		grid-gap: 48px;
+	}
     
-    &__education, .education {
-        grid-area: education;
-        max-width: 520px;
+	&__education, .education {
+		grid-area: education;
+		max-width: 520px;
 
-        &__heading {
-            margin-bottom: 16px;
-        }
+		&__heading {
+			margin-bottom: 16px;
+		}
 
-        &__table, .table {
+		&__table, .table {
 
-					&__row {
-						display: grid;
-						grid-template-columns: 120px auto;
-						grid-template-rows: auto;
-						grid-gap: 24px;
+			&__row {
+				display: grid;
+				grid-template-columns: 120px auto;
+				grid-template-rows: auto;
+				grid-gap: 24px;
+			}
+
+			&__cell {
+				vertical-align: top;
+
+				&:nth-child(1) {
+					white-space: nowrap;
+				}
+
+			}
+
+		}
+
+	}
+
+	&__contact, .contact {
+		grid-area: contact;
+
+		&__heading {
+			margin-bottom: 16px;
+		}
+        
+	}
+
+	@media (max-width: 850px) {
+
+		&__inner {
+			padding: 48px 0;
+			display: grid;
+			grid-template-areas: 
+				"education" 
+				"contact";
+			grid-template-columns: auto;
+			grid-gap: 32px;
+		}
+
+		&__education, .education {
+			max-width: unset;
+
+			&__table, .table {
+
+				&__row {
+					display: grid;
+					grid-template-columns: auto;
+					grid-template-rows: auto auto;
+					grid-gap: unset;
+					margin-bottom: 24px;
+
+					&:last-child {
+						margin-bottom: 0;
 					}
 
-            &__cell {
-                vertical-align: top;
+				}
 
-                &:nth-child(1) {
-                    white-space: nowrap;
-                }
+			}
 
-            }
-
-        }
-
-    }
-
-    &__contact, .contact {
-        grid-area: contact;
-
-        &__heading {
-            margin-bottom: 16px;
-        }
+		}
         
-    }
-
-   @media (max-width: 850px) {
-
-        &__inner {
-            padding: 48px 0;
-            display: grid;
-            grid-template-areas: 
-							"education" 
-							"contact";
-            grid-template-columns: auto;
-            grid-gap: 32px;
-        }
-
-        &__education, .education {
-            max-width: unset;
-
-            &__table, .table {
-
-							&__row {
-								display: grid;
-								grid-template-columns: auto;
-								grid-template-rows: auto auto;
-								grid-gap: unset;
-								margin-bottom: 24px;
-
-								&:last-child {
-									margin-bottom: 0;
-								}
-
-							}
-
-            }
-
-        }
-        
-   } 
+	} 
 
 }

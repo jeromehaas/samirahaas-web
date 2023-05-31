@@ -1,27 +1,27 @@
 .publication {
 
-    &__heading {
-        margin-bottom: 64px;
-    }
+	&__heading {
+		margin-bottom: 64px;
+	}
 
-    &__contributors, .contributors {
+	&__contributors, .contributors {
 
-        &__item, .item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-bottom: 32px;
+		&__item, .item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 32px;
             
-            &__heading {
-                margin-bottom: 8px;
-            }
+			&__heading {
+				margin-bottom: 8px;
+			}
 
-            &__link {
-                display: block;
-            }
+			&__link {
+				display: block;
+			}
 
-        }
+		}
 
-    }
+	}
 
 }
