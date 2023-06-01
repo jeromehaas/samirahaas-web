@@ -4,11 +4,12 @@
 	&__inner {
 		display: grid;
 		grid-template-areas: 
-			"heading description"
-			"impressions impressions"
-			"navigation navigation";
+			"heading" 
+			"description"
+			"impressions"
+			"navigation";
 		grid-gap: 32px;
-		grid-template-columns: 400px 1fr;
+		grid-template-columns: 1fr;
 	}
 
 	&__heading {
@@ -17,8 +18,7 @@
 
 	&__description {
 		grid-area: description;
-		max-width: 880px;
-		justify-self: end;
+		max-width: 720px;
 	}
 	
 	&__impressions, .impressions {
