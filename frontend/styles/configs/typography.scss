@@ -125,6 +125,59 @@
 
 }
 
+.error {
+
+	&__content, .content {
+
+		&__heading {
+			font-size: 200px;
+		}
+
+	}
+	
+	&__link, .link {
+
+		&__text {
+			text-transform: uppercase;
+		}
+			
+	}
+	
+}
+
+
+@media (max-width: 850px), (max-height: 800px) {
+
+	.error {
+
+		&__content, .content {
+
+			&__heading {
+				font-size: 120px;
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width: 500px) {
+
+	.error {
+		
+		&__content, .content {
+
+			&__heading  {
+				font-size: 80px;
+			}
+
+		}
+	
+	}
+
+}
+
 @media (max-width: 1050px) {
 
 	.heading {
@@ -161,6 +214,7 @@
 		&__item {
 			line-height: 0.9;
 		}
+
 
 	}
 
