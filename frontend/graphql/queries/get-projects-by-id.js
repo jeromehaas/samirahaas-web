@@ -27,6 +27,8 @@ export const GET_PROJECTS_BY_ID = (id) => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}

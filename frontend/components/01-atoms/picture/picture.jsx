@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-const Picture = ({ className, src, alt, quality, priority }) => {
+const Picture = ({ className, src, alt, quality, priority, width, height }) => {
 
 	return (
 		<div className={ `${ className } picture` }>
 			{ src ? (
-				<Image className="picture__source" src={ src } alt={ alt } width={ 2500 } height={ 2500 } quality={ quality || 100 } priority={ priority } />
+				<Image className="picture__source" src={ src } alt={ alt } width={ width || 2500 } height={ height || 1600 } quality={ quality || 100 } priority={ priority } />
 			) : (
 				<div className="picture__alternative" />
 			)}
