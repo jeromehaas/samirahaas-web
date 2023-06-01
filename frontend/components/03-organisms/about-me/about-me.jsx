@@ -2,7 +2,7 @@ import Section from 'components/04-layouts/section/section';
 import Heading from 'components/01-atoms/heading/heading';
 import Text from 'components/01-atoms/text/text';
 import Picture from 'components/01-atoms/picture/picture';
-import Link from 'components/01-atoms/link/link';
+import Anchor from 'components/01-atoms/anchor/acnhor';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef, useEffect } from 'react';
@@ -23,7 +23,7 @@ const AboutMe = ({ data }) => {
 			aboutMeTimelineRef.current.to('.about-me .about-me__image', { autoAlpha: 1, duration: 1, top: 0 }, 0);
 			aboutMeTimelineRef.current.to('.about-me .content__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0.25);
 			aboutMeTimelineRef.current.to('.about-me .content__text', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
-			aboutMeTimelineRef.current.to('.about-me .content__link', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
+			aboutMeTimelineRef.current.to('.about-me .content__anchor', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
 		}, aboutMeRef);
 		return () => { return context.revert(); };
 	}, []);
@@ -33,7 +33,7 @@ const AboutMe = ({ data }) => {
 			<div className="about-me__content content">
 				<Heading className="content__heading animation--fade-in" level="h2">{ data?.attributes.heading }</Heading>
 				<Text className="content__text animation--fade-in">{ data?.attributes.text }</Text>
-				<Link className="content__link animation--fade-in" href={ data?.attributes.button.link || '/' }>{ data?.attributes.button.label }</Link>
+				<Anchor className="content__anchor animation--fade-in" href={ data?.attributes.button.link || '/' }>{ data?.attributes.button.label }</Anchor>
 			</div>
 			<Picture className="about-me__image animation--fade-in" src={ data?.attributes.image.data?.attributes.url } alt="Image" />
 		</Section>

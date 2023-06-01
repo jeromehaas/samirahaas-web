@@ -51,6 +51,7 @@
 			"arrow-body-style": ["error", "always"],
 			"template-curly-spacing": "off",
 			"quote-props": "off",
-			"import/prefer-default-export": "off"
+			"import/prefer-default-export": "off",
+			"react/no-unescaped-entities": "off"
   }
 }

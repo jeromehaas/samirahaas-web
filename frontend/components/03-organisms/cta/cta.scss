@@ -1,0 +1,108 @@
+.cta {
+	border-top: 1px solid $grey-40;
+	margin-bottom: 0 !important;
+
+	&__inner {
+		padding: 56px 0 !important;
+	}
+
+	&__link, .link {
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		
+		&__text {
+			display: inline-block;
+		}
+		
+		&__icon {
+			margin-top: 8px;
+			width: 56px;
+			margin-left: 32px;
+			transition: 0.2s ease;
+		}
+
+		&:hover {
+
+			& .link__icon {
+				margin-left: 48px;
+			}
+
+		}
+
+	}
+
+	@media (max-width: 1050px) {
+
+		&__link, .link {
+
+			&__icon {
+				width: 32px;
+				margin-left: 24px;
+			}
+
+			&:hover {
+
+				& .link__icon {
+					margin-left: 32px
+				}
+
+			}
+
+		}
+
+	}
+
+	@media (max-width: 850px) {
+
+		&__link, .link {
+		
+			&__icon {
+				width: 24px;
+				margin-top: 4px;
+				margin-left: 16px;
+			}
+
+			&:hover {
+
+				& .link__icon {
+					margin-left: 24px;
+				}
+			}
+
+		}
+
+	}
+
+	@media (max-width: 500px) {
+
+		&__inner {
+			padding: 32px 0 !important;
+		}
+		
+		&__link, .link {
+			align-items: flex-end;
+
+			&__text {
+				max-width: 186px;
+			}
+
+			&__icon {
+				margin-bottom: 0.5em;
+				margin-left: 8px;
+			}
+
+			&:hover {
+
+				& .link__icon {
+					margin-left: 16px;
+				}
+
+			}
+
+		}
+
+	}
+
+}
