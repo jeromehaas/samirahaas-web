@@ -19,7 +19,7 @@ const Impressions = ({ className, items }) => {
 						<div className={ `impressions__item item item--${ getLength(item.group.data) }` } key={ item.id }>
 							{ item.group.data.map((image) => {
 								return (
-									<Picture className="item__image animation" src={ image.attributes.url } key={ Math.random() } quality={ 100 } alt="Image" width={ image.attributes.width } height={ image.attributes.height } />
+									<Picture className="item__image animation--fade-in" src={ image.attributes.url } key={ Math.random() } quality={ 100 } alt="Image" width={ image.attributes.width } height={ image.attributes.height } />
 								);
 							})}
 						</div>
