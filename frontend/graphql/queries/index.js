@@ -18,7 +18,7 @@ import { GET_HERO } from './get-hero';
 
 const queries = {
 	GET_ALL_PROJECTS,
-	GET_PROJECTS_BY_CATEGORY,
+	// GET_PROJECTS_BY_CATEGORY,
 	GET_PROJECTS_BY_ID,
 	GET_TEASER,
 	GET_ABOUT_ME,

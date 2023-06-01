@@ -21,7 +21,6 @@ const HighlightSlider = ({ className, items }) => {
 		const context = gsap.context(() => {
 			if (!items || items.lenght === 0) return;
 			const status = gsap.utils.toArray('.box .progress__status');
-			const boxes = gsap.utils.toArray('.box');
 			const images = gsap.utils.toArray('.preview .preview__image');
 			const labels = gsap.utils.toArray('.box .box__label');
 			const titles = gsap.utils.toArray('.box .box__title');
@@ -30,8 +29,8 @@ const HighlightSlider = ({ className, items }) => {
 			timeline.current.to(labels, { opacity: 0.2, duration: 1, ease: 'inOut' }, 0);
 			timeline.current.to(titles, { opacity: 0.2, duration: 1, ease: 'inOut' }, 0);
 			timeline.current.to(images, { opacity: 0, duration: 1, ease: 'inOut' }, 0);
-			timeline.current.to(boxes, { zIndex: 0, duration: 0, ease: 'inOut' }, 0);
-			timeline.current.to(boxes[counter], { zIndex: 5, duration: 0, ease: 'inOut' }, 0);
+			timeline.current.to(images, { zIndex: 0, duration: 0, ease: 'inOut' }, 0);
+			timeline.current.to(images[counter], { zIndex: 5, duration: 0, ease: 'inOut' }, 0);
 			timeline.current.to(labels[counter], { opacity: 1, duration: 2, ease: 'inOut' }, 0.5);
 			timeline.current.to(titles[counter], { opacity: 1, duration: 2, ease: 'inOut' }, 0.5);
 			timeline.current.to(images[counter], { opacity: 1, duration: 2, ease: 'inOut' }, 0.5);
@@ -44,13 +43,14 @@ const HighlightSlider = ({ className, items }) => {
 		}, sliderRef);
 		return () => { return context.revert(); };
 	}, [counter]);
-
 	return (
 		<div className={ `${ className } highlight-slider` } ref={ sliderRef }>
 			<div className="highlight-slider__preview preview">
 				{ items?.map((item) => {
 					return (
-						<Picture className="preview__image" src={ item.attributes.teaser.data?.attributes.url } alt="Image" key={ item.id } priority />
+						<Link className="preview__image image" href={ `/project/${ item.id }` } key={ item.id }>
+							<Picture className="image__source" src={ item.attributes.teaser.data?.attributes.url } alt="Image" priority />
+						</Link>
 					);
 				})}
 			</div>

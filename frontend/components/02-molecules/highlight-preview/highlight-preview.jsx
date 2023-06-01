@@ -27,8 +27,10 @@ const HighlightPreview = ({ className, items }) => {
 			timeline.current.to(status, { right: '100%', left: '0%', duration: 0 }, 0);
 			timeline.current.to(images, { opacity: 0, duration: 1, ease: 'inOut' }, 0);
 			timeline.current.to(boxes, { zIndex: 0, duration: 0, ease: 'inOut' }, 0);
+			timeline.current.to(images, { zIndex: 0, duration: 0, ease: 'inOut' }, 0);
 			timeline.current.to(boxes, { opacity: 0, duration: 1, ease: 'inOut' }, 0);
 			timeline.current.to(boxes[counter], { zIndex: 5, duration: 0, ease: 'inOut' }, 0);
+			timeline.current.to(images[counter], { zIndex: 5, duration: 0, ease: 'inOut' }, 0);
 			timeline.current.to(boxes[counter], { opacity: 1, duration: 1, ease: 'inOut' }, 0.5);
 			timeline.current.to(images[counter], { opacity: 1, duration: 1, ease: 'inOut' }, 0.5);
 			timeline.current.to(status, { opacity: 1, duration: 0, ease: 'none ' }, 0.5);
@@ -46,7 +48,9 @@ const HighlightPreview = ({ className, items }) => {
 			<div className="highlight-preview__preview preview">
 				{ items?.map((item) => {
 					return (
-						<Picture className="preview__image" src={ item.attributes.teaser.data?.attributes.url } alt="Image" key={ item.id } quality={ 100 } priority />
+						<Link className="preview__image image" href={ `/project/${ item.id}` } key={ item.id }>
+							<Picture className="image__source" src={ item.attributes.teaser.data?.attributes.url } alt="Image" quality={ 100 } priority />
+						</Link>
 					);
 				})}
 			</div>

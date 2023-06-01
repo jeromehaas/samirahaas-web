@@ -5,7 +5,7 @@
 		height: 720px;
 		margin-bottom: 32px;
 
-		&__image {
+		&__image, .image {
 			position: absolute; 
 			top: 0;
 			right: 0;
@@ -15,7 +15,13 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+
+			&__source {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 
 	}
