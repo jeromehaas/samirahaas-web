@@ -1,12 +1,12 @@
 .my-ethics {
     
 	&__inner {
-		padding: 80px;
+		padding: 120px 160px;
 		display: grid;
 		grid-template-areas: 
       "image content";
 		grid-column-gap: 80px;
-		grid-template-columns: 560px 1fr;
+		grid-template-columns: 1fr 600px;
 	}
 
 	&__content, .content {
@@ -15,10 +15,13 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-		margin: 0 auto;
+		width: 100%;
+		max-width: 600px;
+		justify-self: end;
+		align-self: center;
+
         
 		&__heading {
-			margin-top: 64px;
 			margin-bottom: 16px;
 		}
 
@@ -26,14 +29,32 @@
 
 	&__image {
 		grid-area: image;
-		width: 560px;
-		height: 360px;
+		width: 800px;
+		height: 540px;
+	}
+
+	@media (max-width: 1800px) {
+		
+		&__inner {
+			padding: 80px;
+			grid-template-columns: 1fr 440px;
+		}
+
+		&__image {
+			width: 640px;
+			height: 400px;
+		}
+
+		&__content, .content {
+			max-width: 440px;
+		}
+		
 	}
 
 	@media (max-width: 1150px) {
 
 		&__inner {
-			grid-template-columns: 400px 1fr;
+			grid-template-columns: 480px 1fr;
 		}
 
 		&__content, .content {
@@ -45,8 +66,16 @@
 		}
 
 		&__image {
-			width: 400px;
+			width: 480px;
 			height: 320px;
+		}
+
+	}
+
+	@media (max-width: 950px) {
+
+		&__inner {
+			padding: 0;
 		}
 
 	}
@@ -54,19 +83,11 @@
 	@media (max-width: 900px) {
 
 		&__inner {
-			grid-template-columns: 320px 1fr;
-		}
-
-		&__content, .content {
-            
-			&__heading {
-				margin-top: 40px;
-			}
-            
+			grid-template-columns: 400px 1fr;
 		}
 
 		&__image {
-			width: 320px;
+			width: 400px;
 			height: 320px;
 		}
 
@@ -85,7 +106,9 @@
 		}
 
 		&__content, .content {
-			margin: 0 0 0 80px;
+			padding-left: 80px;
+			max-width: unset;
+			width: 100%;
 
 			&__heading {
 				margin-top: 48px;
@@ -101,10 +124,10 @@
 
 	}
 
-	@media (max-width: 375px) {
+	@media (max-width: 350px) {
 
 		&__content, .content {
-			margin: 0;
+			padding: 0;
 		}
 
 	}

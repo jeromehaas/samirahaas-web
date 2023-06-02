@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_general_showcase_items",
+  "info": {
+    "displayName": "Showcase Item"
+  },
+  "options": {},
+  "attributes": {
+    "format": {
+      "type": "enumeration",
+      "enum": [
+        "Annie",
+        "Berenice",
+        "Cindy",
+        "Dorothea",
+        "Eve",
+        "Francesca",
+        "Gertrude",
+        "Hannah"
+      ],
+      "required": true,
+      "default": "Annie"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    }
+  }
+}

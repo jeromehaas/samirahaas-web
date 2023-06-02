@@ -8,17 +8,18 @@
 			"description"
 			"impressions"
 			"navigation";
-		grid-gap: 32px;
 		grid-template-columns: 1fr;
 	}
 
 	&__heading {
 		grid-area: heading;
+		margin-bottom: 32px;
 	}
 
 	&__description {
 		grid-area: description;
 		max-width: 720px;
+		margin-bottom: 32px;
 	}
 	
 	&__impressions, .impressions {
@@ -53,7 +54,6 @@
 				"description"
 				"impressions"
 				"navigation";
-			grid-gap: 32px;
 			grid-template-columns: 1fr;
 		}
 

@@ -1,10 +1,12 @@
 .say-hello {
+	margin-top: 64px !important;
     
 	&__inner {
 		display: grid;
 		grid-template-areas: 
       "content image";
 		grid-column-gap: 80px;
+		grid-template-columns: 1fr 800px;
 	}
 
 	&__content, .content {
@@ -13,11 +15,10 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-		max-width: 440px;
+		max-width: 720px;
 		margin-bottom: 80px;
-        
+		
 		&__heading, .heading {
-			margin-top: 64px;
 			margin-bottom: 120px;
 		}
 
@@ -29,19 +30,37 @@
 
 	&__image {
 		grid-area: image;
-		width: 560px;
-		height: 100%;
+		width: 800px;
+		height: 1120px;
 		margin-left: auto;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1800px) {
 
-		&__content, .content {
-			margin-bottom: 0;
+		&__inner {
+			grid-template-columns: 1fr 560px;
 		}
 
 		&__image {
-			width: 320px;
+			width: 560px;
+			height: 800px;
+		}
+
+	}
+
+	@media (max-width: 1200px) {
+		
+		&__inner {
+			grid-template-columns: 1fr 400px;
+		}
+		
+		&__image {
+			width: 400px;
+			height: 560px;
+		}
+		
+		&__content, .content {
+			margin-bottom: 0;
 		}
 
 	}
@@ -54,6 +73,7 @@
 				"content"
 				"image";
 			grid-column-gap: unset;
+			grid-template-columns: 1fr;
 		}
 
 		&__content, .content {
@@ -74,4 +94,4 @@
 
 	}
 
-};
+}

@@ -248,6 +248,10 @@
 
 	}
 
+	@media (max-width: 850px) {
+		margin-top: 48px;
+	}
+
 	@media (max-width: 550px) {
         
 		&__item, .item {

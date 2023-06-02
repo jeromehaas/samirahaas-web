@@ -2,11 +2,12 @@
 	background-color: $beige-80;
     
 	&__inner {
-		padding: 80px;
+		padding: 120px 160px;
 		display: grid;
 		grid-template-areas: 
     	"content image";
 		grid-column-gap: 80px;
+		grid-template-columns: 1fr 600px;
 	}
 
 	&__content, .content {
@@ -15,10 +16,10 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-		max-width: 440px;
+		max-width: 600px;
         
 		&__heading {
-			margin-top: 120px;
+			margin-top: 160px;
 			margin-bottom: 32px;
 		}
 
@@ -31,9 +32,42 @@
 
 	&__image {
 		grid-area: image;
-		width: 440px;
-		height: 640px;
+		width: 600px;
+		height: 880px;
 		justify-self: end;
+	}
+
+	@media (max-width: 1800px) {
+
+		&__inner {
+			padding: 80px;
+			grid-template-columns: unset;
+		}
+
+		&__content, .content {
+        
+			&__heading {
+				margin-top: 80px;
+			}
+
+		}
+
+		&__image {
+			width: 440px;
+			height: 640px;
+		}
+
+
+	}
+
+	@media (max-width: 1200px) {
+
+		&__image {
+			width: 320px;
+			height: 440px;
+		}
+
+
 	}
 
 	@media (max-width: 1150px) {
@@ -53,7 +87,7 @@
 
 	}
 
-	@media (max-width: 850px) {
+	@media (max-width: 950px) {
 
 		&__inner {
 			padding: 64px 0;

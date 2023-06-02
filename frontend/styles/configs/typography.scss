@@ -8,7 +8,7 @@
 
 	&--h1 {
 		font-family: Athena-Light, sans-serif;
-		font-size: 120px;
+		font-size: 160px;
 		line-height: 1;
 		letter-spacing: -2px;
 		text-transform: uppercase;
@@ -58,7 +58,7 @@
 
 .text, .markdown, p {
 	font-family: Usual-Light, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 
 	&--medium {
@@ -76,7 +76,7 @@
 }
 
 .link, a {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 20px;
 		
 	&__content {
@@ -108,7 +108,7 @@
 	&__content, .content {
 
 		&__copyright {
-			font-size: 12px;
+			font-size: 14px;
 		}
 
 	}
@@ -145,6 +145,17 @@
 	
 }
 
+@media (max-width: 1800px) {
+
+	.heading {
+
+		&--h1 {
+			font-size: 120px;
+		}
+
+	}
+
+}
 
 @media (max-width: 850px), (max-height: 800px) {
 

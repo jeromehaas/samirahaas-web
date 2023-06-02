@@ -2,12 +2,12 @@
 	background-color: $beige-80;
 
 	&__inner {
-		padding: 80px;
+		padding: 120px 0 120px 160px;
 		display: grid;
 		grid-template-areas: 
       "education contact";
-		grid-template-columns: auto auto;
-		grid-gap: 48px;
+		grid-template-columns: 1fr 800px;
+		grid-gap: 80px;
 	}
     
 	&__education, .education {
@@ -47,6 +47,23 @@
 			margin-bottom: 16px;
 		}
         
+	}
+
+	@media (max-width: 1800px) {
+		
+		&__inner {
+			padding: 80px 0 80px;;
+			grid-template-columns: 1fr 560px;
+		}
+		
+	}
+
+	@media (max-width: 1200px) {
+		
+		&__inner {
+			grid-template-columns: 1fr 400px;
+		}
+		
 	}
 
 	@media (max-width: 850px) {

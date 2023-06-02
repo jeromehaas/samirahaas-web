@@ -32,7 +32,7 @@ const Gallery = ({ data }) => {
 	return (
 		<Section className="gallery" ref={ galleryRef }>
 			<Heading className="gallery__heading animation--fade-in" level="h1" lookLike="h4">{ data.attributes.heading }</Heading>
-			<Markdown className="gallery__description animation--fade-in">{ data.attributes.description }</Markdown>
+			{ data.attributes.description ? <Markdown className="gallery__description animation--fade-in">{ data.attributes.description }</Markdown> : null }
 			<Impressions className="gallery__impressions" items={ data.attributes.images } />
 			<nav className="gallery__navigation navigation animation--fade-in">
 				<Link className="navigation__item item" href={ `/${ data.attributes.category.toLowerCase() }` }>

@@ -24,7 +24,7 @@ export const GET_WEDDING = () => {
 						  formats
 							url
 							width
-							heigth
+							height
 						}
 					  }
 					}

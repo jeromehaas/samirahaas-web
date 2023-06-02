@@ -78,6 +78,7 @@
 			align-self: flex-end;
 			text-align: right;
 			margin-bottom: 4px;
+			color: $grey-100;
 		}
     
 	}
@@ -130,7 +131,7 @@
 
 	}
 
-	@media (max-width: 300px) {
+	@media (max-width: 350px) {
 
 		&__inner {
 			flex-direction: column;

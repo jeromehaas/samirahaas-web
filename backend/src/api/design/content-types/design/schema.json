@@ -4,7 +4,8 @@
   "info": {
     "singularName": "design",
     "pluralName": "designs",
-    "displayName": "Design"
+    "displayName": "Design",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,6 +21,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project.project"
+    },
+    "showcase": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.showcase-item"
     }
   }
 }
