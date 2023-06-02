@@ -40,9 +40,21 @@ export const GET_PROJECTS_BY_ID = (id) => {
 								attributes {
 								formats
 									url
-							} 
+								} 
+							}
 						}
-						}
+						navigation {
+          		next {
+            		data {
+              		id
+            		}
+          		}
+          		previous {
+            		data {
+              		id
+            		}
+          		}
+        		}
 					}
 				}
 			}

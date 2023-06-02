@@ -24,10 +24,11 @@ const Showcase = ({ data }) => {
 		return () => { return context.revert(); };
 	});
 
+	// GET ITEMS
 	const items = useMemo(() => {
 		return data && data.attributes.showcase.map((item) => {
 			return {
-				id: item.id,
+				id: item.project.data.id,
 				format: item.format,
 				heading: item.project.data.attributes.heading,
 				preview: item.project.data.attributes.preview.data?.attributes,

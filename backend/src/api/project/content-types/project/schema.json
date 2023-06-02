@@ -52,6 +52,11 @@
     "description": {
       "type": "richtext",
       "required": false
+    },
+    "navigation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.project-navigation"
     }
   }
 }

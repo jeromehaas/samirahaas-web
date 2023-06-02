@@ -24,10 +24,14 @@
 	
 	&__impressions, .impressions {
 		grid-area: impressions;
+		margin-bottom: 32px;
 	}
 
 	&__navigation, .navigation {
 		grid-area: navigation;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 
 		&__item, .item {
 			display: flex;
@@ -35,7 +39,7 @@
 			align-items: center;
 
 			&__icon {
-				margin-right: 16px;
+				margin: 0 16px;
 			}
 
 			&__label {

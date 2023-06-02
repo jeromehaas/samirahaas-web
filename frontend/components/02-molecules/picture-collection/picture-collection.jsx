@@ -12,7 +12,7 @@ const PictureCollection = ({ className, items }) => {
 					return (
 						<Link className="picture-collection__item item animation--fade-in" href={ `/project/${ item.id }` } data-format={ item.format } key={ item.id }>
 							<div className="item__image-wrapper">
-								<Picture className="item__image" src={ item.preview?.url } key={ item.id } alt="Image" priority={ index === 0 } />
+								<Picture className="item__image" src={ item.preview?.url } key={ item.id } alt="Image" priority={ index <= 1 } />
 							</div>
 							{ item.heading && (<Heading className="item__heading" level="h5">{ item.heading }</Heading>)}
 						</Link>
