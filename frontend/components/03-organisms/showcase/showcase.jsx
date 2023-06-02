@@ -3,7 +3,7 @@ import Heading from 'components/01-atoms/heading/heading';
 import PictureCollection from 'components/02-molecules/picture-collection/picture-collection';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useMemo } from 'react';
 
 const Showcase = ({ data }) => {
 
@@ -24,13 +24,15 @@ const Showcase = ({ data }) => {
 		return () => { return context.revert(); };
 	});
 
-	// GET ALL ITEMS
-	const items = data && data.attributes.projects.data.map((item) => {
-		return {
-			id: item.id,
-			heading: item.attributes.heading,
-			preview: item.attributes.preview.data?.attributes,
-		};
+	const items = useMemo(() => {
+		return data && data.attributes.showcase.map((item) => {
+			return {
+				id: item.id,
+				format: item.format,
+				heading: item.project.data.attributes.heading,
+				preview: item.project.data.attributes.preview.data?.attributes,
+			};
+		});
 	});
 
 	return (

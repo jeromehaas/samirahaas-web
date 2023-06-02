@@ -4,7 +4,8 @@
   "info": {
     "singularName": "architecture",
     "pluralName": "architectures",
-    "displayName": "Architecture"
+    "displayName": "Architecture",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,10 +17,10 @@
       "repeatable": false,
       "component": "general.two-level-heading"
     },
-    "projects": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::project.project"
+    "showcase": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.showcase-item"
     }
   }
 }

@@ -4,58 +4,62 @@ export const GET_ARCHITECTURE = () => {
 	return gql`
 	query {
 		architecture {
-		  data {
-			attributes {
-			  heading {
-				top
-				sub
-			  }
-			   projects {
-				data {
-				  id
-				  attributes {
-					heading
-					description
-					category
-					preview {
-					  data {
-						attributes {
-						  formats
-							url
-							width
-							height
-						}
-					  }
+			data {
+				id
+				attributes {
+					heading {
+						top
+						sub
 					}
-					images {
-							id
-							group {
-								data {
-									id
-									attributes {
-										formats
-										url
-										width
-										height
+					showcase {
+						id
+						format
+						project {
+							data {
+								id
+								attributes {
+									heading
+									description
+									category
+									preview {
+										data {
+											attributes {
+												formats
+												url
+												width
+												height
+											}
+										}
+									}
+									images {
+										id
+										group {
+											data {
+												id
+												attributes {
+													formats
+													url
+													width
+													height
+												}
+											}
+										}
+									}
+									teaser {
+										data {
+											attributes {
+												formats
+												url
+											}
+										}
 									}
 								}
 							}
 						}
-					teaser {
-					  data {
-						attributes {
-						  formats
-							url
-						}
-					  }
 					}
-
-				  }
 				}
-			  }
 			}
-		  }
 		}
-	  }
+	}	
 	`;
 };

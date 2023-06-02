@@ -10,7 +10,7 @@ const PictureCollection = ({ className, items }) => {
 			<div className="picture-collection__container">
 				{ items && items.map((item, index) => {
 					return (
-						<Link className="picture-collection__item item animation--fade-in" href={ `/project/${ item.id }` } key={ item.id }>
+						<Link className="picture-collection__item item animation--fade-in" href={ `/project/${ item.id }` } data-format={ item.format } key={ item.id }>
 							<div className="item__image-wrapper">
 								<Picture className="item__image" src={ item.preview?.url } key={ item.id } alt="Image" priority={ index === 0 } />
 							</div>

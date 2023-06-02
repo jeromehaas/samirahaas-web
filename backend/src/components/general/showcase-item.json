@@ -1,24 +1,30 @@
 {
   "collectionName": "components_general_showcase_items",
   "info": {
-    "displayName": "Showcase Item"
+    "displayName": "Showcase Item",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "format": {
       "type": "enumeration",
       "enum": [
-        "Annie",
-        "Berenice",
-        "Cindy",
-        "Dorothea",
-        "Eve",
-        "Francesca",
-        "Gertrude",
-        "Hannah"
+        "F_07_16_01",
+        "F_01_10_13",
+        "F_09_14_01",
+        "F_00_16_08",
+        "F_11_12_01",
+        "F_03_16_05",
+        "F_10_14_00",
+        "F_15_06_03",
+        "F_00_12_12",
+        "F_08_16_00",
+        "F_00_14_10",
+        "F_06_16_02",
+        "F_02_12_10"
       ],
       "required": true,
-      "default": "Annie"
+      "default": "F_07_16_01"
     },
     "project": {
       "type": "relation",

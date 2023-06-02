@@ -17,11 +17,6 @@
       "repeatable": false,
       "component": "general.two-level-heading"
     },
-    "projects": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::project.project"
-    },
     "showcase": {
       "type": "component",
       "repeatable": true,

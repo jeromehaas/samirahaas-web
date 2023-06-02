@@ -17,9 +17,9 @@
       "enum": [
         "Corporate",
         "Storytelling",
-        "Architecture",
-        "Weddings",
-        "Design"
+        "Architektur",
+        "Hochzeiten",
+        "Gestaltung"
       ],
       "required": true,
       "default": "Corporate"
