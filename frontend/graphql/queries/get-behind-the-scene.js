@@ -13,6 +13,8 @@ export const GET_BEHIND_THE_SCENE = () => {
 					attributes {
 					  formats
 						url
+						width
+						height
 					}
 				  }
 				}

@@ -16,7 +16,7 @@ const Jumper = () => {
 	// ANIMATE ELEMENTS
 	useEffect(() => {
 		const context = gsap.context(() => {
-			jumperTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: jumperRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
+			jumperTimelineRef.current = gsap.timeline({ delay: 0.25, scrollTrigger: { trigger: jumperRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
 			jumperTimelineRef.current.to('.jumper .jumper__link', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' });
 		}, jumperRef);
 		return () => { return context.revert(); };

@@ -1,7 +1,6 @@
 .behind-the-scenes {
 
 	&__images, .images {
-		grid-auto-rows: 100px;
 		margin: 0 auto;
 
 		&__item {
@@ -33,12 +32,49 @@
 				width: calc(100% / 24 * 12);
 				margin-right: calc(100% / 24 * 12);
 			}
+
 		}
 
 	}
-
-
     
-	
+	@media (max-width: 800px) {
+
+		&__images, .images {
+			margin: 0 auto;
+
+			&__item {
+				display: block;
+				margin-bottom: 80px;
+				height: 100%;
+
+				&:nth-child(4n + 1) {
+					margin-left: calc(100% / 24 * 0);
+					width: calc(100% / 24 * 17.5);
+					margin-right: calc(100% / 24 * 6.5);
+				}
+					
+				&:nth-child(4n + 2) {
+					margin-left: calc(100% / 24 * 6.5);
+					width: calc(100% / 24 * 17.5);
+					margin-right: calc(100% / 24 * 0);
+				}
+							
+				&:nth-child(4n + 3) {
+					margin-left: calc(100% / 24 * 0);
+					width: calc(100% / 24 * 18);
+					margin-right: calc(100% / 24 * 6);
+				}
+							
+				&:nth-child(4n + 4) {
+					margin-left: calc(100% / 24 * 0);
+					width: calc(100% / 24 * 18);
+					margin-right: calc(100% / 24 * 6);
+				}
+
+			}
+
+		}	
+
+	}
 
 }

@@ -39,7 +39,7 @@ const HighlightPreview = ({ className, items }) => {
 			timeline.current.to(boxes[counter], { opacity: 1, duration: 1, ease: 'power4.out' }, 0.5);
 			timeline.current.to(images[counter], { opacity: 1, duration: 1, ease: 'power4.out' }, 0.5);
 			timeline.current.to(status, { opacity: 1, duration: 0, ease: 'power4.out ' }, 0.5);
-			timeline.current.to(status, { right: '0%', duration: 6, ease: 'power4.out' }, 0.5);
+			timeline.current.to(status, { right: '0%', duration: 6, ease: 'power1.out' }, 0.5);
 			timeline.current.to(status, { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
 			timeline.current.to(images[counter], { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
 			timeline.current.to(images[counter], { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
