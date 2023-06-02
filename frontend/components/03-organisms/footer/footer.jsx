@@ -18,13 +18,13 @@ const Footer = () => {
 	// ANIMATE ELEMENTS
 	useEffect(() => {
 		const context = gsap.context(() => {
-			footerTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: footerRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false } });
-			footerTimelineRef.current.to('.footer .footer__logo', { autoAlpha: 1, duration: 1, top: 0 }, 0);
-			footerTimelineRef.current.to('.footer .content__title', { autoAlpha: 1, duration: 1, top: 0 }, 0.25);
-			footerTimelineRef.current.to('.footer .content__contact-links', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
-			footerTimelineRef.current.to('.footer .content__social-media-links', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
-			footerTimelineRef.current.to('.footer .content__legal-links', { autoAlpha: 1, duration: 1, top: 0 }, 1);
-			footerTimelineRef.current.to('.footer .content__copyright', { autoAlpha: 1, duration: 1, top: 0 }, 1.25);
+			footerTimelineRef.current = gsap.timeline({ ease: 'elastic.out(1, 0.1)', scrollTrigger: { trigger: footerRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false } });
+			footerTimelineRef.current.to('.footer .footer__logo', { autoAlpha: 1, duration: 1, ease: 'power4.out', top: 0 }, 0);
+			footerTimelineRef.current.to('.footer .content__title', { autoAlpha: 1, duration: 1, ease: 'power4.out', top: 0 }, 0.25);
+			footerTimelineRef.current.to('.footer .content__contact-links', { autoAlpha: 1, duration: 1, ease: 'power4.out', top: 0 }, 0.25);
+			footerTimelineRef.current.to('.footer .content__social-media-links', { autoAlpha: 1, duration: 1, ease: 'power4.out', top: 0 }, 0.25);
+			footerTimelineRef.current.to('.footer .content__legal-links', { autoAlpha: 1, duration: 1, ease: 'power4.out', top: 0 }, 0.25);
+			footerTimelineRef.current.to('.footer .content__copyright', { autoAlpha: 1, duration: 1, ease: 'power4.out', top: 0 }, 0.25);
 		}, footerRef);
 		return () => { return context.revert(); };
 	}, []);

@@ -18,8 +18,8 @@ const LegalInformations = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			legalInformationsTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: legalInformationsRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false } });
-			legalInformationsTimelineRef.current.to('.legal-informations .legal-informations__heading .heading__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
-			legalInformationsTimelineRef.current.to('.legal-informations .paragraphs__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
+			legalInformationsTimelineRef.current.to('.legal-informations .legal-informations__heading .heading__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0);
+			legalInformationsTimelineRef.current.to('.legal-informations .paragraphs__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25, ease: 'power4.out' }, 0);
 		}, legalInformationsRef);
 		return () => { return context.revert(); };
 	}, []);

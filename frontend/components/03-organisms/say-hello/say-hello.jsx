@@ -19,9 +19,9 @@ const SayHello = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			sayHelloTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: sayHelloRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false } });
-			sayHelloTimelineRef.current.to('.say-hello .content__heading .heading__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
-			sayHelloTimelineRef.current.to('.say-hello .say-hello__image', { autoAlpha: 1, duration: 1, top: 0 }, 0.25);
-			sayHelloTimelineRef.current.to('.say-hello .content__text', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
+			sayHelloTimelineRef.current.to('.say-hello .content__heading .heading__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0);
+			sayHelloTimelineRef.current.to('.say-hello .say-hello__image', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.25);
+			sayHelloTimelineRef.current.to('.say-hello .content__text', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.5);
 		}, sayHelloRef);
 		return () => { return context.revert(); };
 	}, []);

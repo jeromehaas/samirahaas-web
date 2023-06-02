@@ -15,9 +15,9 @@ const Hero = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			heroTimelineRef.current = gsap.timeline();
-			heroTimelineRef.current.to('.hero__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
-			heroTimelineRef.current.to('.hero__text', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
-			heroTimelineRef.current.to('.hero__scroller', { autoAlpha: 1, duration: 1, top: 0 }, 1);
+			heroTimelineRef.current.to('.hero__heading', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.5);
+			heroTimelineRef.current.to('.hero__text', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.75);
+			heroTimelineRef.current.to('.hero__scroller', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 1);
 		}, heroRef);
 		return () => { return context.revert(); };
 	}, []);

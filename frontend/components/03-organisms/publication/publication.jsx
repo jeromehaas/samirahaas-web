@@ -19,8 +19,8 @@ const Publication = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			publicationTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: publicationRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false } });
-			publicationTimelineRef.current.to('.publication .publication__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0);
-			publicationTimelineRef.current.to('.publication .contributors__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0.25);
+			publicationTimelineRef.current.to('.publication .publication__heading', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0);
+			publicationTimelineRef.current.to('.publication .contributors__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25, ease: 'power4.out' }, 0.25);
 		}, publicationRef);
 		return () => { return context.revert(); };
 	}, []);

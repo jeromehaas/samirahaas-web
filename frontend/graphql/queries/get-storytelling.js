@@ -53,6 +53,18 @@ export const GET_STORYTELLING = () => {
 											}
 										}
 									}
+									navigation {
+										next {
+											data {
+												id
+											}
+										}
+										previous {
+											data {
+												id
+											}
+										}
+									}
 								}
 							}
 						}

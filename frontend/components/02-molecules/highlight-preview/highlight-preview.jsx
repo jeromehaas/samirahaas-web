@@ -7,16 +7,21 @@ import Link from 'next/link';
 
 const HighlightPreview = ({ className, items }) => {
 
+	// CREATE REFS
 	const timeline = useRef();
 	const previewRef = useRef();
+
+	// SETUP STATE
 	const [counter, setCounter] = useState(0);
 
+	// UPDATE COUNTER
 	const updateCounter = () => {
 		const isLastSlide = counter === items.length - 1;
 		const newCounter = isLastSlide ? 0 : counter + 1;
 		setCounter(newCounter);
 	};
 
+	// SETUP ANIMATION
 	useEffect(() => {
 		const context = gsap.context(() => {
 			if (!items || items.length === 0) return;
@@ -24,21 +29,21 @@ const HighlightPreview = ({ className, items }) => {
 			const images = gsap.utils.toArray('.preview .preview__image');
 			const boxes = gsap.utils.toArray('.projects .box');
 			timeline.current = gsap.timeline({ onComplete: updateCounter });
-			timeline.current.to(status, { right: '100%', left: '0%', duration: 0 }, 0);
-			timeline.current.to(images, { opacity: 0, duration: 1, ease: 'inOut' }, 0);
-			timeline.current.to(boxes, { zIndex: 0, duration: 0, ease: 'inOut' }, 0);
-			timeline.current.to(images, { zIndex: 0, duration: 0, ease: 'inOut' }, 0);
-			timeline.current.to(boxes, { opacity: 0, duration: 1, ease: 'inOut' }, 0);
-			timeline.current.to(boxes[counter], { zIndex: 5, duration: 0, ease: 'inOut' }, 0);
-			timeline.current.to(images[counter], { zIndex: 5, duration: 0, ease: 'inOut' }, 0);
-			timeline.current.to(boxes[counter], { opacity: 1, duration: 1, ease: 'inOut' }, 0.5);
-			timeline.current.to(images[counter], { opacity: 1, duration: 1, ease: 'inOut' }, 0.5);
-			timeline.current.to(status, { opacity: 1, duration: 0, ease: 'none ' }, 0.5);
-			timeline.current.to(status, { right: '0%', duration: 6, ease: 'none' }, 0.5);
-			timeline.current.to(status, { opacity: 0, duration: 1, ease: 'inOut' }, 8);
-			timeline.current.to(images[counter], { opacity: 0, duration: 1, ease: 'inOut' }, 8);
-			timeline.current.to(images[counter], { opacity: 0, duration: 1, ease: 'inOut' }, 8);
-			timeline.current.to(boxes[counter], { opacity: 0, duration: 1, ease: 'inOut' }, 8);
+			timeline.current.to(status, { right: '100%', left: '0%', duration: 0, ease: 'power4.out' }, 0);
+			timeline.current.to(images, { opacity: 0, duration: 1, ease: 'power4.out' }, 0);
+			timeline.current.to(boxes, { zIndex: 0, duration: 0, ease: 'power4.out' }, 0);
+			timeline.current.to(images, { zIndex: 0, duration: 0, ease: 'power4.out' }, 0);
+			timeline.current.to(boxes, { opacity: 0, duration: 1, ease: 'power4.out' }, 0);
+			timeline.current.to(boxes[counter], { zIndex: 5, duration: 0, ease: 'power4.out' }, 0);
+			timeline.current.to(images[counter], { zIndex: 5, duration: 0, ease: 'power4.out' }, 0);
+			timeline.current.to(boxes[counter], { opacity: 1, duration: 1, ease: 'power4.out' }, 0.5);
+			timeline.current.to(images[counter], { opacity: 1, duration: 1, ease: 'power4.out' }, 0.5);
+			timeline.current.to(status, { opacity: 1, duration: 0, ease: 'power4.out ' }, 0.5);
+			timeline.current.to(status, { right: '0%', duration: 6, ease: 'power4.out' }, 0.5);
+			timeline.current.to(status, { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
+			timeline.current.to(images[counter], { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
+			timeline.current.to(images[counter], { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
+			timeline.current.to(boxes[counter], { opacity: 0, duration: 1, ease: 'power4.out' }, 8);
 		}, previewRef);
 		return () => { return context.revert(); };
 	}, [counter]);

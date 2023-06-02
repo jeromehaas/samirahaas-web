@@ -18,8 +18,8 @@ const Showcase = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			showcaseTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: showcaseRef.current, start: 'top bottom-=80px', end: 'bottom top+=80px', markers: false } });
-			showcaseTimelineRef.current.to('.showcase .heading__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0);
-			showcaseTimelineRef.current.to('.showcase .picture-collection__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25 }, 0.5);
+			showcaseTimelineRef.current.to('.showcase .heading__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0);
+			showcaseTimelineRef.current.to('.showcase .picture-collection__item', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25, ease: 'power4.out' }, 0.5);
 		}, showcaseRef);
 		return () => { return context.revert(); };
 	});

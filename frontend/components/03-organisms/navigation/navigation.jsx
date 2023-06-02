@@ -64,8 +64,8 @@ const Navigation = () => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			barTimelineRef.current = gsap.timeline({ paused: true });
-			barTimelineRef.current.to(['.navigation .bar__hamburger', '.navigation .bar__logo'], { opacity: 0 }, 0);
-			barTimelineRef.current.to(['.navigation .navigation__bar', '.navigation .navigation__background', '.navigation .navigation__placeholder'], { top: '-80px' }, 0);
+			barTimelineRef.current.to(['.navigation .bar__hamburger', '.navigation .bar__logo'], { opacity: 0, duration: 1, ease: 'power4.out' }, 0);
+			barTimelineRef.current.to(['.navigation .navigation__bar', '.navigation .navigation__background', '.navigation .navigation__placeholder'], { top: '-80px', duration: 1, ease: 'power4.out' }, 0);
 		}, navigationRef.current);
 		return () => { return context.revert(); };
 	}, []);
@@ -75,7 +75,7 @@ const Navigation = () => {
 		const context = gsap.context(() => {
 			menuTimelineRef.current = gsap.timeline({ paused: true });
 			menuTimelineRef.current.to('.navigation .navigation__menu', { bottom: '0%', duration: 1, ease: 'power4.inOut' }, 0);
-			menuTimelineRef.current.to('.navigation .main-links__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.inOut', stagger: { amount: 0.25 } }, 0.75);
+			menuTimelineRef.current.to('.navigation .main-links__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.inOut', stagger: 0.15 }, 0.75);
 			menuTimelineRef.current.to('.navigation .social-links__item', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.inOut' }, 1.25);
 		}, navigationRef.current);
 		return () => { return context.revert(); };

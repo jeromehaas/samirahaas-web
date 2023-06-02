@@ -16,7 +16,7 @@ const Scroller = ({ className }) => {
 	useEffect(() => {
 		if (!scrollerRef) return;
 		const context = gsap.context(() => {
-			gsap.to('.scroller__icon', { top: 8, repeat: -1, duration: 1, yoyo: true, ease: 'power1.inOut' });
+			gsap.to('.scroller__icon', { top: 8, repeat: -1, duration: 1, yoyo: true, ease: 'sine.out' });
 		}, scrollerRef);
 		return () => { return context.revert(); };
 	}, []);

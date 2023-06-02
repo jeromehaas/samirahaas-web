@@ -18,8 +18,8 @@ const Profile = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			profileTimelineRef.current = gsap.timeline({ ScrollTrigger: { trigger: profileTimelineRef.current, start: 'top bottom-=80px', end: 'bottom top-=80px' } });
-			profileTimelineRef.current.to('.profile .profile__education', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
-			profileTimelineRef.current.to('.profile .profile__contact', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
+			profileTimelineRef.current.to('.profile .profile__education', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.5);
+			profileTimelineRef.current.to('.profile .profile__contact', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.75);
 		}, profileRef);
 		return () => { return context.revert(); };
 	}, []);

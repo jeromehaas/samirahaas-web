@@ -20,10 +20,10 @@ const AboutMe = ({ data }) => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			aboutMeTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: aboutMeRef.current, start: 'top bottom-=320px', end: 'bottom top+=320px', markers: false } });
-			aboutMeTimelineRef.current.to('.about-me .about-me__image', { autoAlpha: 1, duration: 1, top: 0 }, 0);
-			aboutMeTimelineRef.current.to('.about-me .content__heading', { autoAlpha: 1, duration: 1, top: 0 }, 0.25);
-			aboutMeTimelineRef.current.to('.about-me .content__text', { autoAlpha: 1, duration: 1, top: 0 }, 0.5);
-			aboutMeTimelineRef.current.to('.about-me .content__anchor', { autoAlpha: 1, duration: 1, top: 0 }, 0.75);
+			aboutMeTimelineRef.current.to('.about-me .about-me__image', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0);
+			aboutMeTimelineRef.current.to('.about-me .content__heading', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.25);
+			aboutMeTimelineRef.current.to('.about-me .content__text', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.5);
+			aboutMeTimelineRef.current.to('.about-me .content__anchor', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.75);
 		}, aboutMeRef);
 		return () => { return context.revert(); };
 	}, []);
