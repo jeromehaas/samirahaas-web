@@ -20,6 +20,8 @@ export const GET_TEASER = () => {
 								attributes {
 									formats
 									url
+									width
+									height
 								}
 							}
 						}
@@ -31,6 +33,8 @@ export const GET_TEASER = () => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}

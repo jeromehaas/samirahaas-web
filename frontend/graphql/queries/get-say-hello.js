@@ -18,6 +18,8 @@ export const GET_SAY_HELLO = () => {
                   attributes {
                     formats
 										url
+										width
+										height
                   }
                 }
               }

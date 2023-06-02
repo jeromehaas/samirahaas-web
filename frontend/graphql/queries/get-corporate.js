@@ -24,6 +24,8 @@ export const GET_CORPORATE = () => {
 						attributes {
 						  formats
 							url
+							width
+							height
 						}
 					  }
 					}
@@ -35,6 +37,8 @@ export const GET_CORPORATE = () => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}

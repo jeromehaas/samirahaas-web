@@ -22,6 +22,8 @@ export const GET_ARCHITECTURE = () => {
 						attributes {
 						  formats
 							url
+							width
+							height
 						}
 					  }
 					}
@@ -33,6 +35,8 @@ export const GET_ARCHITECTURE = () => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}

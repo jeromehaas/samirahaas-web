@@ -18,6 +18,8 @@ export const GET_MY_ETHICS = () => {
 					attributes {
 						formats
 						url
+						width
+						height
 					}
 				}
 			}

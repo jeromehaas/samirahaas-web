@@ -13,6 +13,8 @@ export const GET_ALL_PROJECTS = () => {
 								attributes {
 									formats
 									url
+									width
+									height
 								}
 							}
 						}

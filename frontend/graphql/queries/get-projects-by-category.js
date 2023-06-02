@@ -16,6 +16,8 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 								attributes {
 									formats
 									url
+									width
+									height
 								}
 							}
 						}
@@ -27,6 +29,8 @@ export const GET_PROJECTS_BY_CATEGORY = (category) => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}

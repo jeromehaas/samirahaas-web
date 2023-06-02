@@ -23,6 +23,8 @@ export const GET_DESIGN = () => {
 						attributes {
 						  formats
 							url
+							width
+							height
 						}
 					  }
 					}
@@ -34,6 +36,8 @@ export const GET_DESIGN = () => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}

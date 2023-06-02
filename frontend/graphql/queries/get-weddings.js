@@ -23,6 +23,8 @@ export const GET_WEDDING = () => {
 						attributes {
 						  formats
 							url
+							width
+							heigth
 						}
 					  }
 					}
@@ -34,6 +36,8 @@ export const GET_WEDDING = () => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}
@@ -43,6 +47,8 @@ export const GET_WEDDING = () => {
 						attributes {
 						  formats
 							url
+							width
+							height
 						}
 					  }
 					}

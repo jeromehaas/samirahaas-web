@@ -23,6 +23,8 @@ export const GET_STORYTELLING = () => {
 						attributes {
 						  formats
 							url
+							width 
+							height
 						}
 					  }
 					}
@@ -34,6 +36,8 @@ export const GET_STORYTELLING = () => {
 									attributes {
 										formats
 										url
+										width
+										height
 									}
 								}
 							}
