@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.3] - 09.06.2023
+- Setup: sitemap
+- Setup: robots.txt
+- Setup: tracking wrapper
+- Fix: cta component styles
+- Refactor: height of preview-slider
+
 ## [v0.1.2] - 03.06.2023
 - Setup: linter for frontend and backend
 - Setup: themes for VS Code
