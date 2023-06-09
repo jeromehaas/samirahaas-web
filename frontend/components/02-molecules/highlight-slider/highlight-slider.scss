@@ -3,6 +3,7 @@
 	&__preview, .preview {
 		position: relative;
 		height: 1120px;
+		max-height: calc(100vh - 240px);
 		margin-bottom: 32px;
 
 		&__image, .image {
