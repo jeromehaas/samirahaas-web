@@ -89,7 +89,7 @@ const Navigation = () => {
 
 	// ANIMATIE BAR
 	useEffect(() => {
-		if (scrollPosition > previousScrollPosition && !isOpen) {
+		if (((scrollPosition > previousScrollPosition) &&	 (scrollPosition >= 0)) && !isOpen) {
 			barTimelineRef.current.play();
 		} else {
 			barTimelineRef.current.reverse();
