@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.4] - 20.06.2023
+- Refactor: improve logic of navigation component
+- Refactor: add new format to picture-collection
+
 ## [v0.1.3] - 09.06.2023
 - Setup: sitemap
 - Setup: robots.txt
