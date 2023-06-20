@@ -91,6 +91,12 @@
 			margin-right: calc(100% / 24 * 3);
 		}
 
+		&[data-format="F_15_08_01"] {
+			margin-left: calc(100% / 24 * 15);
+			width: calc(100% / 24 * 8);
+			margin-right: calc(100% / 24 * 1);
+		}
+
 		&__image-wrapper {
 			overflow: hidden;
 			width: 100%;
@@ -214,6 +220,12 @@
 				margin-left: calc(100% / 24 * 7.5);
 				width: calc(100% / 24 * 15);
 				margin-right: calc(100% / 24 * 1.5);
+			}
+
+			&[data-format="F_15_08_01"] {
+				margin-left: calc(100% / 24 * 7.5);
+				width: calc(100% / 24 * 9);
+				margin-right: calc(100% / 24 * 0.5);
 			}
 
 		}
