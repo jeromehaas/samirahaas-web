@@ -9,8 +9,6 @@ const Navigation = () => {
 
 	// SETUP STATE
 	const [isOpen, setIsOpen] = useState(false);
-	const [scrollPosition, setScrollPosition] = useState(0);
-	const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
 
 	// SETUP ROUTER
 	const router = useRouter();
@@ -18,7 +16,6 @@ const Navigation = () => {
 	// SETUP REFS
 	const navigationRef = useRef();
 	const menuTimelineRef = useRef();
-	const barTimelineRef = useRef();
 
 	// OPEN MENU
 	const openMenu = () => {
@@ -34,11 +31,6 @@ const Navigation = () => {
 	const toggleMenu = () => {
 		isOpen ? closeMenu() : openMenu();
 		setIsOpen(!isOpen);
-	};
-
-	// HANDLE SCROLL
-	const handleScroll = () => {
-		setScrollPosition(window.pageYOffset);
 	};
 
 	// HANDLE LINK KLICK
@@ -60,16 +52,6 @@ const Navigation = () => {
 		return () => { return context.revert(); };
 	}, []);
 
-	// ANIMATE BAR
-	useEffect(() => {
-		const context = gsap.context(() => {
-			barTimelineRef.current = gsap.timeline({ paused: true });
-			barTimelineRef.current.to(['.navigation .bar__hamburger', '.navigation .bar__logo'], { opacity: 0, duration: 1, ease: 'power4.out' }, 0);
-			barTimelineRef.current.to(['.navigation .navigation__bar', '.navigation .navigation__background', '.navigation .navigation__placeholder'], { top: '-80px', duration: 1, ease: 'power4.out' }, 0);
-		}, navigationRef.current);
-		return () => { return context.revert(); };
-	}, []);
-
 	// ANIMATE MENU
 	useEffect(() => {
 		const context = gsap.context(() => {
@@ -80,22 +62,6 @@ const Navigation = () => {
 		}, navigationRef.current);
 		return () => { return context.revert(); };
 	}, []);
-
-	// ADD SCROLL EVENTLISTENER
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => { return window.removeEventListener('scroll', handleScroll); };
-	}, []);
-
-	// ANIMATIE BAR
-	useEffect(() => {
-		if (((scrollPosition > previousScrollPosition) &&	 (scrollPosition >= 0)) && !isOpen) {
-			barTimelineRef.current.play();
-		} else {
-			barTimelineRef.current.reverse();
-		};
-		setPreviousScrollPosition(scrollPosition);
-	}, [scrollPosition]);
 
 	return (
 		<nav className="navigation" ref={ navigationRef }>
