@@ -25,6 +25,10 @@ const Gallery = ({ data }) => {
 	// HANDLE CLICK
 	const handleClick = (event, project) => {
 		event.preventDefault();
+		gsap.to('.gallery .gallery__heading', { autoAlpha: 0, duration: 0 }, 0);
+		gsap.to('.gallery .gallery__description', { autoAlpha: 0, duration: 0 }, 0);
+		gsap.to('.gallery .impressions__item .item__image', { autoAlpha: 0, duration: 0 }, 0);
+		gsap.to('.gallery .gallery__navigation', { autoAlpha: 0, duration: 0 }, 0);
 		router.push(`/project/${ project.data.id }`);
 	};
 
@@ -38,10 +42,6 @@ const Gallery = ({ data }) => {
 			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 2.5);
 		}, galleryRef);
 		return () => {
-			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
-			galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
-			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
-			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
 			context.revert();
 		};
 	}, [id]);
