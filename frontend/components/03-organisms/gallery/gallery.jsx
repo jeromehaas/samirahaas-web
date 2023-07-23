@@ -22,6 +22,12 @@ const Gallery = ({ data }) => {
 	const galleryRef = useRef(null);
 	const galleryTimelineRef = useRef(null);
 
+	// HANDLE CLICK
+	const handleClick = (event, project) => {
+		event.preventDefault();
+		router.push(`/project/${ project.data.id }`);
+	};
+
 	// ANIMATE ELEMENTS
 	useEffect(() => {
 		const context = gsap.context(() => {
@@ -47,11 +53,11 @@ const Gallery = ({ data }) => {
 			<Impressions className="gallery__impressions" items={ data.attributes.images } />
 			{ data.attributes.navigation?.next.data.id && data.attributes.navigation?.previous.data.id ? (
 				<nav className="gallery__navigation navigation animation--fade-in">
-					<Link className="navigation__item item item--previous" href={ `/project/${ data.attributes.navigation.previous.data.id }` }>
+					<Link className="navigation__item item item--previous" onClick={ (event) => { return handleClick(event, data.attributes.navigation.previous); } } href="/">
 						<img className="item__icon" src="/icons/chevron-left.svg" alt="Arrow" />
 						<Text className="item__label">zurück</Text>
 					</Link>
-					<Link className="navigation__item item item--next" href={ `/project/${ data.attributes.navigation.next.data.id }` }>
+					<Link className="navigation__item item item--next" onClick={ (event) => { return handleClick(event, data.attributes.navigation.next); } } href="/">
 						<Text className="item__label">weiter</Text>
 						<img className="item__icon" src="/icons/chevron-right.svg" alt="Arrow" />
 					</Link>
