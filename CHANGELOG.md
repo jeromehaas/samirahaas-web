@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.6] - 23.07.2023
+- Fix: flicker on route-changes on project-pages
+
 ## [v0.1.5] - 23.07.2023
 - Refactor: logic of navigation component
 - Update: nextjs version
