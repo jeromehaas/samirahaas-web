@@ -34,16 +34,11 @@ const Gallery = ({ data }) => {
 
 	// ANIMATE ELEMENTS
 	useEffect(() => {
-		const context = gsap.context(() => {
-			galleryTimelineRef.current = gsap.timeline({ delay: 0.25, scrollTrigger: { trigger: galleryRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
-			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.25);
-			galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.5);
-			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25, ease: 'power4.out' }, 1);
-			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 2.5);
-		}, galleryRef);
-		return () => {
-			context.revert();
-		};
+		galleryTimelineRef.current = gsap.timeline({ delay: 0.25, scrollTrigger: { trigger: galleryRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
+		galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.25);
+		galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.5);
+		galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25, ease: 'power4.out' }, 1);
+		galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 2.5);
 	}, [id]);
 
 	return (
