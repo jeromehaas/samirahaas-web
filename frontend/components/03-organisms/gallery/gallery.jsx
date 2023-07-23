@@ -41,7 +41,7 @@ const Gallery = ({ data }) => {
 	}, [id]);
 
 	return (
-		<Section className="gallery" ref={ galleryRef }>
+		<Section className="gallery" ref={ galleryRef } key={ id }>
 			<Heading className="gallery__heading animation--fade-in" level="h1" lookLike="h4">{ data.attributes.heading }</Heading>
 			{ data.attributes.description ? <Markdown className="gallery__description animation--fade-in">{ data.attributes.description }</Markdown> : null }
 			<Impressions className="gallery__impressions" items={ data.attributes.images } />
