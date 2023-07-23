@@ -6,7 +6,7 @@ import Gallery from 'components/03-organisms/gallery/gallery';
 const Project = ({ data }) => {
 
 	return (
-		<Page>
+		<Page meta={ { title: data.project.attributes.heading } }>
 			<Gallery heading={ data.project.attributes.heading } data={ data.project } />
 		</Page>
 	);
