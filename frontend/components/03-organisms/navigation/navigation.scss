@@ -39,7 +39,7 @@
 	&__menu, .menu {
 		background-color: $beige-100;
 		position: fixed;
-		bottom: 100%;
+		top: -100vh;
 		left: 0;
 		width: 100%;
 		height: 100vh;
