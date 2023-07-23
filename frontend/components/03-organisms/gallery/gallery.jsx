@@ -5,7 +5,7 @@ import Impressions from 'components/02-molecules/impressions/impressions';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Markdown from 'components/01-atoms/markdown/markdown';
 
@@ -23,7 +23,7 @@ const Gallery = ({ data }) => {
 	const galleryTimelineRef = useRef(null);
 
 	// ANIMATE ELEMENTS
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const context = gsap.context(() => {
 			galleryTimelineRef.current = gsap.timeline({ delay: 0.25, scrollTrigger: { trigger: galleryRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
 			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 0.25);
@@ -32,10 +32,10 @@ const Gallery = ({ data }) => {
 			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 2.5);
 		}, galleryRef);
 		return () => {
-			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 0, duration: 0 }, 0);
-			galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 0, duration: 0 }, 0);
-			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 0, duration: 1 }, 0);
-			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 0, duration: 0 }, 0);
+			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
+			galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
+			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
+			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 0, display: 'none', duration: 0 }, 0);
 			context.revert();
 		};
 	}, [id]);
