@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.5] - 23.07.2023
+- Refactor: logic of navigation component
+- Update: nextjs version
+- Fix: correct size for small viewport in picture-collection format
+- Refactor: remove bar-animation in bar component
+
 ## [v0.1.4] - 20.06.2023
 - Refactor: improve logic of navigation component
 - Refactor: add new format to picture-collection
