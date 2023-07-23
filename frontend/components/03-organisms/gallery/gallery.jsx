@@ -31,7 +31,13 @@ const Gallery = ({ data }) => {
 			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 1, duration: 1, top: 0, stagger: 0.25, ease: 'power4.out' }, 1);
 			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 1, duration: 1, top: 0, ease: 'power4.out' }, 2.5);
 		}, galleryRef);
-		return () => { return context.revert(); };
+		return () => {
+			galleryTimelineRef.current.to('.gallery .gallery__heading', { autoAlpha: 0, duration: 0 }, 0);
+			galleryTimelineRef.current.to('.gallery .gallery__description', { autoAlpha: 0, duration: 0 }, 0);
+			galleryTimelineRef.current.to('.gallery .impressions__item .item__image', { autoAlpha: 0, duration: 1 }, 0);
+			galleryTimelineRef.current.to('.gallery .gallery__navigation', { autoAlpha: 0, duration: 0 }, 0);
+			context.revert();
+		};
 	}, [id]);
 
 	return (
