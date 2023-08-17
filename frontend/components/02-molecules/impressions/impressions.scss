@@ -8,7 +8,7 @@
 		grid-auto-flow: row;
 		flex-direction: row;
 		grid-template-rows: auto;
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(auto-fill, 1fr);
 		margin-bottom: 16px;
 		
 		&__image, .image {
@@ -18,22 +18,6 @@
 			object-fit: cover;
 		}
 			
-			
-		&--one {
-			grid-template-rows: auto;
-			grid-template-columns: 1fr;
-		}
-		
-		&--two {
-			grid-template-rows: auto;
-			grid-template-columns: 1fr 1fr;
-		}
-		
-		&--three {
-			grid-template-rows: auto;
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-	
 	}
 
 	@media (max-width: 550px) {
