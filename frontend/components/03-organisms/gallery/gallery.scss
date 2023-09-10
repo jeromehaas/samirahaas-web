@@ -27,68 +27,68 @@
 		margin-bottom: 32px;
 	}
 
-	&__navigation, .navigation {
-		grid-area: navigation;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	// &__navigation, .navigation {
+	// 	grid-area: navigation;
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	justify-content: space-between;
 
-		&__item, .item {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
+	// 	&__item, .item {
+	// 		display: flex;
+	// 		flex-direction: row;
+	// 		align-items: center;
 
 
-			&__icon {
-				position: relative;
-				transition: all 0.2s ease;
-				left: 0;
-				right: 0;
-				height: 12px;
-			}
+	// 		&__icon {
+	// 			position: relative;
+	// 			transition: all 0.2s ease;
+	// 			left: 0;
+	// 			right: 0;
+	// 			height: 12px;
+	// 		}
 
-			&__label {
-				margin-bottom: 4px;
-			}
+	// 		&__label {
+	// 			margin-bottom: 4px;
+	// 		}
 
-			&--previous {
+	// 		&--previous {
 
-				& .item__icon {
-					margin-right: 16px;
-					margin-left: 4px;
-				}
+	// 			& .item__icon {
+	// 				margin-right: 16px;
+	// 				margin-left: 4px;
+	// 			}
 
-				&:hover {
+	// 			&:hover {
 					
-					& .item__icon {
-						left: -4px;
-					}
+	// 				& .item__icon {
+	// 					left: -4px;
+	// 				}
 
-				}
+	// 			}
 
-			}
+	// 		}
 		
-			&--next {
+	// 		&--next {
 
-				& .item__icon {
-					margin-right: 4px;
-					margin-left: 16px;
-				}
+	// 			& .item__icon {
+	// 				margin-right: 4px;
+	// 				margin-left: 16px;
+	// 			}
 
-				&:hover {
+	// 			&:hover {
 					
-					& .item__icon {
-						left: 4px;
-					}
+	// 				& .item__icon {
+	// 					left: 4px;
+	// 				}
 
-				}
+	// 			}
 
-			}
+	// 		}
 
 			
-		}
+	// 	}
 
-	}
+	// }
 
 	@media (max-width: 850px) {
 
