@@ -1,7 +1,5 @@
 import Page from 'components/04-layouts/page/page';
 import Publication from 'components/03-organisms/publication/publication';
-import client from 'graphql/client';
-import queries from 'graphql/queries';
 import fetchImprint from 'queries/fetch-imprint';
 
 const Imprint = ({ data }) => {
