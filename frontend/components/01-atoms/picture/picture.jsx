@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-const Picture = ({ className, src, alt, quality, priority, width, height }) => {
+const Picture = ({ className, src, alt, quality, priority = true, width, height }) => {
 
 	return (
 		<div className={ `${ className } picture` }>

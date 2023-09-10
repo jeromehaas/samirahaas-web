@@ -14,16 +14,20 @@ const Page = ({ className, children, meta }) => {
 	const router = useRouter();
 
 	const handleRouteChangeStart = () => {
-		gsap.to(['.main', '.cta', '.footer', '.jumper'], { opacity: 0, duration: 0.3 });
+		gsap.to(['.main', '.cta', '.footer', '.jumper'], { opacity: 0, duration: 0.2 });
 	};
 
 	const handleRouteChangeEnd = () => {
-		gsap.to(['.main', '.cta', '.footer', '.jumper'], { opacity: 1, duration: 0.3 });
+		gsap.to(['.main', '.cta', '.footer', '.jumper'], { opacity: 1, duration: 0.2, delay: 0.2 });
 	};
 
 	useEffect(() => {
 		router.events && router.events.on('routeChangeStart', handleRouteChangeStart);
 		router.events && router.events.on('routeChangeComplete', handleRouteChangeEnd);
+		return () => {
+			router.events && router.events.off('routeChangeStart', handleRouteChangeStart);
+			router.events && router.events.off('routeChangeComplete', handleRouteChangeEnd);
+		};
 	}, []);
 
 	return (
