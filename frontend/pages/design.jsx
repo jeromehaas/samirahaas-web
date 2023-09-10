@@ -1,7 +1,6 @@
 import Page from 'components/04-layouts/page/page';
 import Showcase from 'components/03-organisms/showcase/showcase';
-import client from 'graphql/client';
-import queries from 'graphql/queries';
+import { fetchDesign } from 'queries';
 
 const Design = ({ data }) => {
 
@@ -15,12 +14,12 @@ const Design = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const design = await client.query({ query: queries.GET_DESIGN() });
+	const design = await fetchDesign();
 
 	return {
 		props: {
 			data: {
-				design: design.data.design.data,
+				design: design.data.data,
 			},
 		},
 	};

@@ -2,6 +2,7 @@ import Page from 'components/04-layouts/page/page';
 import Showcase from 'components/03-organisms/showcase/showcase';
 import client from 'graphql/client';
 import queries from 'graphql/queries';
+import { fetchStorytelling } from 'queries';
 
 const Storytelling = ({ data }) => {
 
@@ -15,12 +16,12 @@ const Storytelling = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const storytelling = await client.query({ query: queries.GET_STORYTELLING() });
+	const storytelling = await fetchStorytelling();
 
 	return {
 		props: {
 			data: {
-				storytelling: storytelling.data.storytelling.data,
+				storytelling: storytelling.data.data,
 			},
 		},
 	};

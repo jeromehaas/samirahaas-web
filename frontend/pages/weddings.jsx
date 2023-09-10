@@ -1,7 +1,6 @@
 import Page from 'components/04-layouts/page/page';
 import Showcase from 'components/03-organisms/showcase/showcase';
-import client from 'graphql/client';
-import queries from 'graphql/queries';
+import { fetchWedding } from 'queries';
 
 const Weddings = ({ data }) => {
 
@@ -15,12 +14,12 @@ const Weddings = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const wedding = await client.query({ query: queries.GET_WEDDING() });
+	const wedding = await fetchWedding();
 
 	return {
 		props: {
 			data: {
-				wedding: wedding.data.wedding.data,
+				wedding: wedding.data.data,
 			},
 		},
 	};

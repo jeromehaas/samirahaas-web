@@ -1,7 +1,6 @@
 import Page from 'components/04-layouts/page/page';
 import Showcase from 'components/03-organisms/showcase/showcase';
-import client from 'graphql/client';
-import queries from 'graphql/queries';
+import { fetchArchitecture } from 'queries/index.js';
 
 const Architecture = ({ data }) => {
 
@@ -15,12 +14,12 @@ const Architecture = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const architecture = await client.query({ query: queries.GET_ARCHITECTURE() });
+	const architecture = await fetchArchitecture();
 
 	return {
 		props: {
 			data: {
-				architecture: architecture.data.architecture.data,
+				architecture: architecture.data.data,
 			},
 		},
 	};

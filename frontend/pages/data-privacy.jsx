@@ -1,7 +1,6 @@
 import LegalInformations from 'components/03-organisms/legal-informations/legal-informations';
 import Page from 'components/04-layouts/page/page';
-import client from 'graphql/client';
-import queries from 'graphql/queries';
+import { fetchDataPrivacy } from 'queries';
 
 const DataPrivacy = ({ data }) => {
 
@@ -15,12 +14,12 @@ const DataPrivacy = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const dataPrivacy = await client.query({ query: queries.GET_DATA_PRIVACY() });
+	const dataPrivacy = await fetchDataPrivacy();
 
 	return {
 		props: {
 			data: {
-				dataPrivacy: dataPrivacy.data.dataPrivacy.data,
+				dataPrivacy: dataPrivacy.data.data,
 			},
 		},
 	};

@@ -2,6 +2,7 @@ import Page from 'components/04-layouts/page/page';
 import Publication from 'components/03-organisms/publication/publication';
 import client from 'graphql/client';
 import queries from 'graphql/queries';
+import fetchImprint from 'queries/fetch-imprint';
 
 const Imprint = ({ data }) => {
 
@@ -15,12 +16,12 @@ const Imprint = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const imprint = await client.query({ query: queries.GET_IMPRINT() });
+	const imprint = await fetchImprint();
 
 	return {
 		props: {
 			data: {
-				imprint: imprint.data.imprint.data,
+				imprint: imprint.data.data,
 			},
 		},
 	};

@@ -1,7 +1,6 @@
 import Page from 'components/04-layouts/page/page';
 import Showcase from 'components/03-organisms/showcase/showcase';
-import client from 'graphql/client';
-import queries from 'graphql/queries';
+import { fetchCorporate } from 'queries';
 
 const Corporate = ({ data }) => {
 
@@ -15,12 +14,12 @@ const Corporate = ({ data }) => {
 
 export async function getServerSideProps() {
 
-	const corporate = await client.query({ query: queries.GET_CORPORATE() });
+	const corporate = await fetchCorporate();
 
 	return {
 		props: {
 			data: {
-				corporate: corporate.data.corporate.data,
+				corporate: corporate.data.data,
 			},
 		},
 	};
