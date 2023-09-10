@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.8] - 10.09.2023
+- Refactor: switch from graphql to rest
+
 ## [v0.1.7] - 23.07.2023
 - Fix: flicker on route-changes on project-pages
 
